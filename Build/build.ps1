@@ -10,3 +10,6 @@ $startupXml = [System.Xml.Linq.XElement]::Parse('<startup useLegacyV2RuntimeActi
 
 $configSections.AddAfterSelf($startupXml)
 $xDoc.Save($pathToConfig)
+
+$xDoc2 = [System.Xml.Linq.XDocument]::Load($pathToConfig)
+$xDoc2.ToString()
