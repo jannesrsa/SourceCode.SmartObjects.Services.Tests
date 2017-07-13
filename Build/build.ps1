@@ -6,7 +6,7 @@ foreach ($file in $files) {
     if(!$vstestConfigXDocument.Root.Element("startup"))
     {
         $startupXElement = [System.Xml.Linq.XElement]::Parse('<startup useLegacyV2RuntimeActivationPolicy="true"> 
-                <supportedRuntime version="v4.2"/>
+                <supportedRuntime version="v4.0"/>
             </startup>')
 
         $file.FullName
