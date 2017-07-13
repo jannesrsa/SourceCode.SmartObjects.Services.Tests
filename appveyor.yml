@@ -1,11 +1,10 @@
 version: 1.0.{build}
 
-image: Visual Studio 2017
 
 configuration:
 - Release
 
-platform: x64
+platform: Any CPU
 
 before_build:
 - nuget restore
@@ -16,7 +15,7 @@ build:
 
 before_test:
 - cd build
-- powershell -Command .\build.ps1
+#- powershell -Command .\build.ps1
 - cd ..
 
 test_script:
