@@ -1,6 +1,6 @@
 ## SourceCode.SmartObjects.Services.Tests
 
-[![Build status](https://ci.appveyor.com/api/projects/status/yg5vnimungm86hf1/branch/master?svg=true)](https://ci.appveyor.com/project/jannesrsa/sourcecode-smartobjects-services-tests)
+[![Build status](https://ci.appveyor.com/api/projects/status/github/jannesrsa/SourceCode.SmartObjects.Services.Tests?branch=master&svg=true)](https://ci.appveyor.com/project/jannesrsa/sourcecode-smartobjects-services-tests)
 
 Tools and extensions to assist with writing integration tests for a K2 Service Broker.
 
