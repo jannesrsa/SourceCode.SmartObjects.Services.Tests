@@ -10,4 +10,4 @@ init:
 before_build:
 - appveyor-retry dotnet restore -v Minimal
 build_script:
-- dotnet build "src\SourceCode.SmartObjects.Services.Tests.csproj"
+- dotnet build SourceCode.SmartObjects.Services.Tests.sln
