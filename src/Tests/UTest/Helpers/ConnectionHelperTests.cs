@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
@@ -14,13 +15,17 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             {
                 AnotherMethod();
             }
-            catch (System.IO.FileNotFoundException ex)
+            catch (Exception ex)
             {
-                Debug.WriteLine($"Fusionlog: {ex.FusionLog}");
-                Debug.WriteLine($"FileName: {ex.FileName}");
+                if (ex is FileNotFoundException)
+                {
+                    Debug.WriteLine($"Fusionlog: {(ex as FileNotFoundException).FusionLog}");
+                    Debug.WriteLine($"FileName: {(ex as FileNotFoundException).FileName}");
+                }
+                
                 Debug.WriteLine($"ToString: {ex.ToString()}");
 
-                throw new Exception(ex.FusionLog);
+                throw new Exception(ex.ToString());
             }
         }
 
