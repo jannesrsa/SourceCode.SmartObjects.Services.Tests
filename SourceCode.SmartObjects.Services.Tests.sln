@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceCode.SmartObjects.Services.Tests", "src\SourceCode.SmartObjects.Services.Tests.csproj", "{CC1046C1-5FD5-4D53-92D2-F9F0E5361BCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceCode.SmartObjects.Services.Tests.UTest", "Tests\UTest\SourceCode.SmartObjects.Services.Tests.UTest.csproj", "{92220B58-B173-4E7D-AF78-A5094354E32A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceCode.SmartObjects.Services.Tests.UTest", "src\Tests\UTest\SourceCode.SmartObjects.Services.Tests.UTest.csproj", "{92220B58-B173-4E7D-AF78-A5094354E32A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
