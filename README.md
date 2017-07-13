@@ -4,8 +4,6 @@
 
 Tools and extensions to assist with writing integration tests for a K2 Service Broker.
 
-The language version for the project is C# version 5.0 to be compatible with the K2 Core VMs that has Visual Studio 2013 installed.
-
 ### Getting started
 
 **Getting started with Git and GitHub**
