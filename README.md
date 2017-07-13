@@ -1,5 +1,7 @@
 ## SourceCode.SmartObjects.Services.Tests
 
+[![Build status](https://ci.appveyor.com/api/projects/status/yg5vnimungm86hf1/branch/master?svg=true)](https://ci.appveyor.com/project/jannesrsa/sourcecode-smartobjects-services-tests)
+
 Tools and extensions to assist with writing integration tests for a K2 Service Broker.
 
 The language version for the project is C# version 5.0 to be compatible with the K2 Core VMs that has Visual Studio 2013 installed.
