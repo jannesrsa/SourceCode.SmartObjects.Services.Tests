@@ -24,7 +24,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
                 Debug.WriteLine($"FileName: {ex.FileName}");
                 Debug.WriteLine($"ToString: {ex.ToString()}");
 
-                throw new Exception(ex.FusionLog);
+                //throw new Exception(ex.FusionLog);
             }
         }
     }
