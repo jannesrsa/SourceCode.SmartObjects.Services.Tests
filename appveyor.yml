@@ -11,10 +11,10 @@ before_build:
 - nuget restore
 
 build:
-- project: SourceCode.SmartObjects.Services.Tests.sln
-- verbosity: minimal
+ project: SourceCode.SmartObjects.Services.Tests.sln
+ verbosity: minimal
 
-build_script:
+before_test:
 - cd build
-- powershell -Command .\build.ps1 -VisualStudioVersion "14.0" -InstallSHFB -Verbosity minimal -Logger "${env:ProgramFiles}\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+- powershell -Command .\build.ps1
 - cd ..
