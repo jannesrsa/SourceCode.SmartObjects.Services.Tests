@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
 {
@@ -8,11 +9,22 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         [TestMethod()]
         public void GetCurrentUserTest()
         {
-            // Action
-            var currentuser = ConnectionHelper.GetCurrentUser();
+            try
+            {
+                // Action
+                var currentuser = ConnectionHelper.GetCurrentUser();
 
-            // Assert
-            Assert.IsFalse(string.IsNullOrWhiteSpace(currentuser));
+                // Assert
+                Assert.IsFalse(string.IsNullOrWhiteSpace(currentuser));
+            }
+            catch (System.IO.FileNotFoundException ex)
+            {
+                Console.WriteLine($"Fusionlog: {ex.FusionLog}");
+                Console.WriteLine($"FileName: {ex.FileName}");
+                Console.WriteLine($"ToString: {ex.ToString()}");
+
+                throw;
+            }
         }
     }
 }
