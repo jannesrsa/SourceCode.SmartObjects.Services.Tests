@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
@@ -19,11 +20,11 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             }
             catch (System.IO.FileNotFoundException ex)
             {
-                Console.WriteLine($"Fusionlog: {ex.FusionLog}");
-                Console.WriteLine($"FileName: {ex.FileName}");
-                Console.WriteLine($"ToString: {ex.ToString()}");
+                Debug.WriteLine($"Fusionlog: {ex.FusionLog}");
+                Debug.WriteLine($"FileName: {ex.FileName}");
+                Debug.WriteLine($"ToString: {ex.ToString()}");
 
-                throw;
+                throw new Exception(ex.FusionLog);
             }
         }
     }
