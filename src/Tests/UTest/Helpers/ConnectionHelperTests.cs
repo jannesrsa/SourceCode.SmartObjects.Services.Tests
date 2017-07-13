@@ -10,18 +10,9 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         [TestMethod()]
         public void GetCurrentUserTest()
         {
-            AnotherMethod();
-        }
-
-        private static void AnotherMethod()
-        {
             try
             {
-                // Action
-                var currentuser = ConnectionHelper.GetCurrentUser();
-
-                // Assert
-                Assert.IsFalse(string.IsNullOrWhiteSpace(currentuser));
+                AnotherMethod();
             }
             catch (System.IO.FileNotFoundException ex)
             {
@@ -31,6 +22,15 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
 
                 throw new Exception(ex.FusionLog);
             }
+        }
+
+        private static void AnotherMethod()
+        {
+            // Action
+            var currentuser = ConnectionHelper.GetCurrentUser();
+
+            // Assert
+            Assert.IsFalse(string.IsNullOrWhiteSpace(currentuser));
         }
     }
 }
