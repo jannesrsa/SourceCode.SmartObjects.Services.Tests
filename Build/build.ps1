@@ -9,14 +9,14 @@ Set-ItemProperty -Path HKLM:\Software\Microsoft\Fusion -Name LogPath          -V
 $files = "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe.Config","C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config"
 
 foreach ($file in $files) {
-    $vstestConfigXDocument = [System.Xml.Linq.XDocument]::Load("C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe.Config")
+    $vstestConfigXDocument = [System.Xml.Linq.XDocument]::Load($file)
     if(!$vstestConfigXDocument.Root.Element("startup"))
     {
         $startupXElement = [System.Xml.Linq.XElement]::Parse('<startup useLegacyV2RuntimeActivationPolicy="true"> 
                 <supportedRuntime version="v4.0"/>
             </startup>')
 
-        $file.FullName
+        $file
         $configSectionsXElement = $vstestConfigXDocument.Root.Element("configSections")
        
         if($configSectionsXElement)
@@ -28,6 +28,6 @@ foreach ($file in $files) {
             $vstestConfigXDocument.Root.Add($startupXElement)
         }
 
-        $vstestConfigXDocument.Save($file.FullName)
+        $vstestConfigXDocument.Save($file)
     }
 }
