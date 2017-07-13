@@ -48,47 +48,58 @@
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="SourceCode.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.ComponentModel.dll</HintPath>
+      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.ComponentModel.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SourceCode.Deployment.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.Deployment.Management.dll</HintPath>
+      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.Deployment.Management.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SourceCode.EnvironmentSettings.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\K2 blackpearl\Bin\SourceCode.EnvironmentSettings.Client.dll</HintPath>
+      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.EnvironmentSettings.Client.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SourceCode.Forms.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\K2 blackpearl\Bin\SourceCode.Forms.Management.dll</HintPath>
+      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.Forms.Management.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SourceCode.Forms.Utilities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\K2 blackpearl\Bin\SourceCode.Forms.Utilities.dll</HintPath>
+      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.Forms.Utilities.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SourceCode.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\K2 blackpearl\Bin\SourceCode.Framework.dll</HintPath>
+      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.Framework.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SourceCode.HostClientAPI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\K2 blackpearl\Bin\SourceCode.HostClientAPI.dll</HintPath>
+      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.HostClientAPI.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SourceCode.SmartObjects.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\K2 blackpearl\Bin\SourceCode.SmartObjects.Authoring.dll</HintPath>
+      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.SmartObjects.Authoring.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SourceCode.SmartObjects.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\K2 blackpearl\Bin\SourceCode.SmartObjects.Client.dll</HintPath>
+      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.SmartObjects.Client.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SourceCode.SmartObjects.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\K2 blackpearl\Bin\SourceCode.SmartObjects.Management.dll</HintPath>
+      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.SmartObjects.Management.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SourceCode.SmartObjects.Services.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\K2 blackpearl\Bin\SourceCode.SmartObjects.Services.Management.dll</HintPath>
+      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.SmartObjects.Services.Management.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
