@@ -22,7 +22,7 @@ after_build:
 - nuget pack src\SourceCode.SmartObjects.Services.Tests.nuspec -Version %appveyor_build_version%
 
 artifacts:
-- path: src\SourceCode.SmartObjects.Services.Tests.%appveyor_build_version%.nupkg
+- path: c:\projects\SourceCode.SmartObjects.Services.Tests.%appveyor_build_version%.nupkg
 
 deploy:
   provider: NuGet
