@@ -11,7 +11,7 @@ Tools and extensions to assist with writing integration tests for a K2 Service B
  * People new to GitHub should consider using [GitHub for Windows](http://windows.github.com/).
  * If you decide not to use GHFW you will need to:
   1. [Set up Git and connect to GitHub](http://help.github.com/win-set-up-git/)
-  2. [Fork the Clay repository](http://help.github.com/fork-a-repo/)
+  2. [Fork the SourceCode.SmartObjects.Services.Tests repository](http://help.github.com/fork-a-repo/)
  * Finally you should look into [git - the simple guide](http://rogerdudler.github.com/git-guide/)
 
 **Rules for Our Git Repository**
