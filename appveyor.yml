@@ -16,4 +16,4 @@ build:
 
 
 test_script:
-- vstest.console /logger:Appveyor /Platform:x64 "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
+- vstest.console /Platform:x64 /InIsolation /logger:Appveyor "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
