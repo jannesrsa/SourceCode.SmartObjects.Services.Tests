@@ -20,4 +20,4 @@ before_test:
 - cd ..
 
 test_script:
-- vstest.console /logger:Appveyor /Platform:x64 "C:\projects\SourceCode.SmartObjects.Services.Tests.UTest.dll"
+- vstest.console /logger:Appveyor /Platform:x64 "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll
