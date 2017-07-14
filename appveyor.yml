@@ -23,4 +23,6 @@ deploy:
     secure: 9ZjxrStO3j210yUXmH4Q5/H7Bkepb+A1f3kn0snparetNCiXA7sYHvQLRVlAt94m
   on:
     branch: master
-is_not_pr: true
+
+cache:
+  - packages -> **\packages.config
