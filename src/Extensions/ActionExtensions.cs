@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SourceCode.SmartObjects.Services.Tests.Helpers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Extensions
 {
@@ -40,18 +40,14 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
                     throw;
                 exception = ex;
             }
-            catch (UnitTestAssertException)
-            {
-                //if the action has an Assert then rethrow the assert exception so the test framework can capture it.
-                throw;
-            }
 
-            Assert.IsNotNull(exception, "Exception of type {0} should be thrown. No exception was thrown.", typeof(T));
+            AssertHelper.IsNotNull(exception, "Exception of type {0} should be thrown. No exception was thrown.", typeof(T));
 
             if (message != null)
             {
-                Assert.AreEqual(message.Trim(), exception.Message.Trim());
+                AssertHelper.AreEqual(message.Trim(), exception.Message.Trim());
             }
+
             return exception;
         }
 

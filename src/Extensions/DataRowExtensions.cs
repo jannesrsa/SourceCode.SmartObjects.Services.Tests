@@ -1,5 +1,5 @@
 ﻿using System.Data;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SourceCode.SmartObjects.Services.Tests.Helpers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Extensions
 {
@@ -10,8 +10,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
             dataRow.ThrowIfNull("dataRow");
             columnName.ThrowIfNullOrWhiteSpace("columnName");
 
-            Assert.AreEqual<T>(expectedValue, dataRow.Field<T>(columnName)
-                , string.Format("{0}.{1} has an incorrect value.{2}", dataRow.Table.TableName, columnName, rowIdentifier ?? string.Empty));
+            AssertHelper.AreEqual<T>(expectedValue, dataRow.Field<T>(columnName)
+                            , string.Format("{0}.{1} has an incorrect value.{2}", dataRow.Table.TableName, columnName, rowIdentifier ?? string.Empty));
         }
 
         public static T AssertHasValue<T>(this DataRow dataRow, string columnName, string rowIdentifier = null)
@@ -21,7 +21,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
 
             var cellObjectValue = (dataRow.Field<object>(columnName));
 
-            Assert.IsFalse(cellObjectValue == null || string.IsNullOrEmpty(cellObjectValue.ToString()),
+            AssertHelper.IsFalse(cellObjectValue == null || string.IsNullOrEmpty(cellObjectValue.ToString()),
                 string.Format("[{0}].[{1}] must have a '{2}' value. Row Identifier: [{3}]",
                     dataRow.Table.TableName, columnName, typeof(T).ToString(), rowIdentifier));
             try
@@ -31,8 +31,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
             }
             catch (System.Exception ex)
             {
-                Assert.Fail(string.Format("[{0}].[{1}] convert to '{2}' error. Value: '{3}' Row Identifier: [{4}] Error: '{5}'",
-                    dataRow.Table.TableName, columnName, typeof(T).ToString(), cellObjectValue, rowIdentifier, ex.Message));
+                AssertHelper.Fail(string.Format("[{0}].[{1}] convert to '{2}' error. Value: '{3}' Row Identifier: [{4}] Error: '{5}'",
+                     dataRow.Table.TableName, columnName, typeof(T).ToString(), cellObjectValue, rowIdentifier, ex.Message));
 
                 throw;
             }

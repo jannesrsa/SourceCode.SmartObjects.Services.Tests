@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Reflection;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SourceCode.SmartObjects.Authoring;
 using SourceCode.SmartObjects.Client;
 using SourceCode.SmartObjects.Management;
@@ -25,8 +24,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             dataTable1.ThrowIfNull("dataTable1");
             dataTable2.ThrowIfNull("dataTable2");
 
-            Assert.AreEqual(dataTable1.Rows.Count, dataTable2.Rows.Count);
-            Assert.AreEqual(dataTable1.Columns.Count, dataTable2.Columns.Count);
+            AssertHelper.AreEqual(dataTable1.Rows.Count, dataTable2.Rows.Count);
+            AssertHelper.AreEqual(dataTable1.Columns.Count, dataTable2.Columns.Count);
 
             for (int i = 0; i < dataTable1.Rows.Count; i++)
             {
@@ -36,7 +35,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
                 foreach (DataColumn dataColumn1 in dataTable1.Columns)
                 {
                     var dataColumn2 = dataTable2.Columns[dataColumn1.ColumnName];
-                    Assert.AreEqual(dataRow1[dataColumn1], dataRow2[dataColumn2]);
+                    AssertHelper.AreEqual(dataRow1[dataColumn1], dataRow2[dataColumn2]);
                 }
             }
         }
@@ -323,7 +322,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
             foreach (SmartProperty returnProperty in method.ReturnProperties)
             {
-                Assert.IsFalse(string.IsNullOrEmpty(returnProperty.Value));
+                AssertHelper.IsFalse(string.IsNullOrEmpty(returnProperty.Value));
             }
         }
 
@@ -338,7 +337,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
         public static void VerifyPaging(SmartObjectClientServer clientServer, SmartObject smartObject, int pageSize)
         {
             var totalDataTable = SmartObjectHelper.ExecuteListDataTable(clientServer, smartObject);
-            Assert.IsTrue(totalDataTable.Rows.Count > 0);
+            AssertHelper.IsTrue(totalDataTable.Rows.Count > 0);
 
             for (int pageNumber = 1; totalDataTable.GetCondition(pageNumber, pageSize); pageNumber++)
             {
@@ -352,11 +351,11 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
                 var pagedReader = SmartObjectHelper.ExecuteListReader(clientServer, smartObject, options);
                 if (options.IncludeTotalRecordCount)
                 {
-                    Assert.AreEqual(totalDataTable.Rows.Count, pagedReader.TotalRecordCount);
+                    AssertHelper.AreEqual(totalDataTable.Rows.Count, pagedReader.TotalRecordCount);
                 }
                 else
                 {
-                    Assert.AreEqual(-1, pagedReader.TotalRecordCount);
+                    AssertHelper.AreEqual(-1, pagedReader.TotalRecordCount);
                 }
 
                 using (var pagedResults = new DataTable())
