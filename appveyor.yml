@@ -17,6 +17,9 @@ build:
 test_script:
 - vstest.console /Platform:x64 /InIsolation /logger:Appveyor "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
 
+artifacts:
+  - path: '**\*.nupkg'
+
 deploy:
   provider: NuGet
   api_key:
