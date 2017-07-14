@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>$id$</id>
+    <id>SourceCode.SmartObjects.Services.Tests</id>
     <version>$version$</version>
-    <title>$title$</title>
+    <title>SourceCode.SmartObjects.Services.Tests</title>
     <authors>Jannes Coetzee</authors>
     <owners>Jannes Coetzee</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -13,6 +13,6 @@
     <tags>K2 SmartObject ServiceBroker</tags>
   </metadata>
   <files>
-    <file src="bin\$configuration$\$id$.dll" target="lib\net40\" />
+    <file src="bin\Release\SourceCode.SmartObjects.Services.Tests.dll" target="lib\net40\" />
   </files>
 </package>
