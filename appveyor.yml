@@ -19,7 +19,7 @@ test_script:
 
 # build NuGet package and upload it to artifacts
 after_build:
-- nuget pack src\SourceCode.SmartObjects.Services.Tests.nuspec -Version %appveyor_build_version%
+- nuget pack src\SourceCode.SmartObjects.Services.Tests.csproj
 
 artifacts:
 - path: src\SourceCode.SmartObjects.Services.Tests.%appveyor_build_version%.nupkg
