@@ -8,16 +8,12 @@ configuration:
 platform: Any CPU
 
 before_build:
-- nuget restore
+- nuget restore -verbosity quiet
 
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
  verbosity: minimal
 
-before_test:
-- cd build
-#- powershell -Command .\build.ps1
-- cd ..
 
 test_script:
-- vstest.console /logger:Appveyor /Platform:x64 "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll
+- vstest.console /logger:Appveyor /Platform:x64 "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
