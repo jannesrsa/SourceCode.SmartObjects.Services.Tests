@@ -41,7 +41,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
                 exception = ex;
             }
 
-            AssertHelper.IsNotNull(exception, $"Exception of type {typeof(T)} should be thrown. No exception was thrown.");
+            AssertHelper.IsNotNull(exception, "Exception of type {0} should be thrown. No exception was thrown.", typeof(T));
 
             if (message != null)
             {
