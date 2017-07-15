@@ -16,7 +16,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -67,11 +67,6 @@
     <Reference Include="SourceCode.Forms.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.Forms.Management.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SourceCode.Forms.Utilities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.Forms.Utilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="SourceCode.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
@@ -131,6 +126,7 @@
     <Compile Include="Helpers\SecurityHelper.cs" />
     <Compile Include="Helpers\SmartFormHelper.cs" />
     <Compile Include="Helpers\SmartObjectHelper.cs" />
+    <Compile Include="Helpers\UrlHelper.cs" />
     <Compile Include="Helpers\ValueHelper.cs" />
     <Compile Include="Managers\ServiceInstanceManager.cs" />
     <Compile Include="Managers\ServiceInstanceSettings.cs" />
