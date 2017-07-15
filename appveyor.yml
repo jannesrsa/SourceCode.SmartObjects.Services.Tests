@@ -15,13 +15,14 @@ build:
  verbosity: minimal
 
 test_script:
-- vstest.console /Platform:x64 /InIsolation /logger:Appveyor "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
+- vstest.console /logger:Appveyor /Settings:src\AppVeyor.RunSettings /InIsolation /Enablecodecoverage "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
 
 # build NuGet package and upload it to artifacts
 after_build:
 - nuget pack src\SourceCode.SmartObjects.Services.Tests.nuspec -Version %appveyor_build_version%
 
 artifacts:
+- path: SourceCode.SmartObjects.Services.Tests.%appveyor_build_version%.nupkg
 - path: SourceCode.SmartObjects.Services.Tests.%appveyor_build_version%.nupkg
 
 deploy:

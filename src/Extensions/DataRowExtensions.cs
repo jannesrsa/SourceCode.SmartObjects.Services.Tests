@@ -11,7 +11,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
             columnName.ThrowIfNullOrWhiteSpace("columnName");
 
             AssertHelper.AreEqual<T>(expectedValue, dataRow.Field<T>(columnName)
-                            , string.Format("{0}.{1} has an incorrect value.{2}", dataRow.Table.TableName, columnName, rowIdentifier ?? string.Empty));
+                            , $"{dataRow.Table.TableName}.{columnName} has an incorrect value.{rowIdentifier ?? string.Empty}");
         }
 
         public static T AssertHasValue<T>(this DataRow dataRow, string columnName, string rowIdentifier = null)
@@ -22,8 +22,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
             var cellObjectValue = (dataRow.Field<object>(columnName));
 
             AssertHelper.IsFalse(cellObjectValue == null || string.IsNullOrEmpty(cellObjectValue.ToString()),
-                string.Format("[{0}].[{1}] must have a '{2}' value. Row Identifier: [{3}]",
-                    dataRow.Table.TableName, columnName, typeof(T).ToString(), rowIdentifier));
+                $"[{dataRow.Table.TableName}].[{columnName}] must have a '{typeof(T)}' value. Row Identifier: [{rowIdentifier}]");
             try
             {
                 var cellValue = dataRow.Field<T>(columnName);
@@ -31,8 +30,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
             }
             catch (System.Exception ex)
             {
-                AssertHelper.Fail(string.Format("[{0}].[{1}] convert to '{2}' error. Value: '{3}' Row Identifier: [{4}] Error: '{5}'",
-                     dataRow.Table.TableName, columnName, typeof(T).ToString(), cellObjectValue, rowIdentifier, ex.Message));
+                AssertHelper.Fail($"[{dataRow.Table.TableName}].[{columnName}] convert to '{typeof(T)}' error. Value: '{cellObjectValue}' Row Identifier: [{rowIdentifier}] Error: '{ex.Message}'");
 
                 throw;
             }
