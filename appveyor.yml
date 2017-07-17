@@ -2,9 +2,6 @@ version: 1.0.{build}
 
 image: Visual Studio 2017
 
-init:
-- git config --global core.autocrlf true
-
 assembly_info:
   patch: true
   file: 'src\Properties\AssemblyInfo.*'
@@ -19,10 +16,6 @@ configuration:
 - Release
 
 platform: Any CPU
-
-# scripts to run before build
-before_build:
-- nuget restore -verbosity quiet
 
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
