@@ -8,15 +8,15 @@
       <ModuleName>mscorlib</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="5C-82-E3-E4-4E-4D-70-5F-6E-0A-28-83-6E-4A-AC-20-0D-55-85-C0">
-      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\MSTest.exe</ModulePath>
-      <ModuleTime>2015-07-07T07:51:38Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="00-3F-2F-6A-C9-54-E6-65-54-00-DC-70-9A-DF-2C-D5-CC-6A-7B-88">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\MSTest.exe</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>MSTest</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="2C-68-4E-D5-C1-3A-95-ED-B2-9B-A5-AC-35-83-4B-2A-92-7D-EC-71">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Common\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:45:03.4036159Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="9E-84-31-63-EE-95-33-23-D4-D6-52-78-4E-1C-B8-E7-C1-F6-9C-64">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Common</ModuleName>
       <Classes />
     </Module>
@@ -26,15 +26,15 @@
       <ModuleName>System</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="AA-3B-1D-46-19-3E-D3-88-43-47-D3-1C-48-42-12-21-60-87-13-47">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.ExecutionCommon\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.541548Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="5F-92-D9-C9-D8-C1-9C-15-CA-33-3E-D5-8E-B2-18-F0-12-B5-3E-AD">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.ExecutionCommon</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="BA-37-91-08-FF-4E-E3-92-22-87-5C-B0-C4-31-B2-CD-D2-72-57-18">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Resource\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Resource.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.5655531Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="83-4F-4E-80-FC-BB-66-FA-71-42-AD-36-BC-54-6D-81-11-8D-D0-FC">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Resource.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Resource</ModuleName>
       <Classes />
     </Module>
@@ -50,16 +50,22 @@
       <ModuleName>System.Xml</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="01-76-93-04-A0-DC-E8-05-99-10-09-82-2B-83-D9-A0-07-06-C8-E6">
-      <ModulePath>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.CommandLine\v4.0_14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.CommandLine.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.4955394Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="71-ED-1E-A1-2D-59-7E-46-17-19-15-A4-2D-3B-C3-14-E3-EA-08-63">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.CommandLine.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.CommandLine</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="04-58-89-F2-0B-CE-93-0E-73-AA-3D-87-9D-5D-45-11-C0-02-86-EF">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.TMI\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.TMI.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.6705682Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="55-D9-49-AC-38-0A-56-D1-A6-F2-D6-CF-B6-E7-BD-C0-EB-58-62-82">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.TMI.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.TMI</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="31-76-6A-81-5B-45-2B-B2-02-8C-E4-69-D2-C3-8F-87-B1-54-25-E8">
+      <ModulePath>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</ModulePath>
+      <ModuleTime>2016-07-12T22:53:05.3504661Z</ModuleTime>
+      <ModuleName>System.Core</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="6C-72-90-32-BD-6C-13-33-1B-BF-95-BB-29-8E-A9-4C-2E-7E-D3-86">
@@ -80,21 +86,15 @@
       <ModuleName>System.Web</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="31-76-6A-81-5B-45-2B-B2-02-8C-E4-69-D2-C3-8F-87-B1-54-25-E8">
-      <ModulePath>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:53:05.3504661Z</ModuleTime>
-      <ModuleName>System.Core</ModuleName>
-      <Classes />
-    </Module>
-    <Module skippedDueTo="Filter" hash="00-2B-49-9F-4A-61-6D-2F-9C-36-4D-65-B2-02-E5-3F-54-FB-6D-36">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Tip\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Tip.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.6475652Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="AE-D8-4F-B3-07-4D-01-63-C0-AB-1B-FE-B2-39-BB-50-0B-5D-68-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Tip.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Tip</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="08-45-77-C3-8B-8B-8E-34-A2-92-74-D2-A1-49-2F-C3-33-42-63-88">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.7245775Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="6B-A5-37-FD-F8-7A-C2-EA-2C-7C-84-CE-74-3E-CD-59-89-D9-EC-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel</ModuleName>
       <Classes />
     </Module>
@@ -104,46 +104,46 @@
       <ModuleName>Microsoft.VisualStudio.QualityTools.UnitTestFramework</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="42-4C-9E-D4-D9-47-DA-1C-D3-6F-F0-B2-FC-4B-00-86-02-A6-0A-DA">
-      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.CodedUITestFramework.dll</ModulePath>
-      <ModuleTime>2015-07-07T07:51:38Z</ModuleTime>
-      <ModuleName>Microsoft.VisualStudio.QualityTools.CodedUITestFramework</ModuleName>
-      <Classes />
-    </Module>
-    <Module skippedDueTo="Filter" hash="A9-80-7D-37-8B-FA-AA-35-C9-D9-FA-8E-73-7C-05-67-49-C5-A2-B4">
-      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.WebLoadTest.Tip.dll</ModulePath>
-      <ModuleTime>2015-07-07T07:51:38Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="58-83-E2-32-5F-74-FF-E0-62-EE-B4-F2-7D-76-D5-91-32-9D-50-93">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.WebLoadTest.Tip.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.WebLoadTest.Tip</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="AA-88-B1-10-85-A9-09-82-99-D7-42-38-22-D6-CB-B7-60-62-C9-9C">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.6585668Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="4C-2E-52-E7-6C-A6-47-B2-2C-C2-04-A0-3D-1E-9C-53-58-96-2C-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="58-CE-A7-E0-D8-E6-8C-F3-F8-AF-F0-D2-A0-69-59-2C-79-81-21-97">
-      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.TeamSystem.Licensing.dll</ModulePath>
-      <ModuleTime>2015-07-07T07:51:38Z</ModuleTime>
-      <ModuleName>Microsoft.VisualStudio.TeamSystem.Licensing</ModuleName>
+    <Module skippedDueTo="Filter" hash="4C-2E-52-E7-6C-A6-47-B2-2C-C2-04-A0-3D-1E-9C-53-58-96-2C-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="00-2B-49-9F-4A-61-6D-2F-9C-36-4D-65-B2-02-E5-3F-54-FB-6D-36">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Tip\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Tip.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.6475652Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="AE-D8-4F-B3-07-4D-01-63-C0-AB-1B-FE-B2-39-BB-50-0B-5D-68-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Tip.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Tip</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="2C-68-4E-D5-C1-3A-95-ED-B2-9B-A5-AC-35-83-4B-2A-92-7D-EC-71">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Common\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:45:03.4036159Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="9E-84-31-63-EE-95-33-23-D4-D6-52-78-4E-1C-B8-E7-C1-F6-9C-64">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Common</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="08-45-77-C3-8B-8B-8E-34-A2-92-74-D2-A1-49-2F-C3-33-42-63-88">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.7245775Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="6B-A5-37-FD-F8-7A-C2-EA-2C-7C-84-CE-74-3E-CD-59-89-D9-EC-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="83-4F-4E-80-FC-BB-66-FA-71-42-AD-36-BC-54-6D-81-11-8D-D0-FC">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Resource.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.Resource</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="34-7C-A7-F3-FB-DC-23-41-73-86-1F-B2-0B-02-06-15-56-5E-D6-7F">
@@ -164,9 +164,9 @@
       <ModuleName>System.Runtime</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="00-05-AE-FA-E9-33-28-D2-1A-5F-19-9C-C8-2F-13-55-81-91-DC-5F">
-      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.LoadTest.dll</ModulePath>
-      <ModuleTime>2016-06-20T21:45:20Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="1E-37-B6-67-A5-AC-9E-B0-07-6E-09-15-C7-08-42-67-E0-17-15-A6">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.LoadTest.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.LoadTest</ModuleName>
       <Classes />
     </Module>
@@ -176,9 +176,9 @@
       <ModuleName>Microsoft.VisualStudio.QualityTools.WebTestFramework</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="00-05-AE-FA-E9-33-28-D2-1A-5F-19-9C-C8-2F-13-55-81-91-DC-5F">
-      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.LoadTest.dll</ModulePath>
-      <ModuleTime>2016-06-20T21:45:20Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="1E-37-B6-67-A5-AC-9E-B0-07-6E-09-15-C7-08-42-67-E0-17-15-A6">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.LoadTest.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.LoadTest</ModuleName>
       <Classes />
     </Module>
@@ -188,21 +188,21 @@
       <ModuleName>SourceCode.SmartObjects.Services.Tests.UTest</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="81-06-33-34-09-49-27-53-2B-1A-30-21-7E-77-C6-61-2F-7C-2B-F8">
-      <ModulePath>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.ControllerObject\v4.0_14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.ControllerObject.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.5205449Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="4C-88-D2-3D-0F-C1-D2-EC-12-FA-12-CD-5B-1D-F0-EF-75-D1-49-1D">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.ControllerObject.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.ControllerObject</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="58-CE-A7-E0-D8-E6-8C-F3-F8-AF-F0-D2-A0-69-59-2C-79-81-21-97">
-      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.TeamSystem.Licensing.dll</ModulePath>
-      <ModuleTime>2015-07-07T07:51:38Z</ModuleTime>
-      <ModuleName>Microsoft.VisualStudio.TeamSystem.Licensing</ModuleName>
+    <Module skippedDueTo="Filter" hash="4C-2E-52-E7-6C-A6-47-B2-2C-C2-04-A0-3D-1E-9C-53-58-96-2C-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="2C-68-4E-D5-C1-3A-95-ED-B2-9B-A5-AC-35-83-4B-2A-92-7D-EC-71">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Common\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:45:03.4036159Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="9E-84-31-63-EE-95-33-23-D4-D6-52-78-4E-1C-B8-E7-C1-F6-9C-64">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Common</ModuleName>
       <Classes />
     </Module>
@@ -212,9 +212,9 @@
       <ModuleName>SourceCode.SmartObjects.Services.Tests.UTest</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="7F-4B-70-CC-12-9D-55-8A-0D-C7-AB-EB-13-D1-27-08-44-9A-1F-C6">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.AgentProcessManager\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.AgentProcessManager.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:45.597716Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="E3-6B-FF-E9-15-14-17-3B-56-14-4F-EA-85-5F-E9-BE-73-EC-9E-57">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.AgentProcessManager.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.AgentProcessManager</ModuleName>
       <Classes />
     </Module>
@@ -224,15 +224,15 @@
       <ModuleName>System.Runtime.Remoting</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="58-CE-A7-E0-D8-E6-8C-F3-F8-AF-F0-D2-A0-69-59-2C-79-81-21-97">
-      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.TeamSystem.Licensing.dll</ModulePath>
-      <ModuleTime>2015-07-07T07:51:38Z</ModuleTime>
-      <ModuleName>Microsoft.VisualStudio.TeamSystem.Licensing</ModuleName>
+    <Module skippedDueTo="Filter" hash="4C-2E-52-E7-6C-A6-47-B2-2C-C2-04-A0-3D-1E-9C-53-58-96-2C-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="2C-68-4E-D5-C1-3A-95-ED-B2-9B-A5-AC-35-83-4B-2A-92-7D-EC-71">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Common\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:45:03.4036159Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="9E-84-31-63-EE-95-33-23-D4-D6-52-78-4E-1C-B8-E7-C1-F6-9C-64">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Common</ModuleName>
       <Classes />
     </Module>
@@ -3006,27 +3006,27 @@
       <ModuleName>mscorlib</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="47-EC-0B-6F-2C-4D-26-98-90-75-0E-E0-04-60-64-E5-22-37-D0-AD">
-      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\QTAgent32_40.exe</ModulePath>
-      <ModuleTime>2015-07-07T07:51:38Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="A1-58-B9-94-B2-2F-91-3E-16-C3-1F-28-C3-B7-41-F0-52-3C-4E-2D">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTAgent32_40.exe</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>QTAgent32_40</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="AA-3B-1D-46-19-3E-D3-88-43-47-D3-1C-48-42-12-21-60-87-13-47">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.ExecutionCommon\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.541548Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="5F-92-D9-C9-D8-C1-9C-15-CA-33-3E-D5-8E-B2-18-F0-12-B5-3E-AD">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.ExecutionCommon</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="2C-68-4E-D5-C1-3A-95-ED-B2-9B-A5-AC-35-83-4B-2A-92-7D-EC-71">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Common\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:45:03.4036159Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="9E-84-31-63-EE-95-33-23-D4-D6-52-78-4E-1C-B8-E7-C1-F6-9C-64">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Common</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="BA-37-91-08-FF-4E-E3-92-22-87-5C-B0-C4-31-B2-CD-D2-72-57-18">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Resource\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Resource.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.5655531Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="83-4F-4E-80-FC-BB-66-FA-71-42-AD-36-BC-54-6D-81-11-8D-D0-FC">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Resource.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Resource</ModuleName>
       <Classes />
     </Module>
@@ -3060,15 +3060,15 @@
       <ModuleName>System.Runtime.Remoting</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="59-1F-98-4F-C2-80-83-2E-DB-A5-09-F9-B7-81-89-21-BF-14-3D-76">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.AgentObject\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.AgentObject.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.4535324Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="1E-C5-80-EB-1C-6A-18-4D-FD-8B-EB-2E-96-A3-78-D6-CA-A3-73-F4">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.AgentObject.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.AgentObject</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="7F-4B-70-CC-12-9D-55-8A-0D-C7-AB-EB-13-D1-27-08-44-9A-1F-C6">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.AgentProcessManager\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.AgentProcessManager.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:45.597716Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="E3-6B-FF-E9-15-14-17-3B-56-14-4F-EA-85-5F-E9-BE-73-EC-9E-57">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.AgentProcessManager.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.AgentProcessManager</ModuleName>
       <Classes />
     </Module>
@@ -3078,9 +3078,9 @@
       <ModuleName>System.Web</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="08-45-77-C3-8B-8B-8E-34-A2-92-74-D2-A1-49-2F-C3-33-42-63-88">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.7245775Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="6B-A5-37-FD-F8-7A-C2-EA-2C-7C-84-CE-74-3E-CD-59-89-D9-EC-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel</ModuleName>
       <Classes />
     </Module>
@@ -3096,74 +3096,68 @@
       <ModuleName>Microsoft.VisualStudio.QualityTools.UnitTestFramework</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="3B-3B-06-8C-A3-CC-F8-2A-DC-15-1E-A7-A9-99-5E-3E-2F-E0-F2-B5">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.7075745Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="8B-40-E0-97-5B-AA-7E-09-7F-58-D5-A4-64-BD-D8-11-47-E1-81-F2">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="AA-88-B1-10-85-A9-09-82-99-D7-42-38-22-D6-CB-B7-60-62-C9-9C">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.6585668Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="4C-2E-52-E7-6C-A6-47-B2-2C-C2-04-A0-3D-1E-9C-53-58-96-2C-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="58-CE-A7-E0-D8-E6-8C-F3-F8-AF-F0-D2-A0-69-59-2C-79-81-21-97">
-      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.TeamSystem.Licensing.dll</ModulePath>
-      <ModuleTime>2015-07-07T07:51:38Z</ModuleTime>
-      <ModuleName>Microsoft.VisualStudio.TeamSystem.Licensing</ModuleName>
+    <Module skippedDueTo="Filter" hash="4C-2E-52-E7-6C-A6-47-B2-2C-C2-04-A0-3D-1E-9C-53-58-96-2C-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.AssemblyResolver</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="3B-3B-06-8C-A3-CC-F8-2A-DC-15-1E-A7-A9-99-5E-3E-2F-E0-F2-B5">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.7075745Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="8B-40-E0-97-5B-AA-7E-09-7F-58-D5-A4-64-BD-D8-11-47-E1-81-F2">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="37-37-7A-DA-73-D4-47-18-27-60-F2-0B-63-96-18-D5-CF-DD-9F-B7">
-      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.Enterprise.AspNetHelper.dll</ModulePath>
-      <ModuleTime>2016-06-20T21:45:20Z</ModuleTime>
-      <ModuleName>Microsoft.VisualStudio.Enterprise.AspNetHelper</ModuleName>
-      <Classes />
-    </Module>
-    <Module skippedDueTo="Filter" hash="AA-3B-1D-46-19-3E-D3-88-43-47-D3-1C-48-42-12-21-60-87-13-47">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.ExecutionCommon\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.541548Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="5F-92-D9-C9-D8-C1-9C-15-CA-33-3E-D5-8E-B2-18-F0-12-B5-3E-AD">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.ExecutionCommon</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="2C-68-4E-D5-C1-3A-95-ED-B2-9B-A5-AC-35-83-4B-2A-92-7D-EC-71">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Common\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:45:03.4036159Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="9E-84-31-63-EE-95-33-23-D4-D6-52-78-4E-1C-B8-E7-C1-F6-9C-64">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.Common.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Common</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="A2-9B-6D-02-BC-84-E3-68-2D-B9-47-D9-08-AB-A5-29-B5-7D-C9-2C">
-      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.NicServices.dll</ModulePath>
-      <ModuleTime>2015-07-07T07:51:38Z</ModuleTime>
-      <ModuleName>Microsoft.VisualStudio.QualityTools.NicServices</ModuleName>
+    <Module skippedDueTo="Filter" hash="83-4F-4E-80-FC-BB-66-FA-71-42-AD-36-BC-54-6D-81-11-8D-D0-FC">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Resource.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
+      <ModuleName>Microsoft.VisualStudio.QualityTools.Resource</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="59-1F-98-4F-C2-80-83-2E-DB-A5-09-F9-B7-81-89-21-BF-14-3D-76">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.AgentObject\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.AgentObject.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.4535324Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="1E-C5-80-EB-1C-6A-18-4D-FD-8B-EB-2E-96-A3-78-D6-CA-A3-73-F4">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.AgentObject.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.AgentObject</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="08-45-77-C3-8B-8B-8E-34-A2-92-74-D2-A1-49-2F-C3-33-42-63-88">
-      <ModulePath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel.dll</ModulePath>
-      <ModuleTime>2016-07-12T22:18:44.7245775Z</ModuleTime>
+    <Module skippedDueTo="Filter" hash="6B-A5-37-FD-F8-7A-C2-EA-2C-7C-84-CE-74-3E-CD-59-89-D9-EC-31">
+      <ModulePath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel.dll</ModulePath>
+      <ModuleTime>2017-04-03T15:18:51.4911742Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="34-7C-A7-F3-FB-DC-23-41-73-86-1F-B2-0B-02-06-15-56-5E-D6-7F">
-      <ModulePath>E:\jannesrsa\Source\Repos\SourceCode.SmartObjects.Services.Tests\TestResults\administrator_DLX 2017-07-17 15_21_30\Out\SourceCode.SmartObjects.Services.Tests.UTest.dll</ModulePath>
+      <ModulePath>E:\jannesrsa\Source\Repos\SourceCode.SmartObjects.Services.Tests\TestResults\administrator_DLX 2017-07-17 18_04_25\Out\SourceCode.SmartObjects.Services.Tests.UTest.dll</ModulePath>
       <ModuleTime>2017-07-17T13:18:36.0550131Z</ModuleTime>
       <ModuleName>SourceCode.SmartObjects.Services.Tests.UTest</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="62-84-28-D8-E5-5E-88-75-6D-60-ED-A1-C9-00-83-FF-E1-5B-B2-51">
-      <ModulePath>E:\jannesrsa\Source\Repos\SourceCode.SmartObjects.Services.Tests\TestResults\administrator_DLX 2017-07-17 15_21_30\Out\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</ModulePath>
+      <ModulePath>E:\jannesrsa\Source\Repos\SourceCode.SmartObjects.Services.Tests\TestResults\administrator_DLX 2017-07-17 18_04_25\Out\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</ModulePath>
       <ModuleTime>2017-06-01T02:40:04Z</ModuleTime>
       <ModuleName>Microsoft.VisualStudio.TestPlatform.TestFramework</ModuleName>
       <Classes />
@@ -3176,7 +3170,7 @@
     </Module>
     <Module hash="F7-FE-6D-97-F1-D5-3C-49-A4-F9-7C-52-3A-C7-D4-37-C6-A5-33-8C">
       <Summary numSequencePoints="770" visitedSequencePoints="9" numBranchPoints="350" visitedBranchPoints="2" sequenceCoverage="1.17" branchCoverage="0.57" maxCyclomaticComplexity="15" minCyclomaticComplexity="1" visitedClasses="1" numClasses="32" visitedMethods="2" numMethods="120" />
-      <ModulePath>E:\jannesrsa\Source\Repos\SourceCode.SmartObjects.Services.Tests\TestResults\administrator_DLX 2017-07-17 15_21_30\Out\SourceCode.SmartObjects.Services.Tests.dll</ModulePath>
+      <ModulePath>E:\jannesrsa\Source\Repos\SourceCode.SmartObjects.Services.Tests\TestResults\administrator_DLX 2017-07-17 18_04_25\Out\SourceCode.SmartObjects.Services.Tests.dll</ModulePath>
       <ModuleTime>2017-07-17T13:18:31.8271904Z</ModuleTime>
       <ModuleName>SourceCode.SmartObjects.Services.Tests</ModuleName>
       <Files>
