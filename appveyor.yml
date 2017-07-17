@@ -20,13 +20,9 @@ platform: Any CPU
 # scripts to run before build
 before_build:
 - nuget restore -verbosity quiet
-  # MSBuild verbosity level
-  # by default, all script lines are interpreted as batch
-  - echo Version: {version}
-  # to run script as a PowerShell command prepend it with ps:
-  - ps: Write-Host 'This is PowerShell : Version {version}'
-  # batch commands start from cmd:
-  - cmd: echo This is batch again $(appveyor_build_version)
+- echo Version: '{version}'
+- ps: Write-Host 'This is PowerShell {version}'
+- cmd: echo This is batch again version.{version} appveyor_build_version. $(appveyor_build_version)
 
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
