@@ -9,8 +9,6 @@ assembly_info:
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
 
-appveyor AddMessage "This is a test message"
-
 nuget:
   disable_publish_on_pr: true  
 
@@ -22,6 +20,7 @@ platform: Any CPU
 # scripts to run before build
 before_build:
 - nuget restore -verbosity quiet
+- appveyor AddMessage "This is a test message"
 
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
