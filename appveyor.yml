@@ -16,6 +16,7 @@ before_build:
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
  verbosity: minimal
+ publish_nuget: true             # package projects with .nuspec files and push to artifacts
 
 test_script:
 - vstest.console /Platform:x64 /InIsolation /logger:Appveyor "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
