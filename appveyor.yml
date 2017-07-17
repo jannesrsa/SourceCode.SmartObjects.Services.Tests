@@ -2,6 +2,10 @@ version: 1.0.{build}
 
 image: Visual Studio 2017
 
+assembly_info:
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+
 nuget:
   disable_publish_on_pr: true  
 
