@@ -1,4 +1,4 @@
-## SourceCode.SmartObjects.Services.Tests
+## K2 SmartObjects Integration Tests Helper
 
 [![Build status](https://ci.appveyor.com/api/projects/status/github/jannesrsa/smartobjects-services-tests?branch=master&svg=true)](https://ci.appveyor.com/project/jannesrsa/sourcecode-smartobjects-services-tests)
 
