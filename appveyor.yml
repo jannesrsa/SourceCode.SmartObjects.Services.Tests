@@ -4,10 +4,12 @@ image: Visual Studio 2017
 
 assembly_info:
   patch: true
-  file: '**\AssemblyInfo.*'
+  file: 'src\AssemblyInfo.*'
   assembly_version: '{version}'
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
+
+appveyor AddMessage "This is a test message"
 
 nuget:
   disable_publish_on_pr: true  
@@ -20,9 +22,6 @@ platform: Any CPU
 # scripts to run before build
 before_build:
 - nuget restore -verbosity quiet
-- echo Version: '{version}'
-- ps: Write-Host 'This is PowerShell {version}'
-- cmd: echo This is batch again version.{version} appveyor_build_version. $(appveyor_build_version)
 
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
@@ -31,13 +30,6 @@ build:
 
 test_script:
 - vstest.console /Platform:x64 /InIsolation /logger:Appveyor "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
-
-# build NuGet package and upload it to artifacts
-# after_build:
-# - nuget pack src\SourceCode.SmartObjects.Services.Tests.nuspec -Version %appveyor_build_version%
-
-# artifacts:
-# - path: SourceCode.SmartObjects.Services.Tests.%appveyor_build_version%.nupkg
 
 #uncomment to publish to NuGet
 #deploy:
