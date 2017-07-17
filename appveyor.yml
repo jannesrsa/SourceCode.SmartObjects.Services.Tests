@@ -20,7 +20,7 @@ platform: Any CPU
 # scripts to run before build
 before_build:
 - nuget restore -verbosity quiet
-- appveyor AddMessage "Version: ${version}"
+- ps: Add-AppveyorMessage - Message "This is a test message Version: ${version}" -Category Warning - Details "Additional information for the message"
 
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
@@ -34,6 +34,6 @@ test_script:
 #deploy:
 #  provider: NuGet
 #  api_key:
-#    secure: 9ZjxrStO3j210yUXmH4Q5/H7Bkepb+A1f3kn0snparetNCiXA7sYHvQLRVlAt94m
+#    secure: IlYToFQdqCxXKG7TERDXxDioFSN74Bp5Cmkv4VsemoPxQj3IOsx5t0wCxRzFslPR
 #  on:
 #    branch: master
