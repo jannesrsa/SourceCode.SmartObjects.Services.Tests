@@ -20,7 +20,6 @@ platform: Any CPU
 # scripts to run before build
 before_build:
 - nuget restore -verbosity quiet
-- ps: Add-AppveyorMessage "This is a test message Version ${version}" -Category "Warning" -Details "Additional information for the message"
 
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
@@ -29,6 +28,9 @@ build:
 
 test_script:
 - vstest.console /Platform:x64 /InIsolation /logger:Appveyor "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
+
+after_build:
+- ps: Add-AppveyorMessage "Use deploy for NuGet deployment. $env:APPVEYOR_BUILD_VERSION" -Category "Warning" -Details "The NuGet package is not published automatically, but can be published through the AppVeyor Deploy UI."
 
 #uncomment to publish to NuGet
 #deploy:
