@@ -17,6 +17,10 @@ configuration:
 
 platform: Any CPU
 
+# scripts to run before build
+before_build:
+- nuget restore
+
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
  verbosity: minimal
