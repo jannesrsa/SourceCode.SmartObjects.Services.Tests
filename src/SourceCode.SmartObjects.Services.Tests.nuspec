@@ -13,6 +13,6 @@
     <tags>K2 SmartObject ServiceBroker</tags>
   </metadata>
   <files>
-    <file src="SourceCode.SmartObjects.Services.Tests.dll" target="lib\net40\" />
+    <file src="C:\projects\SourceCode.SmartObjects.Services.Tests.dll" target="lib\net40\" />
   </files>
 </package>
