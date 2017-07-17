@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceCode.SmartObjects.Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceCode.SmartObjects.Services.Tests.UTest", "src\Tests\UTest\SourceCode.SmartObjects.Services.Tests.UTest.csproj", "{92220B58-B173-4E7D-AF78-A5094354E32A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{20AD0C0F-4CB3-410A-A68A-7AF5106F0012}"
+	ProjectSection(SolutionItems) = preProject
+		src\AppVeyor.RunSettings = src\AppVeyor.RunSettings
+		appveyor.yml = appveyor.yml
+		src\Key.snk = src\Key.snk
+		src\SourceCode.SmartObjects.Services.Tests.nuspec = src\SourceCode.SmartObjects.Services.Tests.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

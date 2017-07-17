@@ -15,7 +15,7 @@ build:
  verbosity: minimal
 
 test_script:
-- vstest.console /Platform:x64 /InIsolation /logger:Appveyor "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
+- vstest.console /logger:Appveyor /Settings:src\AppVeyor.RunSettings /InIsolation "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
 
 # build NuGet package and upload it to artifacts
 after_build:
