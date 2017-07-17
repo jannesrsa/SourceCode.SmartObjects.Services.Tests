@@ -4,7 +4,7 @@ image: Visual Studio 2017
 
 assembly_info:
   patch: true
-  file: 'src\AssemblyInfo.*'
+  file: 'src\Properties\AssemblyInfo.*'
   assembly_version: '{version}'
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
@@ -20,7 +20,7 @@ platform: Any CPU
 # scripts to run before build
 before_build:
 - nuget restore -verbosity quiet
-- appveyor AddMessage "This is a test message"
+- appveyor AddMessage "Version: {version}"
 
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
