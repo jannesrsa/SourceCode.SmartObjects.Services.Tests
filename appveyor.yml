@@ -30,7 +30,7 @@ test_script:
 - vstest.console /Platform:x64 /InIsolation /logger:Appveyor "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
 
 after_build:
-- ps: Add-AppveyorMessage "Use deploy for NuGet deployment. $env:APPVEYOR_BUILD_VERSION" -Category "Warning" -Details "The NuGet package is not published automatically, but can be published through the AppVeyor Deploy UI."
+- ps: Add-AppveyorMessage "NuGet artifact not deployed. Version. $env:APPVEYOR_BUILD_VERSION" -Category "Information" -Details "The NuGet package is not published automatically, but can be published through the AppVeyor Deploy UI."
 
 #uncomment to publish to NuGet
 #deploy:
