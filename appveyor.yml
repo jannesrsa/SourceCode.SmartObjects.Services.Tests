@@ -20,7 +20,7 @@ platform: Any CPU
 # scripts to run before build
 before_build:
 - nuget restore -verbosity quiet
-- ps: Add-AppveyorMessage - Message "This is a test message Version ${version}" -Category Warning - Details "Additional information for the message"
+- ps: Add-AppveyorMessage "This is a test message Version ${version}" -Category Warning - Details "Additional information for the message"
 
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
