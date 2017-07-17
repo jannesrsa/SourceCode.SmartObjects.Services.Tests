@@ -20,7 +20,7 @@ platform: Any CPU
 # scripts to run before build
 before_build:
 - nuget restore -verbosity quiet
-- appveyor AddMessage "Version: {version}"
+- appveyor AddMessage "Version: ${version}"
 
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
