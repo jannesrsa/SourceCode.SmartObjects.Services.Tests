@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution 
 		src\AppVeyor.RunSettings = src\AppVeyor.RunSettings
 		appveyor.yml = appveyor.yml
 		src\Key.snk = src\Key.snk
+		src\Local.RunSettings = src\Local.RunSettings
 		src\SourceCode.SmartObjects.Services.Tests.nuspec = src\SourceCode.SmartObjects.Services.Tests.nuspec
 	EndProjectSection
 EndProject
