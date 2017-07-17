@@ -1,18 +1,17 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
 {
-    [TestClass()]
     public class ConnectionHelperTests
     {
-        [TestMethod()]
+        [Fact()]
         public void GetCurrentUserTest()
         {
             // Action
             var currentuser = ConnectionHelper.GetCurrentUser();
 
             // Assert
-            Assert.IsFalse(string.IsNullOrWhiteSpace(currentuser));
+            Assert.False(string.IsNullOrWhiteSpace(currentuser));
         }
     }
 }
