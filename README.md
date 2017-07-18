@@ -1,6 +1,6 @@
 ## K2 SmartObjects Integration Tests Helper
 
-[![Build status](https://ci.appveyor.com/api/projects/status/github/jannesrsa/smartobjects-services-tests?branch=master&svg=true)](https://ci.appveyor.com/project/jannesrsa/sourcecode-smartobjects-services-tests)
+[![Build status](https://ci.appveyor.com/api/projects/status/github/jannesrsa/smartobjects-services-tests?svg=true)](https://ci.appveyor.com/project/jannesrsa/sourcecode-smartobjects-services-tests) [![Code Coverage](https://codecov.io/gh/jannesrsa/smartobjects-services-tests/coverage.svg)](https://codecov.io/gh/jannesrsa/smartobjects-services-tests)
 
 Tools and extensions to assist with writing integration tests for a K2 Service Broker.
 

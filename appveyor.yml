@@ -27,7 +27,12 @@ build:
  publish_nuget: true             # package projects with .nuspec files and push to artifacts
 
 test_script:
-- vstest.console /Platform:x64 /InIsolation /logger:Appveyor "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
+- OpenCover.Console.exe -register:user -target:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" -targetargs:""c:\projects\SourceCode.SmartObjects.Services.Tests.UTest.dll" "/Settings:C:\projects\sourcecode-smartobjects-services-tests\src\AppVeyor.runsettings" /InIsolation /logger:Appveyor" -filter:"+[SourceCode.SmartObjects.Services.Tests]* -[SourceCode.SmartObjects.Services.Tests.UTest*]*" -output:".\smartobjects-services-tests_coverage.xml"
+#- vstest.console /logger:Appveyor /Settings:src\AppVeyor.RunSettings /InIsolation "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
+
+after_test:
+- pip install codecov 
+- codecov -X gcov -f smartobjects-services-tests_coverage.xml
 
 after_build:
 - ps: Add-AppveyorMessage "NuGet artifact not deployed. Version. $env:APPVEYOR_BUILD_VERSION" -Category "Information" -Details "The NuGet package is not published automatically, but can be published through the AppVeyor Deploy UI."
@@ -39,3 +44,6 @@ after_build:
 #    secure: IlYToFQdqCxXKG7TERDXxDioFSN74Bp5Cmkv4VsemoPxQj3IOsx5t0wCxRzFslPR
 #  on:
 #    branch: master
+
+cache:
+  - packages -> **\packages.config      # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
