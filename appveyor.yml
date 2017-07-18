@@ -19,7 +19,7 @@ platform: Any CPU
 
 # scripts to run before build
 before_build:
-- nuget restore -verbosity detailed
+- nuget restore -verbosity quiet
 
 build:
  project: SourceCode.SmartObjects.Services.Tests.sln
