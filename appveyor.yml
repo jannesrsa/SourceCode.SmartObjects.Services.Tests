@@ -26,7 +26,13 @@ build:
  verbosity: minimal
  publish_nuget: true             # package projects with .nuspec files and push to artifacts
 
+ before_test:
+- cd build
+- powershell -Command .\build.ps1
+- cd ..
+
 test_script:
+- cd \projects
 - OpenCover.Console.exe -register:user -mergebyhash -target:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\MSTest.exe" -targetargs:"/testcontainer:""c:\projects\SourceCode.SmartObjects.Services.Tests.UTest.dll" -filter:"+[SourceCode.SmartObjects.Services.Tests]* -[SourceCode.SmartObjects.Services.Tests.UTest*]*" -output:"SourceCode.SmartObjects.Services.Tests_coverage.xml"
 #- vstest.console /logger:Appveyor /Settings:src\AppVeyor.RunSettings /InIsolation "src\Tests\UTest\bin\Release\SourceCode.SmartObjects.Services.Tests.UTest.dll"
 
