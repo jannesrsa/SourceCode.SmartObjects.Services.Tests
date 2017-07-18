@@ -5,7 +5,7 @@ using SourceCode.SmartObjects.Services.Tests.Extensions;
 namespace SourceCode.SmartObjects.Services.Tests.UTest
 {
     [TestClass()]
-    public class WhenIgnoreExceptionIsCalledOnActionExtensions
+    public class WhenIgnoreExceptionCalledOnActionExtensions
     {
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
@@ -13,16 +13,6 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
         {
             // Act
             ActionExtensions.IgnoreException(null);
-        }
-
-        [TestMethod()]
-        public void WithNotThrowingException()
-        {
-            //Arrange
-            Action action = () => Console.WriteLine("Test");
-
-            // Act
-            ActionExtensions.IgnoreException(action);
         }
 
         [TestMethod()]
@@ -35,5 +25,14 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
             ActionExtensions.IgnoreException(action);
         }
 
+        [TestMethod()]
+        public void WithNotThrowingException()
+        {
+            //Arrange
+            Action action = () => Console.WriteLine("Test");
+
+            // Act
+            ActionExtensions.IgnoreException(action);
+        }
     }
 }

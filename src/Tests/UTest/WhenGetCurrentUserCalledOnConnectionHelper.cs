@@ -4,7 +4,7 @@ using SourceCode.SmartObjects.Services.Tests.Helpers;
 namespace SourceCode.SmartObjects.Services.Tests.UTest
 {
     [TestClass()]
-    public class WhenGetCurrentUserIsCalledOnConnectionHelper
+    public class WhenGetCurrentUserCalledOnConnectionHelper
     {
         [TestMethod()]
         public void GetCurrentUserTest()
