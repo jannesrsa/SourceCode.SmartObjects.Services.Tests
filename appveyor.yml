@@ -40,6 +40,3 @@ after_build:
 #    secure: IlYToFQdqCxXKG7TERDXxDioFSN74Bp5Cmkv4VsemoPxQj3IOsx5t0wCxRzFslPR
 #  on:
 #    branch: master
-
-cache:
-  - packages -> **\packages.config      # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
