@@ -32,7 +32,7 @@ test_script:
 
 after_test:
 - pip install codecov 
-- codecov -f "smartobjects-services-tests_coverage.xml -X gcov
+- codecov -f $resultsFile-X gcov
 
 after_build:
 - ps: Add-AppveyorMessage "NuGet artifact not deployed. Version. $env:APPVEYOR_BUILD_VERSION" -Category "Information" -Details "The NuGet package is not published automatically, but can be published through the AppVeyor Deploy UI."
