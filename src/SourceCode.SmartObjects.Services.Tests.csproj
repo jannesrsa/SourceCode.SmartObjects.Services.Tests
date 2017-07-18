@@ -79,10 +79,6 @@
       <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.HostClientAPI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SourceCode.Security.UserRoleManager.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.Security.UserRoleManager.Client.dll</HintPath>
-    </Reference>
     <Reference Include="SourceCode.SmartObjects.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Build Output\Assemblies\x86\Program Files\K2\Bin\SourceCode.SmartObjects.Authoring.dll</HintPath>
