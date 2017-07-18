@@ -1,9 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SourceCode.SmartObjects.Services.Tests.Helpers;
 
-namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
+namespace SourceCode.SmartObjects.Services.Tests.UTest
 {
     [TestClass()]
-    public class ConnectionHelperTests
+    public class WhenGetCurrentUserIsCalledOnConnectionHelper
     {
         [TestMethod()]
         public void GetCurrentUserTest()

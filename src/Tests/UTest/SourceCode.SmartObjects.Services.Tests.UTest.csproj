@@ -56,7 +56,9 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Helpers\ConnectionHelperTests.cs" />
+    <Compile Include="WhenIgnoreExceptionIsCalledOnActionExtensions.cs" />
+    <Compile Include="WhenAssertExceptionIsCalledOnActionExtensions.cs" />
+    <Compile Include="WhenGetCurrentUserIsCalledOnConnectionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

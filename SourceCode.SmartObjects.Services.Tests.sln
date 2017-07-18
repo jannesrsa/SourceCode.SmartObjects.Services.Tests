@@ -10,7 +10,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{20AD0C0F-4CB3-410A-A68A-7AF5106F0012}"
 	ProjectSection(SolutionItems) = preProject
 		src\AppVeyor.RunSettings = src\AppVeyor.RunSettings
-		AppVeyor.testsettings = AppVeyor.testsettings
 		appveyor.yml = appveyor.yml
 		Build\build.ps1 = Build\build.ps1
 		src\Key.snk = src\Key.snk
