@@ -57,6 +57,9 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="WhenGetPagedResultCalledOnDataTableExtensions.cs" />
+    <Compile Include="WhenGetConditionCalledOnDataTableExtensions.cs" />
+    <Compile Include="WhenGenerateGetAssertHasValueCalledOnDataTableExtensions.cs" />
     <Compile Include="WhenGetFirstValueCalledOnDataRowExtensions.cs" />
     <Compile Include="WhenAssertHasValueCalledOnDataRowExtensions.cs" />
     <Compile Include="WhenAssertHasValueOfTypeCalledOnDataRowExtensions.cs" />
