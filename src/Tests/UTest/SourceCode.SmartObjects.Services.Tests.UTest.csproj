@@ -57,6 +57,9 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="WhenGetFirstValueCalledOnDataRowExtensions.cs" />
+    <Compile Include="WhenAssertHasValueCalledOnDataRowExtensions.cs" />
+    <Compile Include="WhenAssertHasValueOfTypeCalledOnDataRowExtensions.cs" />
     <Compile Include="WhenAssertAreEqualCalledOnDataRowExtensions.cs" />
     <Compile Include="WhenIgnoreExceptionCalledOnActionExtensions.cs" />
     <Compile Include="WhenAssertExceptionCalledOnActionExtensions.cs" />
