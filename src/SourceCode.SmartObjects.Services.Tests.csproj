@@ -139,6 +139,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IServiceManagementServerWrapper.cs" />
+    <Compile Include="Wrappers\ServiceManagementServerWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
