@@ -39,14 +39,13 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
         public void WithSmartObjectException()
         {
             //Arrange
-
             var ctor = typeof(SmartObjectExceptionData).GetConstructors(BindingFlags.Instance | BindingFlags.NonPublic).FirstOrDefault();
 
             string serviceName = Guid.NewGuid().ToString();
             string serviceGuid = Guid.NewGuid().ToString();
             string message = Guid.NewGuid().ToString();
             string innerExceptionMessage = Guid.NewGuid().ToString();
-            var severity = SeverityType.Error;
+            const SeverityType severity = SeverityType.Error;
 
             var smartObjectExceptionData = (SmartObjectExceptionData)ctor.Invoke(new object[] { serviceName, serviceGuid, message, innerExceptionMessage, severity });
 
@@ -56,7 +55,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
             var exception = new SmartObjectException(collection);
             string expected = $@"Service: {serviceName}
 Service Guid: {serviceGuid}
-Severity: {severity}
+Severity: {severity.ToString()}
 Error Message: {message}
 InnerException Message: {innerExceptionMessage}";
 
@@ -64,7 +63,7 @@ InnerException Message: {innerExceptionMessage}";
             var actual = ExceptionExtensions.GetExceptionMessage(exception);
 
             // Assert
-            //Assert.AreEqual(expected.Trim(), actual.Trim());
+            StringAssert.Contains(expected.Trim(), actual.Trim());
         }
     }
 }
