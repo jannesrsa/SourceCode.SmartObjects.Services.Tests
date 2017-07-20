@@ -1,0 +1,434 @@
+﻿<smartobjectroot name="K2_Management_WebDesigner_Management_ProcessInfo" guid="03449af4-6e06-40ec-b9dc-c1e41ce0fafb" version="0" isextendible="False">
+  <metadata>
+    <display>
+      <displayname>ProcessInfo</displayname>
+      <description></description>
+    </display>
+    <service>
+      <key name="serviceinstance">5d273ad6-e27a-46f8-be67-198b36085f99</key>
+      <key name="serviceobject">WebDesigner_Management_ProcessInfo</key>
+    </service>
+  </metadata>
+  <types>
+    <type name="user" />
+  </types>
+  <properties>
+    <property name="Serialized_Item__String_" type="memo" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>Serialized Item (String)</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.String</key>
+          <key name="endpointPropertyType">SerializedItem</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="CreatedBy" type="text" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>CreatedBy</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.String</key>
+          <key name="propertyInfoName">CreatedBy</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="CreatedDate" type="datetime" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>CreatedDate</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.DateTime</key>
+          <key name="propertyInfoName">CreatedDate</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="Description" type="text" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>Description</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.String</key>
+          <key name="propertyInfoName">Description</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="ID" type="number" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>ID</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.Int32</key>
+          <key name="propertyInfoName">ID</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="IsLocked" type="yesno" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>IsLocked</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.Boolean</key>
+          <key name="propertyInfoName">IsLocked</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="LockedBy" type="text" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>LockedBy</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.String</key>
+          <key name="propertyInfoName">LockedBy</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="ModifiedBy" type="text" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>ModifiedBy</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.String</key>
+          <key name="propertyInfoName">ModifiedBy</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="ModifiedDate" type="datetime" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>ModifiedDate</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.DateTime</key>
+          <key name="propertyInfoName">ModifiedDate</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="Name" type="text" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>Name</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.String</key>
+          <key name="propertyInfoName">Name</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="ShareType" type="text" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>ShareType</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.String</key>
+          <key name="propertyInfoName">ShareType</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="Status" type="text" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>Status</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.String</key>
+          <key name="propertyInfoName">Status</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="Type" type="text" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>Type</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.String</key>
+          <key name="propertyInfoName">Type</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="Version" type="text" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>Version</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.String</key>
+          <key name="propertyInfoName">Version</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="Serialized_Array" type="memo" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>Serialized Array</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.String</key>
+          <key name="endpointPropertyType">SerializedArray</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+    <property name="Serialized_List" type="memo" unique="false" system="false">
+      <metadata>
+        <display>
+          <displayname>Serialized List</displayname>
+          <description></description>
+        </display>
+        <service>
+          <key name="typeFullName">System.String</key>
+          <key name="endpointPropertyType">SerializedList</key>
+        </service>
+      </metadata>
+      <associations />
+    </property>
+  </properties>
+  <methods>
+    <method name="Serialize" type="read" transaction="continue">
+      <metadata>
+        <display>
+          <displayname>Serialize</displayname>
+          <description></description>
+        </display>
+        <service />
+      </metadata>
+      <parameters />
+      <requiredproperties />
+      <input>
+        <property name="CreatedBy" />
+        <property name="CreatedDate" />
+        <property name="Description" />
+        <property name="ID" />
+        <property name="IsLocked" />
+        <property name="LockedBy" />
+        <property name="ModifiedBy" />
+        <property name="ModifiedDate" />
+        <property name="Name" />
+        <property name="ShareType" />
+        <property name="Status" />
+        <property name="Type" />
+        <property name="Version" />
+      </input>
+      <returnproperties>
+        <property name="Serialized_Item__String_" />
+      </returnproperties>
+    </method>
+    <method name="Deserialize" type="read" transaction="continue">
+      <metadata>
+        <display>
+          <displayname>Deserialize</displayname>
+          <description></description>
+        </display>
+        <service />
+      </metadata>
+      <parameters />
+      <requiredproperties />
+      <input>
+        <property name="Serialized_Item__String_" />
+      </input>
+      <returnproperties>
+        <property name="CreatedBy" />
+        <property name="CreatedDate" />
+        <property name="Description" />
+        <property name="ID" />
+        <property name="IsLocked" />
+        <property name="LockedBy" />
+        <property name="ModifiedBy" />
+        <property name="ModifiedDate" />
+        <property name="Name" />
+        <property name="ShareType" />
+        <property name="Status" />
+        <property name="Type" />
+        <property name="Version" />
+      </returnproperties>
+    </method>
+    <method name="SerializeItemToArray" type="create" transaction="continue">
+      <metadata>
+        <display>
+          <displayname>Serialize Item To Array</displayname>
+          <description></description>
+        </display>
+        <service />
+      </metadata>
+      <parameters />
+      <requiredproperties />
+      <input>
+        <property name="CreatedBy" />
+        <property name="CreatedDate" />
+        <property name="Description" />
+        <property name="ID" />
+        <property name="IsLocked" />
+        <property name="LockedBy" />
+        <property name="ModifiedBy" />
+        <property name="ModifiedDate" />
+        <property name="Name" />
+        <property name="ShareType" />
+        <property name="Status" />
+        <property name="Type" />
+        <property name="Version" />
+      </input>
+      <returnproperties>
+        <property name="Serialized_Array" />
+      </returnproperties>
+    </method>
+    <method name="SerializeListToArray" type="read" transaction="continue">
+      <metadata>
+        <display>
+          <displayname>Serialize List To Array</displayname>
+          <description></description>
+        </display>
+        <service />
+      </metadata>
+      <parameters />
+      <requiredproperties />
+      <input>
+        <property name="Serialized_List" />
+      </input>
+      <returnproperties>
+        <property name="Serialized_Array" />
+      </returnproperties>
+    </method>
+    <method name="SerializeAddItemToArray" type="create" transaction="continue">
+      <metadata>
+        <display>
+          <displayname>Serialize Add Item To Array</displayname>
+          <description></description>
+        </display>
+        <service />
+      </metadata>
+      <parameters />
+      <requiredproperties />
+      <input>
+        <property name="Serialized_Array" />
+        <property name="CreatedBy" />
+        <property name="CreatedDate" />
+        <property name="Description" />
+        <property name="ID" />
+        <property name="IsLocked" />
+        <property name="LockedBy" />
+        <property name="ModifiedBy" />
+        <property name="ModifiedDate" />
+        <property name="Name" />
+        <property name="ShareType" />
+        <property name="Status" />
+        <property name="Type" />
+        <property name="Version" />
+      </input>
+      <returnproperties>
+        <property name="Serialized_Array" />
+      </returnproperties>
+    </method>
+    <method name="SerializeRemoveFromArray" type="delete" transaction="continue">
+      <metadata>
+        <display>
+          <displayname>Serialize Remove From Array</displayname>
+          <description></description>
+        </display>
+        <service />
+      </metadata>
+      <parameters />
+      <requiredproperties />
+      <input>
+        <property name="Serialized_Item__String_" />
+        <property name="Serialized_Array" />
+      </input>
+      <returnproperties>
+        <property name="Serialized_Array" />
+      </returnproperties>
+    </method>
+    <method name="DeserializeArray" type="list" transaction="continue">
+      <metadata>
+        <display>
+          <displayname>Deserialize Array</displayname>
+          <description></description>
+        </display>
+        <service />
+      </metadata>
+      <parameters />
+      <requiredproperties />
+      <input>
+        <property name="Serialized_Array" />
+      </input>
+      <returnproperties>
+        <property name="Serialized_Item__String_" />
+      </returnproperties>
+    </method>
+    <method name="DeserializeTypedArray" type="list" transaction="continue">
+      <metadata>
+        <display>
+          <displayname>Deserialize Typed Array</displayname>
+          <description></description>
+        </display>
+        <service />
+      </metadata>
+      <parameters />
+      <requiredproperties />
+      <input>
+        <property name="Serialized_Array" />
+      </input>
+      <returnproperties>
+        <property name="CreatedBy" />
+        <property name="CreatedDate" />
+        <property name="Description" />
+        <property name="ID" />
+        <property name="IsLocked" />
+        <property name="LockedBy" />
+        <property name="ModifiedBy" />
+        <property name="ModifiedDate" />
+        <property name="Name" />
+        <property name="ShareType" />
+        <property name="Status" />
+        <property name="Type" />
+        <property name="Version" />
+      </returnproperties>
+    </method>
+  </methods>
+  <defaults>
+    <methods>
+      <Read name="Serialize" />
+      <List name="DeserializeArray" />
+      <Report name="DeserializeArray" />
+    </methods>
+  </defaults>
+  <associations />
+  <lookup />
+</smartobjectroot>

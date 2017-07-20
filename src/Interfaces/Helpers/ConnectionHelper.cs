@@ -40,21 +40,22 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             switch (typeof(T).Name.ToString())
             {
                 case "ServiceManagementServer":
-                    return (T)GetServerWrapper<IServiceManagementServer>().BaseAPIServer;
+                    return (T)_connectionProvider.GetServer<IServiceManagementServer>().BaseAPIServer;
 
                 case "SmartObjectClientServer":
-                    return (T)GetServerWrapper<ISmartObjectClientServer>().BaseAPIServer;
+                    return (T)_connectionProvider.GetServer<ISmartObjectClientServer>().BaseAPIServer;
 
                 case "SmartObjectManagementServer":
-                    return (T)GetServerWrapper<ISmartObjectManagementServer>().BaseAPIServer;
+                    return (T)_connectionProvider.GetServer<ISmartObjectManagementServer>().BaseAPIServer;
+
+                default:
+                    throw new ArgumentException(typeof(T).Name.ToString());
             }
+        }
 
-            T server = new T();
-
-            server.CreateConnection();
-            server.Connection.Open(_connectionProvider.SmartObjectConnectionStringBuilder.ConnectionString);
-
-            return server;
+        internal static T GetServerWrapper<T>() where T : class, IBaseAPI
+        {
+            return (T)_connectionProvider.GetServer<ISmartObjectManagementServer>();
         }
 
         public static TResult Invoke<TServer, TResult>(Func<TResult> func, ref TServer server)
@@ -74,11 +75,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             {
                 return func();
             }
-        }
-
-        internal static T GetServerWrapper<T>() where T : class, IBaseAPI
-        {
-            return (T)_connectionProvider.GetServer<T>();
         }
 
         internal static void UpdateConnectionProvider(IConnectionProvider connectionProvider)

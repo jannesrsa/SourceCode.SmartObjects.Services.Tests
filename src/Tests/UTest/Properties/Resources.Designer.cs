@@ -83,5 +83,25 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Properties {
                 return ResourceManager.GetString("ServiceInstance_URMService", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;smartobjectroot name=&quot;K2_Management_WebDesigner_Management_ProcessInfo&quot; guid=&quot;03449af4-6e06-40ec-b9dc-c1e41ce0fafb&quot; version=&quot;0&quot; isextendible=&quot;false&quot; mode=&quot;advanced&quot; createdfromlocal=&quot;false&quot;&gt;
+        ///  &lt;metadata&gt;
+        ///    &lt;display&gt;
+        ///      &lt;displayname&gt;ProcessInfo&lt;/displayname&gt;
+        ///      &lt;description /&gt;
+        ///    &lt;/display&gt;
+        ///    &lt;service&gt;
+        ///      &lt;key name=&quot;serviceinstance&quot;&gt;5d273ad6-e27a-46f8-be67-198b36085f99&lt;/key&gt;
+        ///      &lt;key name=&quot;serviceobject&quot;&gt;WebDesigner_Management_ProcessInfo&lt;/key&gt;
+        ///    &lt;/service&gt;
+        ///  &lt;/metadata&gt;
+        ///  &lt;type [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SmartObjectDefinition_ProcessInfo {
+            get {
+                return ResourceManager.GetString("SmartObjectDefinition_ProcessInfo", resourceCulture);
+            }
+        }
     }
 }

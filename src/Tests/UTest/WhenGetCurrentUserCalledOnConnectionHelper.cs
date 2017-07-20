@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SourceCode.SmartObjects.Services.Tests.Helpers;
+using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.UTest
 {
@@ -9,6 +10,9 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
         [TestMethod()]
         public void GetCurrentUserTest()
         {
+            // Arrange
+            ConnectionHelper.UpdateConnectionProvider(new DefaultConnectionHelperProvider());
+
             // Action
             var currentuser = ConnectionHelper.GetCurrentUser();
 

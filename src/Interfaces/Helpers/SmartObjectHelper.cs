@@ -47,9 +47,24 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             return ContainsSmartObject(new SmartObjectManagementServerWrapper(server), systemName);
         }
 
+        internal static bool ContainsSmartObject(ISmartObjectManagementServer server, string systemName)
+        {
+            server.ThrowIfNull("server");
+
+            return server.GetSmartObjects(systemName).SmartObjectList.Any();
+        }
+
         public static void DeleteSmartObject(SmartObjectManagementServer server, string systemName)
         {
             DeleteSmartObject(new SmartObjectManagementServerWrapper(server), systemName);
+        }
+
+        internal static void DeleteSmartObject(ISmartObjectManagementServer server, string systemName)
+        {
+            if (ContainsSmartObject(server, systemName))
+            {
+                server.DeleteSmartObject(systemName, true);
+            }
         }
 
         public static SmartObject ExecuteBulkScalar(SmartObjectClientServer clientServer, SmartObject smartObject, DataTable inputTable)
@@ -57,9 +72,42 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             return ExecuteBulkScalar(new SmartObjectClientServerWrapper(clientServer), smartObject, inputTable);
         }
 
+        internal static SmartObject ExecuteBulkScalar(ISmartObjectClientServer clientServer, SmartObject smartObject, DataTable inputTable)
+        {
+            clientServer.ThrowIfNull("clientServer");
+
+            try
+            {
+                return clientServer.ExecuteBulkScalar(smartObject, inputTable);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.GetExceptionMessage());
+            }
+        }
+
         public static SmartObjectList ExecuteList(SmartObjectClientServer clientServer, SmartObject smartObject, ExecuteListOptions options = null)
         {
             return ExecuteList(new SmartObjectClientServerWrapper(clientServer), smartObject, options);
+        }
+
+        internal static SmartObjectList ExecuteList(ISmartObjectClientServer clientServer, SmartObject smartObject, ExecuteListOptions options = null)
+        {
+            clientServer.ThrowIfNull("clientServer");
+
+            if (options == null)
+            {
+                options = new ExecuteListOptions();
+            }
+
+            try
+            {
+                return clientServer.ExecuteList(smartObject, options);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.GetExceptionMessage());
+            }
         }
 
         public static DataTable ExecuteListDataTable(SmartObjectClientServer clientServer, SmartObject smartObject, ExecuteListOptions options = null)
@@ -67,9 +115,47 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             return ExecuteListDataTable(new SmartObjectClientServerWrapper(clientServer), smartObject, options);
         }
 
+        internal static DataTable ExecuteListDataTable(ISmartObjectClientServer clientServer, SmartObject smartObject, ExecuteListOptions options = null)
+        {
+            clientServer.ThrowIfNull("clientServer");
+
+            if (options == null)
+            {
+                options = new ExecuteListOptions();
+            }
+
+            try
+            {
+                return clientServer.ExecuteListDataTable(smartObject, options);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.GetExceptionMessage());
+            }
+        }
+
         public static SmartObjectReader ExecuteListReader(SmartObjectClientServer clientServer, SmartObject smartObject, ExecuteListReaderOptions options = null)
         {
             return ExecuteListReader(new SmartObjectClientServerWrapper(clientServer), smartObject, options);
+        }
+
+        internal static SmartObjectReader ExecuteListReader(ISmartObjectClientServer clientServer, SmartObject smartObject, ExecuteListReaderOptions options = null)
+        {
+            clientServer.ThrowIfNull("clientServer");
+
+            if (options == null)
+            {
+                options = new ExecuteListReaderOptions();
+            }
+
+            try
+            {
+                return clientServer.ExecuteListReader(smartObject, options);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.GetExceptionMessage());
+            }
         }
 
         public static SmartObject ExecuteScalar(SmartObjectClientServer clientServer, SmartObject smartObject)
@@ -80,6 +166,20 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
         public static DataTable ExecuteSQLQueryDataTable(SmartObjectClientServer clientServer, string query)
         {
             return ExecuteSQLQueryDataTable(new SmartObjectClientServerWrapper(clientServer), query);
+        }
+
+        internal static DataTable ExecuteSQLQueryDataTable(ISmartObjectClientServer clientServer, string query)
+        {
+            clientServer.ThrowIfNull("clientServer");
+
+            try
+            {
+                return clientServer.ExecuteSQLQueryDataTable(query);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.GetExceptionMessage());
+            }
         }
 
         public static ServiceConfigInfo GetServiceConfigInfo(Guid serviceTypeGuid)
@@ -260,137 +360,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             VerifyPaging(new SmartObjectClientServerWrapper(clientServer), smartObject, pageSize);
         }
 
-        internal static bool ContainsSmartObject(ISmartObjectManagementServer server, string systemName)
-        {
-            server.ThrowIfNull("server");
-
-            return server.GetSmartObjects(systemName).SmartObjectList.Any();
-        }
-
-        internal static void DeleteSmartObject(ISmartObjectManagementServer server, string systemName)
-        {
-            if (ContainsSmartObject(server, systemName))
-            {
-                server.DeleteSmartObject(systemName, true);
-            }
-        }
-
-        internal static SmartObject ExecuteBulkScalar(ISmartObjectClientServer clientServer, SmartObject smartObject, DataTable inputTable)
-        {
-            clientServer.ThrowIfNull("clientServer");
-
-            try
-            {
-                return clientServer.ExecuteBulkScalar(smartObject, inputTable);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.GetExceptionMessage());
-            }
-        }
-
-        internal static SmartObjectList ExecuteList(ISmartObjectClientServer clientServer, SmartObject smartObject, ExecuteListOptions options = null)
-        {
-            clientServer.ThrowIfNull("clientServer");
-
-            if (options == null)
-            {
-                options = new ExecuteListOptions();
-            }
-
-            try
-            {
-                return clientServer.ExecuteList(smartObject, options);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.GetExceptionMessage());
-            }
-        }
-
-        internal static DataTable ExecuteListDataTable(ISmartObjectClientServer clientServer, SmartObject smartObject, ExecuteListOptions options = null)
-        {
-            clientServer.ThrowIfNull("clientServer");
-
-            if (options == null)
-            {
-                options = new ExecuteListOptions();
-            }
-
-            try
-            {
-                return clientServer.ExecuteListDataTable(smartObject, options);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.GetExceptionMessage());
-            }
-        }
-
-        internal static SmartObjectReader ExecuteListReader(ISmartObjectClientServer clientServer, SmartObject smartObject, ExecuteListReaderOptions options = null)
-        {
-            clientServer.ThrowIfNull("clientServer");
-
-            if (options == null)
-            {
-                options = new ExecuteListReaderOptions();
-            }
-
-            try
-            {
-                return clientServer.ExecuteListReader(smartObject, options);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.GetExceptionMessage());
-            }
-        }
-
-        internal static SmartObject ExecuteScalar(ISmartObjectClientServer clientServer, SmartObject smartObject)
-        {
-            clientServer.ThrowIfNull("clientServer");
-
-            try
-            {
-                return clientServer.ExecuteScalar(smartObject);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.GetExceptionMessage());
-            }
-        }
-
-        internal static DataTable ExecuteSQLQueryDataTable(ISmartObjectClientServer clientServer, string query)
-        {
-            clientServer.ThrowIfNull("clientServer");
-
-            try
-            {
-                return clientServer.ExecuteSQLQueryDataTable(query);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.GetExceptionMessage());
-            }
-        }
-
-        internal static SmartObject GetSmartObject(ISmartObjectClientServer clientServer, string serviceObjectName, ServiceInstanceSettings serviceInstanceSettings)
-        {
-            clientServer.ThrowIfNull("clientServer");
-
-            var smartObjectName = GetSmartObjectName(serviceObjectName, serviceInstanceSettings);
-            return clientServer.GetSmartObject(smartObjectName);
-        }
-
-        internal static string GetSmartObjectName(ISmartObjectManagementServer managementServer, string serviceObjectName, ServiceInstanceSettings serviceInstanceSettings)
-        {
-            var preSmartObjectName = string.Concat(serviceInstanceSettings.Name, "_");
-            var smartObjectExplorer = managementServer.GetSmartObjects(SearchProperty.SystemName, SearchOperator.EndsWith, string.Concat("_", serviceObjectName));
-            return (from s in smartObjectExplorer.SmartObjectList
-                    where s.Name.StartsWith(preSmartObjectName)
-                    select s.Name).FirstOrDefault();
-        }
-
         internal static void VerifyPaging(ISmartObjectClientServer clientServer, SmartObject smartObject, int pageSize)
         {
             var totalDataTable = SmartObjectHelper.ExecuteListDataTable(clientServer, smartObject);
@@ -423,6 +392,37 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
                         pagedResults);
                 }
             }
+        }
+
+        internal static SmartObject ExecuteScalar(ISmartObjectClientServer clientServer, SmartObject smartObject)
+        {
+            clientServer.ThrowIfNull("clientServer");
+
+            try
+            {
+                return clientServer.ExecuteScalar(smartObject);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.GetExceptionMessage());
+            }
+        }
+
+        internal static SmartObject GetSmartObject(ISmartObjectClientServer clientServer, string serviceObjectName, ServiceInstanceSettings serviceInstanceSettings)
+        {
+            clientServer.ThrowIfNull("clientServer");
+
+            var smartObjectName = GetSmartObjectName(serviceObjectName, serviceInstanceSettings);
+            return clientServer.GetSmartObject(smartObjectName);
+        }
+
+        internal static string GetSmartObjectName(ISmartObjectManagementServer managementServer, string serviceObjectName, ServiceInstanceSettings serviceInstanceSettings)
+        {
+            var preSmartObjectName = string.Concat(serviceInstanceSettings.Name, "_");
+            var smartObjectExplorer = managementServer.GetSmartObjects(SearchProperty.SystemName, SearchOperator.EndsWith, string.Concat("_", serviceObjectName));
+            return (from s in smartObjectExplorer.SmartObjectList
+                    where s.Name.StartsWith(preSmartObjectName)
+                    select s.Name).FirstOrDefault();
         }
     }
 }

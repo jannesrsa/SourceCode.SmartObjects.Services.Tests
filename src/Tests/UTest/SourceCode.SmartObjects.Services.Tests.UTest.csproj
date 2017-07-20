@@ -53,6 +53,7 @@
     </Reference>
     <Reference Include="SourceCode.HostClientAPI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" />
     <Reference Include="SourceCode.SmartObjects.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL" />
+    <Reference Include="SourceCode.SmartObjects.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL" />
     <Reference Include="SourceCode.SmartObjects.Services.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -71,6 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="WhenSerializeItemToArrayCalledOnSmartObjectClientServerExtensions.cs" />
+    <Compile Include="WhenSerializeAddItemToArrayCalledOnSmartObjectClientServerExtensions.cs" />
+    <Compile Include="WhenSerializeCalledOnSmartObjectClientServerExtensions.cs" />
+    <Compile Include="WhenDeserializeTypedArrayCalledOnSmartObjectClientServerExtensions.cs" />
+    <Compile Include="WhenDeserializeCalledOnSmartObjectClientServerExtensions.cs" />
     <Compile Include="WhenDeleteServiceInstanceCalledOnServiceManagementServerExtensions.cs" />
     <Compile Include="WhenGetExceptionMessageCalledOnExceptionExtensions.cs" />
     <Compile Include="WhenGetPagedResultCalledOnDataTableExtensions.cs" />
@@ -98,6 +104,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\ServiceInstance_URMService.xml" />
+    <Content Include="Resources\SmartObjectDefinition_ProcessInfo.xml" />
+    <EmbeddedResource Include="Resources\SmartObject_ProcessInfo.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

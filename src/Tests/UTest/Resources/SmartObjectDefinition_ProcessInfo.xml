@@ -1,0 +1,3221 @@
+﻿<smartobjectroot name="K2_Management_WebDesigner_Management_ProcessInfo" guid="03449af4-6e06-40ec-b9dc-c1e41ce0fafb" version="0" isextendible="false" mode="advanced" createdfromlocal="false">
+  <metadata>
+    <display>
+      <displayname>ProcessInfo</displayname>
+      <description />
+    </display>
+    <service>
+      <key name="serviceinstance">5d273ad6-e27a-46f8-be67-198b36085f99</key>
+      <key name="serviceobject">WebDesigner_Management_ProcessInfo</key>
+    </service>
+  </metadata>
+  <types>
+    <type name="user" />
+  </types>
+  <properties>
+    <property name="Serialized_Item__String_" type="memo" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Serialized Item (String)</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="CreatedBy" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>CreatedBy</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="CreatedDate" type="datetime" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>CreatedDate</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="Description" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Description</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="ID" type="number" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>ID</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="IsLocked" type="yesno" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>IsLocked</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="LockedBy" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>LockedBy</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="ModifiedBy" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>ModifiedBy</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="ModifiedDate" type="datetime" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>ModifiedDate</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="Name" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Name</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="ShareType" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>ShareType</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="Status" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Status</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="Type" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Type</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="Version" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Version</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="Serialized_Array" type="memo" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Serialized Array</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+    <property name="Serialized_List" type="memo" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Serialized List</displayname>
+          <description />
+        </display>
+      </metadata>
+    </property>
+  </properties>
+  <methods>
+    <method name="Serialize" type="read" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Serialize</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="endpointMethodType">Serialization</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="K2_Management" guid="5d273ad6-e27a-46f8-be67-198b36085f99" type="SourceCode.SmartObjects.Services.K2Management.K2ManagementBroker" execblock="0">
+          <metadata>
+            <display>
+              <displayname>K2 Management</displayname>
+              <description />
+            </display>
+          </metadata>
+          <objects>
+            <object name="WebDesigner_Management_ProcessInfo" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>ProcessInfo</displayname>
+                  <description />
+                </display>
+                <service>
+                  <key name="typeFullName">SourceCode.SmartObjects.Services.K2Management.WebDesigner.Management.ProcessInfo</key>
+                  <key name="equalshash">EAgFXR4uFhP0zZo2EMElXw==</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="CreatedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>CreatedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">CreatedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="CreatedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="CreatedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                  <metadata>
+                    <display>
+                      <displayname>CreatedDate</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.DateTime</key>
+                      <key name="propertyInfoName">CreatedDate</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="CreatedDate" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Description" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Description</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Description</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Description" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ID" type="System.Int32" extendtype="default" sotype="number">
+                  <metadata>
+                    <display>
+                      <displayname>ID</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.Int32</key>
+                      <key name="propertyInfoName">ID</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ID" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="IsLocked" type="System.Boolean" extendtype="default" sotype="yesno">
+                  <metadata>
+                    <display>
+                      <displayname>IsLocked</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.Boolean</key>
+                      <key name="propertyInfoName">IsLocked</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="IsLocked" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="LockedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>LockedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">LockedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="LockedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ModifiedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>ModifiedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">ModifiedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ModifiedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ModifiedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                  <metadata>
+                    <display>
+                      <displayname>ModifiedDate</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.DateTime</key>
+                      <key name="propertyInfoName">ModifiedDate</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ModifiedDate" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Name" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Name</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Name</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Name" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ShareType" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>ShareType</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">ShareType</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ShareType" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Status" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Status</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Status</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Status" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Type" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Type</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Type</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Type" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Version" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Version</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Version</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Version" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Serialized_Item__String_" type="System.String" extendtype="default" sotype="memo">
+                  <metadata>
+                    <display>
+                      <displayname>Serialized Item (String)</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="endpointPropertyType">SerializedItem</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Serialized_Item__String_" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="Serialize" type="read">
+                  <metadata>
+                    <display>
+                      <displayname>Serialize</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="endpointMethodType">Serialization</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters />
+                  <input>
+                    <property name="CreatedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>CreatedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">CreatedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="CreatedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="CreatedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                      <metadata>
+                        <display>
+                          <displayname>CreatedDate</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.DateTime</key>
+                          <key name="propertyInfoName">CreatedDate</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="CreatedDate" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ID" type="System.Int32" extendtype="default" sotype="number">
+                      <metadata>
+                        <display>
+                          <displayname>ID</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.Int32</key>
+                          <key name="propertyInfoName">ID</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ID" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="IsLocked" type="System.Boolean" extendtype="default" sotype="yesno">
+                      <metadata>
+                        <display>
+                          <displayname>IsLocked</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.Boolean</key>
+                          <key name="propertyInfoName">IsLocked</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="IsLocked" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="LockedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>LockedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">LockedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="LockedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ModifiedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>ModifiedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">ModifiedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ModifiedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ModifiedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                      <metadata>
+                        <display>
+                          <displayname>ModifiedDate</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.DateTime</key>
+                          <key name="propertyInfoName">ModifiedDate</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ModifiedDate" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Name" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ShareType" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>ShareType</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">ShareType</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ShareType" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Status" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Status</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Status</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Status" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Type" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Type</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Type</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Type" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Version" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Version</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Version</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Version" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </input>
+                  <return>
+                    <property name="Serialized_Item__String_" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized Item (String)</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedItem</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_Item__String_" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+    </method>
+    <method name="Deserialize" type="read" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Deserialize</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="endpointMethodType">Serialization</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="K2_Management" guid="5d273ad6-e27a-46f8-be67-198b36085f99" type="SourceCode.SmartObjects.Services.K2Management.K2ManagementBroker" execblock="0">
+          <metadata>
+            <display>
+              <displayname>K2 Management</displayname>
+              <description />
+            </display>
+          </metadata>
+          <objects>
+            <object name="WebDesigner_Management_ProcessInfo" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>ProcessInfo</displayname>
+                  <description />
+                </display>
+                <service>
+                  <key name="typeFullName">SourceCode.SmartObjects.Services.K2Management.WebDesigner.Management.ProcessInfo</key>
+                  <key name="equalshash">EAgFXR4uFhP0zZo2EMElXw==</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="Serialized_Item__String_" type="System.String" extendtype="default" sotype="memo">
+                  <metadata>
+                    <display>
+                      <displayname>Serialized Item (String)</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="endpointPropertyType">SerializedItem</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Serialized_Item__String_" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="CreatedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>CreatedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">CreatedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="CreatedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="CreatedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                  <metadata>
+                    <display>
+                      <displayname>CreatedDate</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.DateTime</key>
+                      <key name="propertyInfoName">CreatedDate</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="CreatedDate" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Description" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Description</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Description</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Description" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ID" type="System.Int32" extendtype="default" sotype="number">
+                  <metadata>
+                    <display>
+                      <displayname>ID</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.Int32</key>
+                      <key name="propertyInfoName">ID</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ID" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="IsLocked" type="System.Boolean" extendtype="default" sotype="yesno">
+                  <metadata>
+                    <display>
+                      <displayname>IsLocked</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.Boolean</key>
+                      <key name="propertyInfoName">IsLocked</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="IsLocked" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="LockedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>LockedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">LockedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="LockedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ModifiedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>ModifiedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">ModifiedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ModifiedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ModifiedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                  <metadata>
+                    <display>
+                      <displayname>ModifiedDate</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.DateTime</key>
+                      <key name="propertyInfoName">ModifiedDate</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ModifiedDate" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Name" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Name</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Name</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Name" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ShareType" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>ShareType</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">ShareType</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ShareType" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Status" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Status</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Status</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Status" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Type" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Type</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Type</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Type" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Version" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Version</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Version</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Version" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="Deserialize" type="read">
+                  <metadata>
+                    <display>
+                      <displayname>Deserialize</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="endpointMethodType">Serialization</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters />
+                  <input>
+                    <property name="Serialized_Item__String_" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized Item (String)</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedItem</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_Item__String_" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </input>
+                  <return>
+                    <property name="CreatedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>CreatedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">CreatedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="CreatedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="CreatedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                      <metadata>
+                        <display>
+                          <displayname>CreatedDate</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.DateTime</key>
+                          <key name="propertyInfoName">CreatedDate</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="CreatedDate" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ID" type="System.Int32" extendtype="default" sotype="number">
+                      <metadata>
+                        <display>
+                          <displayname>ID</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.Int32</key>
+                          <key name="propertyInfoName">ID</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ID" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="IsLocked" type="System.Boolean" extendtype="default" sotype="yesno">
+                      <metadata>
+                        <display>
+                          <displayname>IsLocked</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.Boolean</key>
+                          <key name="propertyInfoName">IsLocked</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="IsLocked" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="LockedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>LockedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">LockedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="LockedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ModifiedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>ModifiedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">ModifiedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ModifiedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ModifiedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                      <metadata>
+                        <display>
+                          <displayname>ModifiedDate</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.DateTime</key>
+                          <key name="propertyInfoName">ModifiedDate</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ModifiedDate" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Name" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ShareType" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>ShareType</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">ShareType</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ShareType" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Status" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Status</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Status</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Status" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Type" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Type</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Type</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Type" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Version" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Version</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Version</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Version" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+    </method>
+    <method name="DeserializeArray" type="list" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Deserialize Array</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="endpointMethodType">Serialization</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="K2_Management" guid="5d273ad6-e27a-46f8-be67-198b36085f99" type="SourceCode.SmartObjects.Services.K2Management.K2ManagementBroker" execblock="0">
+          <metadata>
+            <display>
+              <displayname>K2 Management</displayname>
+              <description />
+            </display>
+          </metadata>
+          <objects>
+            <object name="WebDesigner_Management_ProcessInfo" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>ProcessInfo</displayname>
+                  <description />
+                </display>
+                <service>
+                  <key name="typeFullName">SourceCode.SmartObjects.Services.K2Management.WebDesigner.Management.ProcessInfo</key>
+                  <key name="equalshash">EAgFXR4uFhP0zZo2EMElXw==</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                  <metadata>
+                    <display>
+                      <displayname>Serialized Array</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="endpointPropertyType">SerializedArray</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Serialized_Array" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Serialized_Item__String_" type="System.String" extendtype="default" sotype="memo">
+                  <metadata>
+                    <display>
+                      <displayname>Serialized Item (String)</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="endpointPropertyType">SerializedItem</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Serialized_Item__String_" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="DeserializeArray" type="list">
+                  <metadata>
+                    <display>
+                      <displayname>Deserialize Array</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="endpointMethodType">Serialization</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters />
+                  <input>
+                    <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized Array</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedArray</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_Array" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </input>
+                  <return>
+                    <property name="Serialized_Item__String_" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized Item (String)</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedItem</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_Item__String_" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+    </method>
+    <method name="DeserializeTypedArray" type="list" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Deserialize Typed Array</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="endpointMethodType">Serialization</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="K2_Management" guid="5d273ad6-e27a-46f8-be67-198b36085f99" type="SourceCode.SmartObjects.Services.K2Management.K2ManagementBroker" execblock="0">
+          <metadata>
+            <display>
+              <displayname>K2 Management</displayname>
+              <description />
+            </display>
+          </metadata>
+          <objects>
+            <object name="WebDesigner_Management_ProcessInfo" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>ProcessInfo</displayname>
+                  <description />
+                </display>
+                <service>
+                  <key name="typeFullName">SourceCode.SmartObjects.Services.K2Management.WebDesigner.Management.ProcessInfo</key>
+                  <key name="equalshash">EAgFXR4uFhP0zZo2EMElXw==</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                  <metadata>
+                    <display>
+                      <displayname>Serialized Array</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="endpointPropertyType">SerializedArray</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Serialized_Array" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="CreatedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>CreatedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">CreatedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="CreatedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="CreatedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                  <metadata>
+                    <display>
+                      <displayname>CreatedDate</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.DateTime</key>
+                      <key name="propertyInfoName">CreatedDate</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="CreatedDate" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Description" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Description</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Description</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Description" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ID" type="System.Int32" extendtype="default" sotype="number">
+                  <metadata>
+                    <display>
+                      <displayname>ID</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.Int32</key>
+                      <key name="propertyInfoName">ID</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ID" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="IsLocked" type="System.Boolean" extendtype="default" sotype="yesno">
+                  <metadata>
+                    <display>
+                      <displayname>IsLocked</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.Boolean</key>
+                      <key name="propertyInfoName">IsLocked</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="IsLocked" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="LockedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>LockedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">LockedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="LockedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ModifiedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>ModifiedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">ModifiedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ModifiedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ModifiedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                  <metadata>
+                    <display>
+                      <displayname>ModifiedDate</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.DateTime</key>
+                      <key name="propertyInfoName">ModifiedDate</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ModifiedDate" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Name" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Name</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Name</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Name" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ShareType" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>ShareType</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">ShareType</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ShareType" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Status" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Status</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Status</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Status" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Type" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Type</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Type</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Type" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Version" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Version</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Version</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Version" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="DeserializeTypedArray" type="list">
+                  <metadata>
+                    <display>
+                      <displayname>Deserialize Typed Array</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="endpointMethodType">Serialization</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters />
+                  <input>
+                    <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized Array</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedArray</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_Array" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </input>
+                  <return>
+                    <property name="CreatedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>CreatedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">CreatedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="CreatedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="CreatedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                      <metadata>
+                        <display>
+                          <displayname>CreatedDate</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.DateTime</key>
+                          <key name="propertyInfoName">CreatedDate</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="CreatedDate" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ID" type="System.Int32" extendtype="default" sotype="number">
+                      <metadata>
+                        <display>
+                          <displayname>ID</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.Int32</key>
+                          <key name="propertyInfoName">ID</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ID" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="IsLocked" type="System.Boolean" extendtype="default" sotype="yesno">
+                      <metadata>
+                        <display>
+                          <displayname>IsLocked</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.Boolean</key>
+                          <key name="propertyInfoName">IsLocked</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="IsLocked" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="LockedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>LockedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">LockedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="LockedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ModifiedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>ModifiedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">ModifiedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ModifiedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ModifiedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                      <metadata>
+                        <display>
+                          <displayname>ModifiedDate</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.DateTime</key>
+                          <key name="propertyInfoName">ModifiedDate</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ModifiedDate" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Name" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ShareType" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>ShareType</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">ShareType</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ShareType" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Status" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Status</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Status</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Status" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Type" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Type</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Type</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Type" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Version" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Version</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Version</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Version" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+    </method>
+    <method name="SerializeItemToArray" type="create" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Serialize Item To Array</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="endpointMethodType">Serialization</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="K2_Management" guid="5d273ad6-e27a-46f8-be67-198b36085f99" type="SourceCode.SmartObjects.Services.K2Management.K2ManagementBroker" execblock="0">
+          <metadata>
+            <display>
+              <displayname>K2 Management</displayname>
+              <description />
+            </display>
+          </metadata>
+          <objects>
+            <object name="WebDesigner_Management_ProcessInfo" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>ProcessInfo</displayname>
+                  <description />
+                </display>
+                <service>
+                  <key name="typeFullName">SourceCode.SmartObjects.Services.K2Management.WebDesigner.Management.ProcessInfo</key>
+                  <key name="equalshash">EAgFXR4uFhP0zZo2EMElXw==</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="CreatedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>CreatedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">CreatedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="CreatedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="CreatedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                  <metadata>
+                    <display>
+                      <displayname>CreatedDate</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.DateTime</key>
+                      <key name="propertyInfoName">CreatedDate</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="CreatedDate" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Description" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Description</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Description</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Description" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ID" type="System.Int32" extendtype="default" sotype="number">
+                  <metadata>
+                    <display>
+                      <displayname>ID</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.Int32</key>
+                      <key name="propertyInfoName">ID</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ID" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="IsLocked" type="System.Boolean" extendtype="default" sotype="yesno">
+                  <metadata>
+                    <display>
+                      <displayname>IsLocked</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.Boolean</key>
+                      <key name="propertyInfoName">IsLocked</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="IsLocked" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="LockedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>LockedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">LockedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="LockedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ModifiedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>ModifiedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">ModifiedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ModifiedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ModifiedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                  <metadata>
+                    <display>
+                      <displayname>ModifiedDate</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.DateTime</key>
+                      <key name="propertyInfoName">ModifiedDate</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ModifiedDate" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Name" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Name</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Name</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Name" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ShareType" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>ShareType</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">ShareType</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ShareType" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Status" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Status</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Status</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Status" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Type" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Type</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Type</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Type" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Version" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Version</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Version</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Version" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                  <metadata>
+                    <display>
+                      <displayname>Serialized Array</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="endpointPropertyType">SerializedArray</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Serialized_Array" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="SerializeItemToArray" type="create">
+                  <metadata>
+                    <display>
+                      <displayname>Serialize Item To Array</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="endpointMethodType">Serialization</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters />
+                  <input>
+                    <property name="CreatedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>CreatedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">CreatedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="CreatedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="CreatedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                      <metadata>
+                        <display>
+                          <displayname>CreatedDate</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.DateTime</key>
+                          <key name="propertyInfoName">CreatedDate</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="CreatedDate" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ID" type="System.Int32" extendtype="default" sotype="number">
+                      <metadata>
+                        <display>
+                          <displayname>ID</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.Int32</key>
+                          <key name="propertyInfoName">ID</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ID" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="IsLocked" type="System.Boolean" extendtype="default" sotype="yesno">
+                      <metadata>
+                        <display>
+                          <displayname>IsLocked</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.Boolean</key>
+                          <key name="propertyInfoName">IsLocked</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="IsLocked" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="LockedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>LockedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">LockedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="LockedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ModifiedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>ModifiedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">ModifiedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ModifiedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ModifiedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                      <metadata>
+                        <display>
+                          <displayname>ModifiedDate</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.DateTime</key>
+                          <key name="propertyInfoName">ModifiedDate</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ModifiedDate" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Name" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ShareType" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>ShareType</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">ShareType</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ShareType" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Status" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Status</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Status</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Status" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Type" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Type</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Type</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Type" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Version" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Version</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Version</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Version" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </input>
+                  <return>
+                    <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized Array</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedArray</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_Array" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+    </method>
+    <method name="SerializeListToArray" type="read" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Serialize List To Array</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="endpointMethodType">Serialization</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="K2_Management" guid="5d273ad6-e27a-46f8-be67-198b36085f99" type="SourceCode.SmartObjects.Services.K2Management.K2ManagementBroker" execblock="0">
+          <metadata>
+            <display>
+              <displayname>K2 Management</displayname>
+              <description />
+            </display>
+          </metadata>
+          <objects>
+            <object name="WebDesigner_Management_ProcessInfo" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>ProcessInfo</displayname>
+                  <description />
+                </display>
+                <service>
+                  <key name="typeFullName">SourceCode.SmartObjects.Services.K2Management.WebDesigner.Management.ProcessInfo</key>
+                  <key name="equalshash">EAgFXR4uFhP0zZo2EMElXw==</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="Serialized_List" type="System.String" extendtype="default" sotype="memo">
+                  <metadata>
+                    <display>
+                      <displayname>Serialized List</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="endpointPropertyType">SerializedList</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Serialized_List" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                  <metadata>
+                    <display>
+                      <displayname>Serialized Array</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="endpointPropertyType">SerializedArray</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Serialized_Array" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="SerializeListToArray" type="read">
+                  <metadata>
+                    <display>
+                      <displayname>Serialize List To Array</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="endpointMethodType">Serialization</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters />
+                  <input>
+                    <property name="Serialized_List" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized List</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedList</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_List" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </input>
+                  <return>
+                    <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized Array</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedArray</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_Array" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+    </method>
+    <method name="SerializeAddItemToArray" type="create" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Serialize Add Item To Array</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="endpointMethodType">Serialization</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="K2_Management" guid="5d273ad6-e27a-46f8-be67-198b36085f99" type="SourceCode.SmartObjects.Services.K2Management.K2ManagementBroker" execblock="0">
+          <metadata>
+            <display>
+              <displayname>K2 Management</displayname>
+              <description />
+            </display>
+          </metadata>
+          <objects>
+            <object name="WebDesigner_Management_ProcessInfo" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>ProcessInfo</displayname>
+                  <description />
+                </display>
+                <service>
+                  <key name="typeFullName">SourceCode.SmartObjects.Services.K2Management.WebDesigner.Management.ProcessInfo</key>
+                  <key name="equalshash">EAgFXR4uFhP0zZo2EMElXw==</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                  <metadata>
+                    <display>
+                      <displayname>Serialized Array</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="endpointPropertyType">SerializedArray</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Serialized_Array" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="CreatedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>CreatedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">CreatedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="CreatedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="CreatedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                  <metadata>
+                    <display>
+                      <displayname>CreatedDate</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.DateTime</key>
+                      <key name="propertyInfoName">CreatedDate</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="CreatedDate" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Description" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Description</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Description</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Description" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ID" type="System.Int32" extendtype="default" sotype="number">
+                  <metadata>
+                    <display>
+                      <displayname>ID</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.Int32</key>
+                      <key name="propertyInfoName">ID</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ID" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="IsLocked" type="System.Boolean" extendtype="default" sotype="yesno">
+                  <metadata>
+                    <display>
+                      <displayname>IsLocked</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.Boolean</key>
+                      <key name="propertyInfoName">IsLocked</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="IsLocked" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="LockedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>LockedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">LockedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="LockedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ModifiedBy" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>ModifiedBy</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">ModifiedBy</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ModifiedBy" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ModifiedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                  <metadata>
+                    <display>
+                      <displayname>ModifiedDate</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.DateTime</key>
+                      <key name="propertyInfoName">ModifiedDate</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ModifiedDate" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Name" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Name</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Name</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Name" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ShareType" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>ShareType</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">ShareType</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ShareType" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Status" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Status</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Status</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Status" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Type" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Type</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Type</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Type" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Version" type="System.String" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Version</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="propertyInfoName">Version</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Version" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="SerializeAddItemToArray" type="create">
+                  <metadata>
+                    <display>
+                      <displayname>Serialize Add Item To Array</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="endpointMethodType">Serialization</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters />
+                  <input>
+                    <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized Array</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedArray</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_Array" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="CreatedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>CreatedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">CreatedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="CreatedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="CreatedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                      <metadata>
+                        <display>
+                          <displayname>CreatedDate</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.DateTime</key>
+                          <key name="propertyInfoName">CreatedDate</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="CreatedDate" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ID" type="System.Int32" extendtype="default" sotype="number">
+                      <metadata>
+                        <display>
+                          <displayname>ID</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.Int32</key>
+                          <key name="propertyInfoName">ID</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ID" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="IsLocked" type="System.Boolean" extendtype="default" sotype="yesno">
+                      <metadata>
+                        <display>
+                          <displayname>IsLocked</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.Boolean</key>
+                          <key name="propertyInfoName">IsLocked</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="IsLocked" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="LockedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>LockedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">LockedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="LockedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ModifiedBy" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>ModifiedBy</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">ModifiedBy</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ModifiedBy" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ModifiedDate" type="System.DateTime" extendtype="default" sotype="datetime">
+                      <metadata>
+                        <display>
+                          <displayname>ModifiedDate</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.DateTime</key>
+                          <key name="propertyInfoName">ModifiedDate</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ModifiedDate" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Name" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ShareType" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>ShareType</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">ShareType</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ShareType" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Status" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Status</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Status</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Status" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Type" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Type</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Type</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Type" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Version" type="System.String" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Version</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="propertyInfoName">Version</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Version" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </input>
+                  <return>
+                    <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized Array</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedArray</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_Array" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+    </method>
+    <method name="SerializeRemoveFromArray" type="delete" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Serialize Remove From Array</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="endpointMethodType">Serialization</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="K2_Management" guid="5d273ad6-e27a-46f8-be67-198b36085f99" type="SourceCode.SmartObjects.Services.K2Management.K2ManagementBroker" execblock="0">
+          <metadata>
+            <display>
+              <displayname>K2 Management</displayname>
+              <description />
+            </display>
+          </metadata>
+          <objects>
+            <object name="WebDesigner_Management_ProcessInfo" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>ProcessInfo</displayname>
+                  <description />
+                </display>
+                <service>
+                  <key name="typeFullName">SourceCode.SmartObjects.Services.K2Management.WebDesigner.Management.ProcessInfo</key>
+                  <key name="equalshash">EAgFXR4uFhP0zZo2EMElXw==</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="Serialized_Item__String_" type="System.String" extendtype="default" sotype="memo">
+                  <metadata>
+                    <display>
+                      <displayname>Serialized Item (String)</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="endpointPropertyType">SerializedItem</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Serialized_Item__String_" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                  <metadata>
+                    <display>
+                      <displayname>Serialized Array</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="typeFullName">System.String</key>
+                      <key name="endpointPropertyType">SerializedArray</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Serialized_Array" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="SerializeRemoveFromArray" type="delete">
+                  <metadata>
+                    <display>
+                      <displayname>Serialize Remove From Array</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="endpointMethodType">Serialization</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters />
+                  <input>
+                    <property name="Serialized_Item__String_" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized Item (String)</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedItem</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_Item__String_" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized Array</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedArray</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_Array" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </input>
+                  <return>
+                    <property name="Serialized_Array" type="System.String" extendtype="default" sotype="memo">
+                      <metadata>
+                        <display>
+                          <displayname>Serialized Array</displayname>
+                          <description />
+                        </display>
+                        <service>
+                          <key name="typeFullName">System.String</key>
+                          <key name="endpointPropertyType">SerializedArray</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Serialized_Array" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+    </method>
+  </methods>
+  <defaults>
+    <methods>
+      <read name="Serialize" />
+      <list name="DeserializeArray" />
+      <report name="DeserializeArray" />
+    </methods>
+  </defaults>
+  <associations />
+</smartobjectroot>
