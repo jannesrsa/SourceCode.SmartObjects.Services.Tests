@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SourceCode.SmartObjects.Client;
 using SourceCode.SmartObjects.Services.Tests.Extensions;
@@ -63,7 +64,7 @@ InnerException Message: {innerExceptionMessage}";
             var actual = ExceptionExtensions.GetExceptionMessage(exception);
 
             // Assert
-            StringAssert.Contains(expected.Trim(), actual.Trim());
+            Assert.AreEqual(Regex.Replace(expected.Trim(), @"\w", " "), Regex.Replace(actual.Trim(), @"\w", " "));
         }
     }
 }
