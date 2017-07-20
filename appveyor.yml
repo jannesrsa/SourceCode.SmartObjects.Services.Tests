@@ -27,7 +27,7 @@ build:
  publish_nuget: true             # package projects with .nuspec files and push to artifacts
 
 test_script:
-- OpenCover.Console.exe -register:user -target:"vstest.console.exe" -targetargs:""c:\projects\SourceCode.SmartObjects.Services.Tests.UTest.dll" "/Settings:C:\projects\sourcecode-smartobjects-services-tests\src\AppVeyor.runsettings" /InIsolation /logger:Appveyor" -filter:"+[SourceCode.SmartObjects.Services.Tests]* -[SourceCode.SmartObjects.Services.Tests.UTest*]*" -output:".\smartobjects-services-tests_coverage.xml" -excludebyattribute:*.ExcludeFromCodeCoverage*
+- OpenCover.Console.exe -register:user -target:"vstest.console.exe" -targetargs:""c:\projects\SourceCode.SmartObjects.Services.Tests.UTest.dll" "/Settings:C:\projects\sourcecode-smartobjects-services-tests\src\AppVeyor.runsettings" /InIsolation /logger:Appveyor" -filter:"+[SourceCode.SmartObjects.Services.Tests]* -[SourceCode.SmartObjects.Services.Tests.UTest*]*" -output:".\smartobjects-services-tests_coverage.xml" -excludebyattribute:*.ExcludeFromCodeCoverage* -returntargetcode
 
 after_test:
 - pip install codecov 

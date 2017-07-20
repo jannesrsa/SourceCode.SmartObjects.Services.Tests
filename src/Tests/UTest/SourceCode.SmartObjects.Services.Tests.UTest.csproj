@@ -67,11 +67,14 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Factories\SmartObjectFactory.cs" />
+    <Compile Include="Factories\SmartObjectOption.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SmartObjectExtensionsTests.cs" />
     <Compile Include="WhenSerializeItemToArrayCalledOnSmartObjectClientServerExtensions.cs" />
     <Compile Include="WhenSerializeAddItemToArrayCalledOnSmartObjectClientServerExtensions.cs" />
     <Compile Include="WhenSerializeCalledOnSmartObjectClientServerExtensions.cs" />
@@ -105,7 +108,10 @@
   <ItemGroup>
     <Content Include="Resources\ServiceInstance_URMService.xml" />
     <Content Include="Resources\SmartObjectDefinition_ProcessInfo.xml" />
-    <EmbeddedResource Include="Resources\SmartObject_ProcessInfo.xml" />
+    <EmbeddedResource Include="Resources\SmartObject_Users_and_Groups.xml" />
+    <EmbeddedResource Include="Resources\SmartObject_ProcessInfo.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

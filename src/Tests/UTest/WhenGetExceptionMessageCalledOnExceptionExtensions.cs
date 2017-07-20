@@ -64,7 +64,7 @@ InnerException Message: {innerExceptionMessage}";
             var actual = ExceptionExtensions.GetExceptionMessage(exception);
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected.Trim(), actual.Trim());
         }
     }
 }

@@ -7,6 +7,7 @@ using SourceCode.SmartObjects.Services.Tests.Extensions;
 using SourceCode.SmartObjects.Services.Tests.Helpers;
 using SourceCode.SmartObjects.Services.Tests.Interfaces;
 using SourceCode.SmartObjects.Services.Tests.Managers;
+using SourceCode.SmartObjects.Services.Tests.UTest.Factories;
 using SourceCode.SmartObjects.Services.Tests.UTest.Properties;
 
 namespace SourceCode.SmartObjects.Services.Tests.UTest
@@ -28,8 +29,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
 
             var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
 
-            var smartObject = new SmartObject();
-            smartObject.Load(GetType().Assembly.GetManifestResourceStream("SourceCode.SmartObjects.Services.Tests.UTest.Resources.SmartObject_ProcessInfo.xml"));
+            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
 
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);

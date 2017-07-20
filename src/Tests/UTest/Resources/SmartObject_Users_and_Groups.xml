@@ -1,0 +1,2858 @@
+﻿<smartobjectroot name="URMService_User" guid="45bb85ad-253d-4b06-9d6c-590a5c76b0ed" version="0" isextendible="false" mode="advanced" createdfromlocal="false">
+  <metadata>
+    <display>
+      <displayname>User</displayname>
+      <description>User Object</description>
+    </display>
+    <service>
+      <key name="serviceinstance">4c2f62ea-be8d-4600-a2b5-185902bdd20a</key>
+      <key name="serviceobject">User</key>
+    </service>
+  </metadata>
+  <types>
+    <type name="user" />
+  </types>
+  <properties>
+    <property name="FQN" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>FQN</displayname>
+          <description>Fully Qualified name of the User object</description>
+        </display>
+      </metadata>
+    </property>
+    <property name="UserName" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>UserName</displayname>
+          <description>User Name as provided by label provider</description>
+        </display>
+      </metadata>
+    </property>
+    <property name="Name" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Name</displayname>
+          <description>Name of the user</description>
+        </display>
+      </metadata>
+    </property>
+    <property name="Description" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Description</displayname>
+          <description>User Description</description>
+        </display>
+      </metadata>
+    </property>
+    <property name="Email" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Email</displayname>
+          <description>Email address</description>
+        </display>
+      </metadata>
+    </property>
+    <property name="Manager" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Manager</displayname>
+          <description>User manager</description>
+        </display>
+      </metadata>
+    </property>
+    <property name="SipAccount" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Sip Account</displayname>
+          <description>User Sip Account</description>
+        </display>
+      </metadata>
+    </property>
+    <property name="UserNameList" type="multivalue" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>User Name List</displayname>
+          <description>List of UserNames in MutliValue format</description>
+        </display>
+      </metadata>
+    </property>
+    <property name="ObjectSID" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>Object SID</displayname>
+          <description>User SID</description>
+        </display>
+      </metadata>
+    </property>
+    <property name="DisplayName" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>DisplayName</displayname>
+          <description>Display name of the User object</description>
+        </display>
+      </metadata>
+    </property>
+  </properties>
+  <methods>
+    <method name="GetUserDetails" type="read" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Get User Details</displayname>
+          <description>Gets the details for a specified user</description>
+        </display>
+        <service>
+          <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+          <key name="methname">GetUser</key>
+          <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="URMService" guid="4c2f62ea-be8d-4600-a2b5-185902bdd20a" type="SourceCode.SmartObjects.Services.UserRoleManagerService.URMService" execblock="0">
+          <metadata>
+            <display>
+              <displayname>URM Service</displayname>
+              <description>URM Service from User and Group resolution against labels</description>
+            </display>
+          </metadata>
+          <objects>
+            <object name="User" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>User</displayname>
+                  <description>User Object</description>
+                </display>
+                <service>
+                  <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>FQN</displayname>
+                      <description>Fully Qualified name of the User object</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">FQN</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="FQN" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="UserName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>UserName</displayname>
+                      <description>User Name as provided by label provider</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">UserName</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="UserName" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Name</displayname>
+                      <description>Name of the user</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Name</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Name" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Description</displayname>
+                      <description>User Description</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Description</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Description" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Email</displayname>
+                      <description>Email address</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Email</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Email" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Manager</displayname>
+                      <description>User manager</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Manager</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Manager" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="SipAccount" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Sip Account</displayname>
+                      <description>User Sip Account</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">SipAccount</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="SipAccount" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ObjectSID" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Object SID</displayname>
+                      <description>User SID</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">ObjectSID</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ObjectSID" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>DisplayName</displayname>
+                      <description>Display name of the User object</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">DisplayName</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="DisplayName" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="GetUserDetails" type="read">
+                  <metadata>
+                    <display>
+                      <displayname>Get User Details</displayname>
+                      <description>Gets the details for a specified user</description>
+                    </display>
+                    <service>
+                      <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+                      <key name="methname">GetUser</key>
+                      <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+                    </service>
+                  </metadata>
+                  <validation>
+                    <requiredproperties>
+                      <property name="FQN" />
+                    </requiredproperties>
+                  </validation>
+                  <parameters />
+                  <input>
+                    <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>FQN</displayname>
+                          <description>Fully Qualified name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">FQN</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="FQN" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </input>
+                  <return>
+                    <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>FQN</displayname>
+                          <description>Fully Qualified name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">FQN</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="FQN" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="UserName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>UserName</displayname>
+                          <description>User Name as provided by label provider</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">UserName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="UserName" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description>Name of the user</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description>User Description</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Email</displayname>
+                          <description>Email address</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Email</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Email" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Manager</displayname>
+                          <description>User manager</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Manager</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Manager" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="SipAccount" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Sip Account</displayname>
+                          <description>User Sip Account</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">SipAccount</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="SipAccount" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ObjectSID" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Object SID</displayname>
+                          <description>User SID</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">ObjectSID</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ObjectSID" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>DisplayName</displayname>
+                          <description>Display name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">DisplayName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="DisplayName" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+    </method>
+    <method name="GetUsers" type="list" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Get Users</displayname>
+          <description>Gets a list of users</description>
+        </display>
+        <service>
+          <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+          <key name="methname">GetUsers</key>
+          <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="URMService" guid="4c2f62ea-be8d-4600-a2b5-185902bdd20a" type="SourceCode.SmartObjects.Services.UserRoleManagerService.URMService" execblock="0">
+          <metadata>
+            <display>
+              <displayname>URM Service</displayname>
+              <description>URM Service from User and Group resolution against labels</description>
+            </display>
+          </metadata>
+          <objects>
+            <object name="User" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>User</displayname>
+                  <description>User Object</description>
+                </display>
+                <service>
+                  <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Name</displayname>
+                      <description>Name of the user</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Name</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Name" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Description</displayname>
+                      <description>User Description</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Description</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Description" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Email</displayname>
+                      <description>Email address</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Email</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Email" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Manager</displayname>
+                      <description>User manager</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Manager</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Manager" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>DisplayName</displayname>
+                      <description>Display name of the User object</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">DisplayName</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="DisplayName" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>FQN</displayname>
+                      <description>Fully Qualified name of the User object</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">FQN</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="FQN" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="UserName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>UserName</displayname>
+                      <description>User Name as provided by label provider</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">UserName</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="UserName" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="SipAccount" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Sip Account</displayname>
+                      <description>User Sip Account</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">SipAccount</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="SipAccount" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ObjectSID" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Object SID</displayname>
+                      <description>User SID</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">ObjectSID</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ObjectSID" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="GetUsers" type="list">
+                  <metadata>
+                    <display>
+                      <displayname>Get Users</displayname>
+                      <description>Gets a list of users</description>
+                    </display>
+                    <service>
+                      <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+                      <key name="methname">GetUsers</key>
+                      <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters>
+                    <parameter name="labelName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Label Name</displayname>
+                          <description>Name of the label the user belongs</description>
+                        </display>
+                        <service>
+                          <key name="paramname">labelName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="parameter">
+                          <parameter name="labelName" />
+                        </mapping>
+                      </mappings>
+                    </parameter>
+                  </parameters>
+                  <input>
+                    <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description>Name of the user</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description>User Description</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Email</displayname>
+                          <description>Email address</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Email</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Email" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Manager</displayname>
+                          <description>User manager</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Manager</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Manager" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>DisplayName</displayname>
+                          <description>Display name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">DisplayName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="DisplayName" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </input>
+                  <return>
+                    <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>FQN</displayname>
+                          <description>Fully Qualified name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">FQN</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="FQN" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="UserName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>UserName</displayname>
+                          <description>User Name as provided by label provider</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">UserName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="UserName" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description>Name of the user</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description>User Description</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Email</displayname>
+                          <description>Email address</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Email</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Email" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Manager</displayname>
+                          <description>User manager</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Manager</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Manager" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="SipAccount" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Sip Account</displayname>
+                          <description>User Sip Account</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">SipAccount</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="SipAccount" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ObjectSID" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Object SID</displayname>
+                          <description>User SID</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">ObjectSID</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ObjectSID" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>DisplayName</displayname>
+                          <description>Display name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">DisplayName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="DisplayName" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+      <parameters>
+        <parameter name="labelName" type="text">
+          <metadata>
+            <display>
+              <displayname>Label Name</displayname>
+              <description>Name of the label the user belongs</description>
+            </display>
+            <service>
+              <key name="paramname">labelName</key>
+            </service>
+          </metadata>
+        </parameter>
+      </parameters>
+    </method>
+    <method name="GetUsersByNames" type="list" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Get Users By Names</displayname>
+          <description>Get Users by List of fqn names.</description>
+        </display>
+        <service>
+          <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+          <key name="methname">GetUsersByNames</key>
+          <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="URMService" guid="4c2f62ea-be8d-4600-a2b5-185902bdd20a" type="SourceCode.SmartObjects.Services.UserRoleManagerService.URMService" execblock="0">
+          <metadata>
+            <display>
+              <displayname>URM Service</displayname>
+              <description>URM Service from User and Group resolution against labels</description>
+            </display>
+          </metadata>
+          <objects>
+            <object name="User" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>User</displayname>
+                  <description>User Object</description>
+                </display>
+                <service>
+                  <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>FQN</displayname>
+                      <description>Fully Qualified name of the User object</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">FQN</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="FQN" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Name</displayname>
+                      <description>Name of the user</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Name</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Name" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Description</displayname>
+                      <description>User Description</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Description</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Description" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Email</displayname>
+                      <description>Email address</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Email</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Email" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Manager</displayname>
+                      <description>User manager</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Manager</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Manager" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="SipAccount" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Sip Account</displayname>
+                      <description>User Sip Account</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">SipAccount</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="SipAccount" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ObjectSID" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Object SID</displayname>
+                      <description>User SID</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">ObjectSID</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ObjectSID" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>DisplayName</displayname>
+                      <description>Display name of the User object</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">DisplayName</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="DisplayName" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="GetUsersByNames" type="list">
+                  <metadata>
+                    <display>
+                      <displayname>Get Users By Names</displayname>
+                      <description>Get Users by List of fqn names.</description>
+                    </display>
+                    <service>
+                      <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+                      <key name="methname">GetUsersByNames</key>
+                      <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters>
+                    <parameter name="userNames" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" sotype="multivalue">
+                      <metadata>
+                        <display>
+                          <displayname>UserNames</displayname>
+                          <description>List of user names to be returned.</description>
+                        </display>
+                        <service>
+                          <key name="paramname">userNames</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="parameter">
+                          <parameter name="userNames" />
+                        </mapping>
+                      </mappings>
+                    </parameter>
+                  </parameters>
+                  <input />
+                  <return>
+                    <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>FQN</displayname>
+                          <description>Fully Qualified name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">FQN</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="FQN" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description>Name of the user</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description>User Description</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Email</displayname>
+                          <description>Email address</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Email</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Email" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Manager</displayname>
+                          <description>User manager</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Manager</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Manager" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="SipAccount" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Sip Account</displayname>
+                          <description>User Sip Account</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">SipAccount</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="SipAccount" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ObjectSID" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Object SID</displayname>
+                          <description>User SID</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">ObjectSID</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ObjectSID" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>DisplayName</displayname>
+                          <description>Display name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">DisplayName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="DisplayName" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+      <parameters>
+        <parameter name="userNames" type="multivalue">
+          <metadata>
+            <display>
+              <displayname>UserNames</displayname>
+              <description>List of user names to be returned.</description>
+            </display>
+            <service>
+              <key name="paramname">userNames</key>
+            </service>
+          </metadata>
+        </parameter>
+      </parameters>
+    </method>
+    <method name="FindGroupUsers" type="list" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Find Group Users </displayname>
+          <description>Find all users for the specified group</description>
+        </display>
+        <service>
+          <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+          <key name="methname">FindGroupUsers</key>
+          <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="URMService" guid="4c2f62ea-be8d-4600-a2b5-185902bdd20a" type="SourceCode.SmartObjects.Services.UserRoleManagerService.URMService" execblock="0">
+          <metadata>
+            <display>
+              <displayname>URM Service</displayname>
+              <description>URM Service from User and Group resolution against labels</description>
+            </display>
+          </metadata>
+          <objects>
+            <object name="User" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>User</displayname>
+                  <description>User Object</description>
+                </display>
+                <service>
+                  <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Name</displayname>
+                      <description>Name of the user</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Name</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Name" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Description</displayname>
+                      <description>User Description</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Description</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Description" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Email</displayname>
+                      <description>Email address</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Email</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Email" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Manager</displayname>
+                      <description>User manager</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Manager</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Manager" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>FQN</displayname>
+                      <description>Fully Qualified name of the User object</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">FQN</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="FQN" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="UserName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>UserName</displayname>
+                      <description>User Name as provided by label provider</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">UserName</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="UserName" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="SipAccount" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Sip Account</displayname>
+                      <description>User Sip Account</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">SipAccount</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="SipAccount" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ObjectSID" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Object SID</displayname>
+                      <description>User SID</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">ObjectSID</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ObjectSID" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>DisplayName</displayname>
+                      <description>Display name of the User object</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">DisplayName</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="DisplayName" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="FindGroupUsers" type="list">
+                  <metadata>
+                    <display>
+                      <displayname>Find Group Users </displayname>
+                      <description>Find all users for the specified group</description>
+                    </display>
+                    <service>
+                      <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+                      <key name="methname">FindGroupUsers</key>
+                      <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters>
+                    <parameter name="groupName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Group name</displayname>
+                          <description>The name of the Group to use</description>
+                        </display>
+                        <service>
+                          <key name="paramname">groupName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="parameter">
+                          <parameter name="groupName" />
+                        </mapping>
+                      </mappings>
+                    </parameter>
+                    <parameter name="labelName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>LabelName</displayname>
+                          <description>Name of the label the user and group name belongs to</description>
+                        </display>
+                        <service>
+                          <key name="paramname">labelName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="parameter">
+                          <parameter name="labelName_1" />
+                        </mapping>
+                      </mappings>
+                    </parameter>
+                  </parameters>
+                  <input>
+                    <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description>Name of the user</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description>User Description</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Email</displayname>
+                          <description>Email address</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Email</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Email" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Manager</displayname>
+                          <description>User manager</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Manager</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Manager" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </input>
+                  <return>
+                    <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>FQN</displayname>
+                          <description>Fully Qualified name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">FQN</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="FQN" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="UserName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>UserName</displayname>
+                          <description>User Name as provided by label provider</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">UserName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="UserName" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description>Name of the user</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description>User Description</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Email</displayname>
+                          <description>Email address</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Email</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Email" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Manager</displayname>
+                          <description>User manager</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Manager</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Manager" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="SipAccount" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Sip Account</displayname>
+                          <description>User Sip Account</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">SipAccount</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="SipAccount" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ObjectSID" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Object SID</displayname>
+                          <description>User SID</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">ObjectSID</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ObjectSID" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>DisplayName</displayname>
+                          <description>Display name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">DisplayName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="DisplayName" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+      <parameters>
+        <parameter name="groupName" type="text">
+          <metadata>
+            <display>
+              <displayname>Group name</displayname>
+              <description>The name of the Group to use</description>
+            </display>
+            <service>
+              <key name="paramname">groupName</key>
+            </service>
+          </metadata>
+        </parameter>
+        <parameter name="labelName_1" type="text">
+          <metadata>
+            <display>
+              <displayname>LabelName (1)</displayname>
+              <description>Name of the label the user and group name belongs to</description>
+            </display>
+            <service>
+              <key name="paramname">labelName</key>
+              <key name="smartmethodparameter">labelName_1</key>
+            </service>
+          </metadata>
+        </parameter>
+      </parameters>
+    </method>
+    <method name="GetRoleUsers" type="list" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Get Role Users</displayname>
+          <description>Gets a list of users for a given Role name</description>
+        </display>
+        <service>
+          <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+          <key name="methname">GetRoleUsers</key>
+          <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="URMService" guid="4c2f62ea-be8d-4600-a2b5-185902bdd20a" type="SourceCode.SmartObjects.Services.UserRoleManagerService.URMService" execblock="0">
+          <metadata>
+            <display>
+              <displayname>URM Service</displayname>
+              <description>URM Service from User and Group resolution against labels</description>
+            </display>
+          </metadata>
+          <objects>
+            <object name="User" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>User</displayname>
+                  <description>User Object</description>
+                </display>
+                <service>
+                  <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>FQN</displayname>
+                      <description>Fully Qualified name of the User object</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">FQN</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="FQN" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="UserName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>UserName</displayname>
+                      <description>User Name as provided by label provider</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">UserName</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="UserName" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Name</displayname>
+                      <description>Name of the user</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Name</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Name" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Description</displayname>
+                      <description>User Description</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Description</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Description" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Email</displayname>
+                      <description>Email address</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Email</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Email" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Manager</displayname>
+                      <description>User manager</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Manager</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Manager" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="SipAccount" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Sip Account</displayname>
+                      <description>User Sip Account</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">SipAccount</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="SipAccount" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ObjectSID" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Object SID</displayname>
+                      <description>User SID</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">ObjectSID</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ObjectSID" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>DisplayName</displayname>
+                      <description>Display name of the User object</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">DisplayName</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="DisplayName" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="GetRoleUsers" type="list">
+                  <metadata>
+                    <display>
+                      <displayname>Get Role Users</displayname>
+                      <description>Gets a list of users for a given Role name</description>
+                    </display>
+                    <service>
+                      <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+                      <key name="methname">GetRoleUsers</key>
+                      <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters>
+                    <parameter name="roleName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Role Name</displayname>
+                          <description>Name of the Role</description>
+                        </display>
+                        <service>
+                          <key name="paramname">roleName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="parameter">
+                          <parameter name="roleName" />
+                        </mapping>
+                      </mappings>
+                    </parameter>
+                  </parameters>
+                  <input />
+                  <return>
+                    <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>FQN</displayname>
+                          <description>Fully Qualified name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">FQN</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="FQN" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="UserName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>UserName</displayname>
+                          <description>User Name as provided by label provider</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">UserName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="UserName" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description>Name of the user</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description>User Description</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Email</displayname>
+                          <description>Email address</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Email</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Email" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Manager</displayname>
+                          <description>User manager</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Manager</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Manager" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="SipAccount" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Sip Account</displayname>
+                          <description>User Sip Account</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">SipAccount</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="SipAccount" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ObjectSID" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Object SID</displayname>
+                          <description>User SID</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">ObjectSID</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ObjectSID" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>DisplayName</displayname>
+                          <description>Display name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">DisplayName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="DisplayName" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+      <parameters>
+        <parameter name="roleName" type="text">
+          <metadata>
+            <display>
+              <displayname>Role Name</displayname>
+              <description>Name of the Role</description>
+            </display>
+            <service>
+              <key name="paramname">roleName</key>
+            </service>
+          </metadata>
+        </parameter>
+      </parameters>
+    </method>
+    <method name="GetRoleUserNames" type="read" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Get Role User Names</displayname>
+          <description>Gets a multivalue name list of users for a role</description>
+        </display>
+        <service>
+          <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+          <key name="methname">GetRoleUserNames</key>
+          <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="URMService" guid="4c2f62ea-be8d-4600-a2b5-185902bdd20a" type="SourceCode.SmartObjects.Services.UserRoleManagerService.URMService" execblock="0">
+          <metadata>
+            <display>
+              <displayname>URM Service</displayname>
+              <description>URM Service from User and Group resolution against labels</description>
+            </display>
+          </metadata>
+          <objects>
+            <object name="User" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>User</displayname>
+                  <description>User Object</description>
+                </display>
+                <service>
+                  <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="UserNameList" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="multivalue">
+                  <metadata>
+                    <display>
+                      <displayname>User Name List</displayname>
+                      <description>List of UserNames in MutliValue format</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">UserNameList</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="UserNameList" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="GetRoleUserNames" type="read">
+                  <metadata>
+                    <display>
+                      <displayname>Get Role User Names</displayname>
+                      <description>Gets a multivalue name list of users for a role</description>
+                    </display>
+                    <service>
+                      <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+                      <key name="methname">GetRoleUserNames</key>
+                      <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters>
+                    <parameter name="roleName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Role Name</displayname>
+                          <description>Name of the Role</description>
+                        </display>
+                        <service>
+                          <key name="paramname">roleName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="parameter">
+                          <parameter name="roleName_1" />
+                        </mapping>
+                      </mappings>
+                    </parameter>
+                  </parameters>
+                  <input />
+                  <return>
+                    <property name="UserNameList" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="multivalue">
+                      <metadata>
+                        <display>
+                          <displayname>User Name List</displayname>
+                          <description>List of UserNames in MutliValue format</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">UserNameList</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="UserNameList" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+      <parameters>
+        <parameter name="roleName_1" type="text">
+          <metadata>
+            <display>
+              <displayname>Role Name (1)</displayname>
+              <description>Name of the Role</description>
+            </display>
+            <service>
+              <key name="paramname">roleName</key>
+              <key name="smartmethodparameter">roleName_1</key>
+            </service>
+          </metadata>
+        </parameter>
+      </parameters>
+    </method>
+    <method name="GetRolesUsers" type="list" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Get Roles Users</displayname>
+          <description>Gets users for a list of role names.</description>
+        </display>
+        <service>
+          <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+          <key name="methname">GetRolesUsers</key>
+          <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="URMService" guid="4c2f62ea-be8d-4600-a2b5-185902bdd20a" type="SourceCode.SmartObjects.Services.UserRoleManagerService.URMService" execblock="0">
+          <metadata>
+            <display>
+              <displayname>URM Service</displayname>
+              <description>URM Service from User and Group resolution against labels</description>
+            </display>
+          </metadata>
+          <objects>
+            <object name="User" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>User</displayname>
+                  <description>User Object</description>
+                </display>
+                <service>
+                  <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>FQN</displayname>
+                      <description>Fully Qualified name of the User object</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">FQN</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="FQN" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="UserName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>UserName</displayname>
+                      <description>User Name as provided by label provider</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">UserName</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="UserName" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Name</displayname>
+                      <description>Name of the user</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Name</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Name" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Description</displayname>
+                      <description>User Description</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Description</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Description" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Email</displayname>
+                      <description>Email address</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Email</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Email" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Manager</displayname>
+                      <description>User manager</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">Manager</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="Manager" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="SipAccount" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Sip Account</displayname>
+                      <description>User Sip Account</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">SipAccount</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="SipAccount" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="ObjectSID" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>Object SID</displayname>
+                      <description>User SID</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">ObjectSID</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="ObjectSID" />
+                    </mapping>
+                  </mappings>
+                </property>
+                <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                  <metadata>
+                    <display>
+                      <displayname>DisplayName</displayname>
+                      <description>Display name of the User object</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">DisplayName</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="DisplayName" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="GetRolesUsers" type="list">
+                  <metadata>
+                    <display>
+                      <displayname>Get Roles Users</displayname>
+                      <description>Gets users for a list of role names.</description>
+                    </display>
+                    <service>
+                      <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+                      <key name="methname">GetRolesUsers</key>
+                      <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters>
+                    <parameter name="roleNames" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" sotype="multivalue">
+                      <metadata>
+                        <display>
+                          <displayname>Role Names</displayname>
+                          <description>List of role names to retrieve users for</description>
+                        </display>
+                        <service>
+                          <key name="paramname">roleNames</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="parameter">
+                          <parameter name="roleNames" />
+                        </mapping>
+                      </mappings>
+                    </parameter>
+                  </parameters>
+                  <input />
+                  <return>
+                    <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>FQN</displayname>
+                          <description>Fully Qualified name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">FQN</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="FQN" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="UserName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>UserName</displayname>
+                          <description>User Name as provided by label provider</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">UserName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="UserName" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Name</displayname>
+                          <description>Name of the user</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Name</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Name" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Description</displayname>
+                          <description>User Description</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Description</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Description" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Email</displayname>
+                          <description>Email address</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Email</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Email" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="Manager" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Manager</displayname>
+                          <description>User manager</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">Manager</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="Manager" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="SipAccount" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Sip Account</displayname>
+                          <description>User Sip Account</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">SipAccount</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="SipAccount" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="ObjectSID" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Object SID</displayname>
+                          <description>User SID</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">ObjectSID</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="ObjectSID" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                    <property name="DisplayName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>DisplayName</displayname>
+                          <description>Display name of the User object</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">DisplayName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="DisplayName" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+      <parameters>
+        <parameter name="roleNames" type="multivalue">
+          <metadata>
+            <display>
+              <displayname>Role Names</displayname>
+              <description>List of role names to retrieve users for</description>
+            </display>
+            <service>
+              <key name="paramname">roleNames</key>
+            </service>
+          </metadata>
+        </parameter>
+      </parameters>
+    </method>
+    <method name="GetRoleUserNamesMultiValue" type="read" transaction="continue" execblockno="0">
+      <metadata>
+        <display>
+          <displayname>Get Role User Names MultiValue</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+          <key name="methname">GetRoleUserNameList</key>
+          <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+        </service>
+      </metadata>
+      <serviceinstances>
+        <serviceinstance name="URMService" guid="4c2f62ea-be8d-4600-a2b5-185902bdd20a" type="SourceCode.SmartObjects.Services.UserRoleManagerService.URMService" execblock="0">
+          <metadata>
+            <display>
+              <displayname>URM Service</displayname>
+              <description>URM Service from User and Group resolution against labels</description>
+            </display>
+          </metadata>
+          <objects>
+            <object name="User" type="" active="true" version="">
+              <metadata>
+                <display>
+                  <displayname>User</displayname>
+                  <description>User Object</description>
+                </display>
+                <service>
+                  <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User</key>
+                </service>
+              </metadata>
+              <properties>
+                <property name="UserNameList" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="multivalue">
+                  <metadata>
+                    <display>
+                      <displayname>User Name List</displayname>
+                      <description>List of UserNames in MutliValue format</description>
+                    </display>
+                    <service>
+                      <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                      <key name="propname">UserNameList</key>
+                    </service>
+                  </metadata>
+                  <mappings>
+                    <mapping type="property">
+                      <property name="UserNameList" />
+                    </mapping>
+                  </mappings>
+                </property>
+              </properties>
+              <methods>
+                <method name="GetRoleUserNamesMultiValue" type="read">
+                  <metadata>
+                    <display>
+                      <displayname>Get Role User Names MultiValue</displayname>
+                      <description />
+                    </display>
+                    <service>
+                      <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+                      <key name="methname">GetRoleUserNameList</key>
+                      <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+                    </service>
+                  </metadata>
+                  <validation />
+                  <parameters>
+                    <parameter name="roleName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" sotype="text">
+                      <metadata>
+                        <display>
+                          <displayname>Role Name</displayname>
+                          <description>Name of the Role</description>
+                        </display>
+                        <service>
+                          <key name="paramname">roleName</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="parameter">
+                          <parameter name="roleName_2" />
+                        </mapping>
+                      </mappings>
+                    </parameter>
+                  </parameters>
+                  <input />
+                  <return>
+                    <property name="UserNameList" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="multivalue">
+                      <metadata>
+                        <display>
+                          <displayname>User Name List</displayname>
+                          <description>List of UserNames in MutliValue format</description>
+                        </display>
+                        <service>
+                          <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                          <key name="propname">UserNameList</key>
+                        </service>
+                      </metadata>
+                      <mappings>
+                        <mapping type="property">
+                          <property name="UserNameList" />
+                        </mapping>
+                      </mappings>
+                    </property>
+                  </return>
+                </method>
+              </methods>
+            </object>
+          </objects>
+        </serviceinstance>
+      </serviceinstances>
+      <parameters>
+        <parameter name="roleName_2" type="text">
+          <metadata>
+            <display>
+              <displayname>Role Name (2)</displayname>
+              <description>Name of the Role</description>
+            </display>
+            <service>
+              <key name="paramname">roleName</key>
+              <key name="smartmethodparameter">roleName_2</key>
+            </service>
+          </metadata>
+        </parameter>
+      </parameters>
+    </method>
+  </methods>
+  <defaults>
+    <methods>
+      <read name="GetUserDetails" />
+      <list name="GetUsers" />
+      <report name="GetUsers" />
+    </methods>
+  </defaults>
+  <associations />
+</smartobjectroot>
