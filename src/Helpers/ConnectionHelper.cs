@@ -40,13 +40,13 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             switch (typeof(T).Name.ToString())
             {
                 case "ServiceManagementServer":
-                    return (T)GetServerWrapper<IServiceManagementServer>().BaseAPIServer;
+                    return (T)GetServerWrapper<ServiceManagementServerWrapper>().BaseAPIServer;
 
                 case "SmartObjectClientServer":
-                    return (T)GetServerWrapper<ISmartObjectClientServer>().BaseAPIServer;
+                    return (T)GetServerWrapper<SmartObjectClientServerWrapper>().BaseAPIServer;
 
                 case "SmartObjectManagementServer":
-                    return (T)GetServerWrapper<ISmartObjectManagementServer>().BaseAPIServer;
+                    return (T)GetServerWrapper<SmartObjectManagementServerWrapper>().BaseAPIServer;
             }
 
             T server = new T();

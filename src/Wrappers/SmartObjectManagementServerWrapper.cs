@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using SourceCode.Hosting.Client.BaseAPI;
 using SourceCode.SmartObjects.Management;
 using SourceCode.SmartObjects.Services.Tests.Extensions;
@@ -7,16 +8,19 @@ using SourceCode.SmartObjects.Services.Tests.Interfaces;
 
 namespace SourceCode.SmartObjects.Services.Tests.Wrappers
 {
-    [ExcludeFromCodeCoverage]
-    public class SmartObjectManagementServerWrapper : ISmartObjectManagementServer
+    internal class SmartObjectManagementServerWrapper : IBaseAPI
     {
-        private SmartObjectManagementServer _smartObjectManagementServer;
+        private readonly SmartObjectManagementServer _smartObjectManagementServer;
 
-        internal SmartObjectManagementServerWrapper(SmartObjectManagementServer smartObjectManagementServer)
+        public SmartObjectManagementServerWrapper(SmartObjectManagementServer smartObjectManagementServer)
         {
             smartObjectManagementServer.ThrowIfNull(nameof(smartObjectManagementServer));
 
             _smartObjectManagementServer = smartObjectManagementServer;
+        }
+
+        public SmartObjectManagementServerWrapper()
+        {
         }
 
         public BaseAPI BaseAPIServer
@@ -27,42 +31,77 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
             }
         }
 
-        public void DeleteSmartObject(string systemName, bool ignoreDependancyException)
+        public bool ContainsSmartObject(string systemName)
+        {
+            return this.GetSmartObjects(systemName).SmartObjectList.Any();
+        }
+
+        public void DeleteSmartObject(string systemName)
+        {
+            if (this.ContainsSmartObject(systemName))
+            {
+                this.DeleteSmartObject(systemName, true);
+            }
+        }
+
+        public void DeleteSmartObjects(Guid serviceInstanceGuid)
+        {
+            foreach (SmartObjectInfo smartObject in this.GetSmartObjects(serviceInstanceGuid).SmartObjects)
+            {
+                this.DeleteSmartObject(smartObject.Name);
+            }
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual void DeleteSmartObject(string systemName, bool ignoreDependancyException)
         {
             _smartObjectManagementServer.DeleteSmartObject(systemName, ignoreDependancyException);
         }
 
-        public string GetServiceInstance(Guid serviceInstanceGuid, ServiceExplorerLevel serviceLevel)
+        [ExcludeFromCodeCoverage]
+        internal virtual string GetServiceInstance(Guid serviceInstanceGuid, ServiceExplorerLevel serviceLevel)
         {
             return _smartObjectManagementServer.GetServiceInstance(serviceInstanceGuid, serviceLevel);
         }
 
-        public string GetServiceInstanceServiceObject(Guid serviceInstanceGuid, string serviceObjectName)
+        [ExcludeFromCodeCoverage]
+        internal virtual string GetServiceInstanceServiceObject(Guid serviceInstanceGuid, string serviceObjectName)
         {
             return _smartObjectManagementServer.GetServiceInstanceServiceObject(serviceInstanceGuid, serviceObjectName);
         }
 
-        public string GetSmartObjectDefinition(string systemName)
+        [ExcludeFromCodeCoverage]
+        internal virtual string GetSmartObjectDefinition(string systemName)
         {
             return _smartObjectManagementServer.GetSmartObjectDefinition(systemName);
         }
 
-        public SmartObjectExplorer GetSmartObjects(SearchProperty searchProperty, SearchOperator searchOperator, string value)
+        [ExcludeFromCodeCoverage]
+        internal virtual SmartObjectExplorer GetSmartObjects(SearchProperty searchProperty, SearchOperator searchOperator, string value)
         {
             return _smartObjectManagementServer.GetSmartObjects(searchProperty, searchOperator, value);
         }
 
-        public SmartObjectExplorer GetSmartObjects(string systemName)
+        [ExcludeFromCodeCoverage]
+        internal virtual SmartObjectExplorer GetSmartObjects(string systemName)
         {
             return _smartObjectManagementServer.GetSmartObjects(systemName);
         }
 
-        public SmartObjectExplorer GetSmartObjects(Guid[] guids)
+        [ExcludeFromCodeCoverage]
+        internal virtual SmartObjectExplorer GetSmartObjects(Guid[] guids)
         {
             return _smartObjectManagementServer.GetSmartObjects(guids);
         }
 
-        public void PublishSmartObjects(string smartObjectDefinitionsPublish)
+        [ExcludeFromCodeCoverage]
+        internal virtual SmartObjectExplorer GetSmartObjects(Guid baseServiceInstanceGuid)
+        {
+            return _smartObjectManagementServer.GetSmartObjects(baseServiceInstanceGuid);
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual void PublishSmartObjects(string smartObjectDefinitionsPublish)
         {
             _smartObjectManagementServer.PublishSmartObjects(smartObjectDefinitionsPublish);
         }

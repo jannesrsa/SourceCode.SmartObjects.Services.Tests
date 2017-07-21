@@ -7,19 +7,23 @@ using SourceCode.SmartObjects.Services.Tests.Interfaces;
 
 namespace SourceCode.SmartObjects.Services.Tests.Wrappers
 {
-    [ExcludeFromCodeCoverage]
-    public class ServiceManagementServerWrapper : IServiceManagementServer
+    internal class ServiceManagementServerWrapper : IBaseAPI
     {
-        private ServiceManagementServer _serviceManagementServer;
+        private readonly ServiceManagementServer _serviceManagementServer;
 
-        internal ServiceManagementServerWrapper(ServiceManagementServer serviceManagementServer)
+        public ServiceManagementServerWrapper(ServiceManagementServer serviceManagementServer)
         {
             serviceManagementServer.ThrowIfNull(nameof(serviceManagementServer));
 
             _serviceManagementServer = serviceManagementServer;
         }
 
-        public BaseAPI BaseAPIServer
+        public ServiceManagementServerWrapper()
+        {
+        }
+
+        [ExcludeFromCodeCoverage]
+        public virtual BaseAPI BaseAPIServer
         {
             get
             {
@@ -27,24 +31,36 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
             }
         }
 
-        public bool DeleteServiceInstance(Guid ServiceInstanceGuid, bool IgnoreDependancy)
+        [ExcludeFromCodeCoverage]
+        public virtual bool DeleteServiceInstance(Guid ServiceInstanceGuid, bool IgnoreDependancy)
         {
             return _serviceManagementServer.DeleteServiceInstance(ServiceInstanceGuid, IgnoreDependancy);
         }
 
-        public string GetServiceInstanceCompact(Guid ServiceInstanceGuid)
+        [ExcludeFromCodeCoverage]
+        public virtual string GetServiceInstanceCompact(Guid ServiceInstanceGuid)
         {
             return _serviceManagementServer.GetServiceInstanceCompact(ServiceInstanceGuid);
         }
 
-        public string GetServiceInstanceConfig(Guid ServiceTypeGuid)
+        [ExcludeFromCodeCoverage]
+        public virtual string GetServiceInstanceConfig(Guid ServiceTypeGuid)
         {
             return _serviceManagementServer.GetServiceInstanceConfig(ServiceTypeGuid);
         }
 
-        public string GetServiceType(Guid ServiceTypeGuid)
+        [ExcludeFromCodeCoverage]
+        public virtual string GetServiceType(Guid ServiceTypeGuid)
         {
             return _serviceManagementServer.GetServiceType(ServiceTypeGuid);
+        }
+
+        internal void DeleteServiceInstance(Guid serviceInstanceGuid)
+        {
+            if (!string.IsNullOrEmpty(this.GetServiceInstanceCompact(serviceInstanceGuid)))
+            {
+                this.DeleteServiceInstance(serviceInstanceGuid, false);
+            }
         }
     }
 }

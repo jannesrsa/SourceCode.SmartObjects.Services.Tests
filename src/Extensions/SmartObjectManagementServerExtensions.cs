@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Linq;
 using SourceCode.SmartObjects.Management;
+using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Extensions
 {
@@ -8,29 +8,17 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
     {
         public static bool ContainsSmartObject(this SmartObjectManagementServer server, string systemName)
         {
-            server.ThrowIfNull("server");
-
-            return server.GetSmartObjects(systemName).SmartObjectList.Any();
+            return new SmartObjectManagementServerWrapper(server).ContainsSmartObject(systemName);
         }
 
         public static void DeleteSmartObject(this SmartObjectManagementServer server, string systemName)
         {
-            server.ThrowIfNull("server");
-
-            if (server.ContainsSmartObject(systemName))
-            {
-                server.DeleteSmartObject(systemName, true);
-            }
+            new SmartObjectManagementServerWrapper(server).DeleteSmartObject(systemName);
         }
 
         public static void DeleteSmartObjects(this SmartObjectManagementServer server, Guid serviceInstanceGuid)
         {
-            server.ThrowIfNull("server");
-
-            foreach (SmartObjectInfo smartObject in server.GetSmartObjects(serviceInstanceGuid).SmartObjects)
-            {
-                server.DeleteSmartObject(smartObject.Name);
-            }
+            new SmartObjectManagementServerWrapper(server).DeleteSmartObjects(serviceInstanceGuid);
         }
     }
 }

@@ -3,8 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using SourceCode.SmartObjects.Services.Management;
 using SourceCode.SmartObjects.Services.Tests.Extensions;
-using SourceCode.SmartObjects.Services.Tests.Interfaces;
 using SourceCode.SmartObjects.Services.Tests.UTest.Properties;
+using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.UTest
 {
@@ -28,13 +28,13 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
         {
             //Arrange
             Guid serviceInstanceGuid = Guid.NewGuid();
-            var mockServiceManagementServer = new Mock<IServiceManagementServer>();
+            var mockServiceManagementServer = new Mock<ServiceManagementServerWrapper>();
 
             mockServiceManagementServer.Setup(x => x.GetServiceInstanceCompact(serviceInstanceGuid)).Returns(Resources.ServiceInstance_URMService);
             mockServiceManagementServer.Setup(x => x.DeleteServiceInstance(serviceInstanceGuid, It.IsAny<bool>())).Returns(true);
 
             // Act
-            ServiceManagementServerExtensions.DeleteServiceInstance(mockServiceManagementServer.Object, serviceInstanceGuid);
+            mockServiceManagementServer.Object.DeleteServiceInstance(serviceInstanceGuid);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using SourceCode.SmartObjects.Services.Tests.Helpers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Extensions
@@ -31,10 +32,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
             }
             catch (System.Exception ex)
             {
-                AssertHelper.Fail(string.Format("[{0}].[{1}] convert to '{2}' error. Value: '{3}' Row Identifier: [{4}] Error: '{5}'",
+                throw new Exception(string.Format("[{0}].[{1}] convert to '{2}' error. Value: '{3}' Row Identifier: [{4}] Error: '{5}'",
                      dataRow.Table.TableName, columnName, typeof(T).ToString(), cellObjectValue, rowIdentifier, ex.Message));
-
-                throw;
             }
         }
 

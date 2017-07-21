@@ -9,6 +9,7 @@ using SourceCode.SmartObjects.Services.Tests.Interfaces;
 using SourceCode.SmartObjects.Services.Tests.Managers;
 using SourceCode.SmartObjects.Services.Tests.UTest.Factories;
 using SourceCode.SmartObjects.Services.Tests.UTest.Properties;
+using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.UTest
 {
@@ -25,9 +26,9 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
 
             var value = Guid.NewGuid().ToString();
 
-            var mockSmartObjectClientServer = new Mock<ISmartObjectClientServer>();
+            var mockSmartObjectClientServer = new Mock<SmartObjectClientServerWrapper>();
             var mockConnectionProvider = new Mock<IConnectionProvider>();
-            var mockSmartObjectManagementServer = new Mock<ISmartObjectManagementServer>();
+            var mockSmartObjectManagementServer = new Mock<SmartObjectManagementServerWrapper>();
 
             var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
 
@@ -37,13 +38,13 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
             mockSmartObjectManagementServer.Setup(i => i.GetSmartObjects(It.IsAny<SearchProperty>(), It.IsAny<SearchOperator>(), It.IsAny<string>())).Returns(mockSmartObjectExplorer);
-            mockConnectionProvider.Setup(x => x.GetServer<ISmartObjectManagementServer>()).Returns(mockSmartObjectManagementServer.Object);
+            mockConnectionProvider.Setup(x => x.GetServer<SmartObjectManagementServerWrapper>()).Returns(mockSmartObjectManagementServer.Object);
             mockSmartObjectClientServer.Setup(x => x.GetSmartObject(It.IsAny<string>())).Returns(expected);
 
             ConnectionHelper.UpdateConnectionProvider(mockConnectionProvider.Object);
 
             // Act
-            var actual = SmartObjectClientServerExtensions.Deserialize(mockSmartObjectClientServer.Object, serviceObjectName, settings.Object, value);
+            var actual = mockSmartObjectClientServer.Object.Deserialize(serviceObjectName, settings.Object, value);
 
             // Assert
             Assert.AreEqual(expected, actual);

@@ -1,8 +1,5 @@
 ﻿using System;
 using SourceCode.Hosting.Client.BaseAPI;
-using SourceCode.SmartObjects.Client;
-using SourceCode.SmartObjects.Management;
-using SourceCode.SmartObjects.Services.Management;
 using SourceCode.SmartObjects.Services.Tests.Interfaces;
 
 namespace SourceCode.SmartObjects.Services.Tests.Wrappers
@@ -42,16 +39,16 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
 
             switch (typeof(T).Name.ToString())
             {
-                case "IServiceManagementServer":
-                    server = new ServiceManagementServerWrapper(new ServiceManagementServer()) as T;
+                case "ServiceManagementServerWrapper":
+                    server = new ServiceManagementServerWrapper() as T;
                     break;
 
-                case "ISmartObjectClientServer":
-                    server = new SmartObjectClientServerWrapper(new SmartObjectClientServer()) as T;
+                case "SmartObjectClientServerWrapper":
+                    server = new SmartObjectClientServerWrapper() as T;
                     break;
 
-                case "ISmartObjectManagementServer":
-                    server = new SmartObjectManagementServerWrapper(new SmartObjectManagementServer()) as T;
+                case "SmartObjectManagementServerWrapper":
+                    server = new SmartObjectManagementServerWrapper() as T;
                     break;
 
                 default:
