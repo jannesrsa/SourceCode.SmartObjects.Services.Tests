@@ -43,42 +43,42 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
         public static bool ContainsSmartObject(SmartObjectManagementServer server, string systemName)
         {
-            return ContainsSmartObject(new SmartObjectManagementServerWrapper(server), systemName);
+            return ContainsSmartObject(ConnectionHelper.GetSmartObjectManagementServerWrapper(server), systemName);
         }
 
         public static void DeleteSmartObject(SmartObjectManagementServer server, string systemName)
         {
-            DeleteSmartObject(new SmartObjectManagementServerWrapper(server), systemName);
+            DeleteSmartObject(ConnectionHelper.GetSmartObjectManagementServerWrapper(server), systemName);
         }
 
         public static SmartObject ExecuteBulkScalar(SmartObjectClientServer clientServer, SmartObject smartObject, DataTable inputTable)
         {
-            return ExecuteBulkScalar(new SmartObjectClientServerWrapper(clientServer), smartObject, inputTable);
+            return ExecuteBulkScalar(ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer), smartObject, inputTable);
         }
 
         public static SmartObjectList ExecuteList(SmartObjectClientServer clientServer, SmartObject smartObject, ExecuteListOptions options = null)
         {
-            return ExecuteList(new SmartObjectClientServerWrapper(clientServer), smartObject, options);
+            return ExecuteList(ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer), smartObject, options);
         }
 
         public static DataTable ExecuteListDataTable(SmartObjectClientServer clientServer, SmartObject smartObject, ExecuteListOptions options = null)
         {
-            return ExecuteListDataTable(new SmartObjectClientServerWrapper(clientServer), smartObject, options);
+            return ExecuteListDataTable(ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer), smartObject, options);
         }
 
         public static SmartObjectReader ExecuteListReader(SmartObjectClientServer clientServer, SmartObject smartObject, ExecuteListReaderOptions options = null)
         {
-            return ExecuteListReader(new SmartObjectClientServerWrapper(clientServer), smartObject, options);
+            return ExecuteListReader(ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer), smartObject, options);
         }
 
         public static SmartObject ExecuteScalar(SmartObjectClientServer clientServer, SmartObject smartObject)
         {
-            return ExecuteScalar(new SmartObjectClientServerWrapper(clientServer), smartObject);
+            return ExecuteScalar(ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer), smartObject);
         }
 
         public static DataTable ExecuteSQLQueryDataTable(SmartObjectClientServer clientServer, string query)
         {
-            return ExecuteSQLQueryDataTable(new SmartObjectClientServerWrapper(clientServer), query);
+            return ExecuteSQLQueryDataTable(ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer), query);
         }
 
         public static ServiceConfigInfo GetServiceConfigInfo(Guid serviceTypeGuid)
@@ -161,7 +161,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
         public static SmartObject GetSmartObject(SmartObjectClientServer clientServer, string serviceObjectName, ServiceInstanceSettings serviceInstanceSettings)
         {
-            return GetSmartObject(new SmartObjectClientServerWrapper(clientServer), serviceObjectName, serviceInstanceSettings);
+            return GetSmartObject(ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer), serviceObjectName, serviceInstanceSettings);
         }
 
         public static SmartObjectDefinition GetSmartObjectDefinition(string smartObjectName)
@@ -256,7 +256,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
         public static void VerifyPaging(SmartObjectClientServer clientServer, SmartObject smartObject, int pageSize)
         {
-            VerifyPaging(new SmartObjectClientServerWrapper(clientServer), smartObject, pageSize);
+            VerifyPaging(ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer), smartObject, pageSize);
         }
 
         internal static bool ContainsSmartObject(SmartObjectManagementServerWrapper server, string systemName)

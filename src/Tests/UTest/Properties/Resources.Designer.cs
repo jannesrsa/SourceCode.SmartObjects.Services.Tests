@@ -85,6 +85,67 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;serviceconfig&gt;
+        ///  &lt;serviceauthentication securityprovider=&quot;&quot; oauthresourcename=&quot;&quot; oauthresourceaudience=&quot;&quot; impersonate=&quot;true&quot; isrequired=&quot;false&quot; enforceimpersonation=&quot;false&quot; useoauth=&quot;false&quot;&gt;
+        ///    &lt;username /&gt;
+        ///    &lt;password /&gt;
+        ///    &lt;extra /&gt;
+        ///    &lt;oauthtoken /&gt;
+        ///  &lt;/serviceauthentication&gt;
+        ///  &lt;settings /&gt;
+        ///&lt;/serviceconfig&gt;.
+        /// </summary>
+        internal static string ServiceInstanceConfig {
+            get {
+                return ResourceManager.GetString("ServiceInstanceConfig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;object name=&quot;ProcessOverview&quot; type=&quot;processOverview&quot; version=&quot;&quot; active=&quot;true&quot;&gt;
+        ///  &lt;metadata&gt;
+        ///    &lt;display&gt;
+        ///      &lt;displayname&gt;Process Overview&lt;/displayname&gt;
+        ///      &lt;description /&gt;
+        ///    &lt;/display&gt;
+        ///    &lt;service /&gt;
+        ///  &lt;/metadata&gt;
+        ///  &lt;properties&gt;
+        ///    &lt;property name=&quot;ProcessSetID&quot; type=&quot;System.Int32&quot; extendtype=&quot;default&quot; sotype=&quot;number&quot;&gt;
+        ///      &lt;metadata&gt;
+        ///        &lt;display&gt;
+        ///          &lt;displayname&gt;Process Set ID&lt;/displayname&gt;
+        ///          &lt;description /&gt;
+        ///        &lt;/display&gt;
+        ///        &lt;service&gt;
+        ///          &lt;key  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ServiceObject_ProcessOverview {
+            get {
+                return ResourceManager.GetString("ServiceObject_ProcessOverview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;servicetype name=&quot;SourceCode.SmartObjects.Services.AD.ADService&quot; guid=&quot;5c50e5ca-985d-49db-8486-cf8dfb702dac&quot;&gt;
+        ///  &lt;metadata&gt;
+        ///    &lt;display&gt;
+        ///      &lt;displayname&gt;AD Service2&lt;/displayname&gt;
+        ///      &lt;description /&gt;
+        ///    &lt;/display&gt;
+        ///  &lt;/metadata&gt;
+        ///  &lt;config&gt;
+        ///    &lt;assembly path=&quot;C:\Program Files (x86)\K2\ServiceBroker\SourceCode.SmartObjects.Services.ADService.dll&quot; class=&quot;SourceCode.SmartObjects.Services.AD.ADService&quot; /&gt;
+        ///  &lt;/config&gt;
+        ///&lt;/servicetype&gt;.
+        /// </summary>
+        internal static string ServiceType_ADService {
+            get {
+                return ResourceManager.GetString("ServiceType_ADService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;smartobjectroot name=&quot;K2_Management_WebDesigner_Management_ProcessInfo&quot; guid=&quot;03449af4-6e06-40ec-b9dc-c1e41ce0fafb&quot; version=&quot;0&quot; isextendible=&quot;false&quot; mode=&quot;advanced&quot; createdfromlocal=&quot;false&quot;&gt;
         ///  &lt;metadata&gt;
         ///    &lt;display&gt;

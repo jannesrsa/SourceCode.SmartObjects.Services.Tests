@@ -52,6 +52,7 @@
       <HintPath>..\..\..\packages\Moq.4.7.99\lib\net45\Moq.dll</HintPath>
     </Reference>
     <Reference Include="SourceCode.HostClientAPI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" />
+    <Reference Include="SourceCode.SmartObjects.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" />
     <Reference Include="SourceCode.SmartObjects.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL" />
     <Reference Include="SourceCode.SmartObjects.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL" />
     <Reference Include="SourceCode.SmartObjects.Services.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL" />
@@ -80,6 +81,8 @@
     <Compile Include="Factories\SmartObjectOption.cs" />
     <Compile Include="Helpers\AssertHelperTests.cs" />
     <Compile Include="Helpers\ConnectionHelperTests.cs" />
+    <Compile Include="Helpers\SecurityHelperTests.cs" />
+    <Compile Include="Helpers\SmartObjectHelperTests.cs" />
     <Compile Include="Mocks\MockWrapperFactory.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -102,6 +105,10 @@
   <ItemGroup>
     <Content Include="Resources\ServiceInstance_URMService.xml" />
     <Content Include="Resources\SmartObjectDefinition_ProcessInfo.xml" />
+    <Content Include="Resources\ServiceInstanceConfig.xml" />
+    <Content Include="Resources\ServiceObject_ProcessOverview.xml" />
+    <Content Include="Resources\ServiceType_ADService.xml" />
+    <EmbeddedResource Include="Resources\CategoryObject.sodx" />
     <EmbeddedResource Include="Resources\SmartObject_Users_and_Groups.xml" />
     <EmbeddedResource Include="Resources\SmartObject_ProcessInfo.xml">
       <SubType>Designer</SubType>

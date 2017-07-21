@@ -1,0 +1,11 @@
+﻿<servicetype name="SourceCode.SmartObjects.Services.AD.ADService" guid="5c50e5ca-985d-49db-8486-cf8dfb702dac">
+  <metadata>
+    <display>
+      <displayname>AD Service2</displayname>
+      <description />
+    </display>
+  </metadata>
+  <config>
+    <assembly path="C:\Program Files (x86)\K2\ServiceBroker\SourceCode.SmartObjects.Services.ADService.dll" class="SourceCode.SmartObjects.Services.AD.ADService" />
+  </config>
+</servicetype>

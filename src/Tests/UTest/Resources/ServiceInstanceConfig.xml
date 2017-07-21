@@ -1,0 +1,9 @@
+﻿<serviceconfig>
+  <serviceauthentication securityprovider="" oauthresourcename="" oauthresourceaudience="" impersonate="true" isrequired="false" enforceimpersonation="false" useoauth="false">
+    <username />
+    <password />
+    <extra />
+    <oauthtoken />
+  </serviceauthentication>
+  <settings />
+</serviceconfig>

@@ -118,8 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ServiceInstanceConfig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\serviceinstanceconfig.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="ServiceInstance_URMService" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\serviceinstance_urmservice.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="ServiceObject_ProcessOverview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\serviceobject_processoverview.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="ServiceType_ADService" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\servicetype_adservice.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="SmartObjectDefinition_ProcessInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\smartobjectdefinition_processinfo.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

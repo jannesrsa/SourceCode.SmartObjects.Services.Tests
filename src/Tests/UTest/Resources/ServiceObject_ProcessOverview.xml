@@ -1,0 +1,113 @@
+﻿<object name="ProcessOverview" type="processOverview" version="" active="true">
+  <metadata>
+    <display>
+      <displayname>Process Overview</displayname>
+      <description />
+    </display>
+    <service />
+  </metadata>
+  <properties>
+    <property name="ProcessSetID" type="System.Int32" extendtype="default" sotype="number">
+      <metadata>
+        <display>
+          <displayname>Process Set ID</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="WorkflowFieldType">Workflow</key>
+          <key name="WorkflowName" />
+        </service>
+      </metadata>
+    </property>
+    <property name="ProcessName" type="System.String" extendtype="default" sotype="text">
+      <metadata>
+        <display>
+          <displayname>Process Name</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="WorkflowFieldType">Workflow</key>
+          <key name="WorkflowName" />
+        </service>
+      </metadata>
+    </property>
+    <property name="Folder" type="System.String" extendtype="default" sotype="text">
+      <metadata>
+        <display>
+          <displayname>Folder</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="WorkflowFieldType">Workflow</key>
+          <key name="WorkflowName" />
+        </service>
+      </metadata>
+    </property>
+    <property name="NumberOfInstances" type="System.Int32" extendtype="default" sotype="number">
+      <metadata>
+        <display>
+          <displayname>Number Of Instances</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="WorkflowFieldType">Workflow</key>
+          <key name="WorkflowName" />
+        </service>
+      </metadata>
+    </property>
+    <property name="AverageDuration" type="System.Int32" extendtype="default" sotype="number">
+      <metadata>
+        <display>
+          <displayname>Average Duration</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="WorkflowFieldType">Workflow</key>
+          <key name="WorkflowName" />
+        </service>
+      </metadata>
+    </property>
+    <property name="IncludeDeletedStatus" type="System.Boolean" extendtype="default" sotype="yesno">
+      <metadata>
+        <display>
+          <displayname>Include Deleted Status</displayname>
+          <description />
+        </display>
+        <service>
+          <key name="WorkflowFieldType">Workflow</key>
+          <key name="WorkflowName" />
+        </service>
+      </metadata>
+    </property>
+  </properties>
+  <methods>
+    <method name="ListProcesses" type="list">
+      <metadata>
+        <display>
+          <displayname>List Processes</displayname>
+          <description />
+        </display>
+        <service />
+      </metadata>
+      <validation>
+        <requiredproperties />
+      </validation>
+      <parameters class="SourceCode.SmartObjects.Services.ServiceSDK.Objects.MethodParameters, SourceCode.SmartObjects.Services.ServiceSDK, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" />
+      <input>
+        <property name="ProcessSetID" />
+        <property name="ProcessName" />
+        <property name="Folder" />
+        <property name="NumberOfInstances" />
+        <property name="AverageDuration" />
+        <property name="IncludeDeletedStatus" />
+      </input>
+      <return>
+        <property name="ProcessSetID" />
+        <property name="ProcessName" />
+        <property name="Folder" />
+        <property name="NumberOfInstances" />
+        <property name="AverageDuration" />
+      </return>
+    </method>
+  </methods>
+</object>
