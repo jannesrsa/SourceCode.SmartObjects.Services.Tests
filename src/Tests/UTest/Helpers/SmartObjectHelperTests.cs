@@ -23,10 +23,16 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         {
             // Arrange
             var dataTable1 = new DataTable();
-            var dataTable2 = new DataTable();
+            var dataColumn = new DataColumn("Column1");
+
+            dataTable1.Columns.Add(dataColumn);
+            var dataRow = dataTable1.NewRow();
+            dataTable1.Rows.Add(dataRow);
+
+            dataRow[dataColumn] = Guid.NewGuid().ToString();
 
             // Action
-            SmartObjectHelper.CompareDataTables(dataTable1, dataTable2);
+            SmartObjectHelper.CompareDataTables(dataTable1, dataTable1.DefaultView.ToTable());
         }
 
         [TestMethod()]
@@ -244,6 +250,22 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         }
 
         [TestMethod()]
+        public void GetServiceType_Null()
+        {
+            // Act
+            _mockWrapperFactory.ServiceManagementServer
+               .Setup(i => i.GetServiceType(
+                   It.IsAny<Guid>()))
+               .Returns(string.Empty);
+
+            // Action
+            var serviceType = SmartObjectHelper.GetServiceType(Guid.NewGuid());
+
+            // Assert
+            Assert.IsNull(serviceType);
+        }
+
+        [TestMethod()]
         public void GetServiceTypeInfo_DefaultValues()
         {
             // Act
@@ -332,15 +354,41 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         [TestMethod()]
         public void PublishSmartObjects_DefaultValues()
         {
+            // Arrange
+            var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
+            var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
+            mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
+
+            _mockWrapperFactory.SmartObjectManagementServer
+                .Setup(i => i.GetSmartObjects(
+                    It.IsAny<string>()))
+                .Returns(mockSmartObjectExplorer);
+
+            var smartObjectDefinitionsPublish = new SmartObjectDefinitionsPublish();
+            smartObjectDefinitionsPublish.SmartObjects.Add(new SmartObjectDefinition());
+
             // Action
-            SmartObjectHelper.PublishSmartObjects(Mock.Of<SmartObjectDefinitionsPublish>());
+            SmartObjectHelper.PublishSmartObjects(smartObjectDefinitionsPublish);
         }
 
         [TestMethod()]
         public void PublishSmartObjectsFromResources_DefaultValues()
         {
+            // Arrange
+            var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
+            var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
+            mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
+
+            _mockWrapperFactory.SmartObjectManagementServer
+                .Setup(i => i.GetSmartObjects(
+                    It.IsAny<string>()))
+                .Returns(mockSmartObjectExplorer);
+
+            var smartObjectDefinitionsPublish = new SmartObjectDefinitionsPublish();
+            smartObjectDefinitionsPublish.SmartObjects.Add(new SmartObjectDefinition());
+
             // Action
-            //SmartObjectHelper.PublishSmartObjectsFromResources(this.GetType().Assembly, null);
+            SmartObjectHelper.PublishSmartObjectsFromResources(this.GetType().Assembly, null);
         }
 
         [TestInitialize()]

@@ -51,6 +51,7 @@
     <Reference Include="Moq, Version=4.7.99.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Moq.4.7.99\lib\net45\Moq.dll</HintPath>
     </Reference>
+    <Reference Include="SourceCode.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" />
     <Reference Include="SourceCode.HostClientAPI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" />
     <Reference Include="SourceCode.SmartObjects.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" />
     <Reference Include="SourceCode.SmartObjects.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL" />
@@ -101,6 +102,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <EmbeddedResource Include="Resources\ProcessInfo.sodx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\ServiceInstance_URMService.xml" />
@@ -108,7 +110,6 @@
     <Content Include="Resources\ServiceInstanceConfig.xml" />
     <Content Include="Resources\ServiceObject_ProcessOverview.xml" />
     <Content Include="Resources\ServiceType_ADService.xml" />
-    <EmbeddedResource Include="Resources\CategoryObject.sodx" />
     <EmbeddedResource Include="Resources\SmartObject_Users_and_Groups.xml" />
     <EmbeddedResource Include="Resources\SmartObject_ProcessInfo.xml">
       <SubType>Designer</SubType>
