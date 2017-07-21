@@ -78,6 +78,7 @@
     <Compile Include="Extensions\ValidationExtensionsTests.cs" />
     <Compile Include="Factories\SmartObjectFactory.cs" />
     <Compile Include="Factories\SmartObjectOption.cs" />
+    <Compile Include="Helpers\AssertHelperTests.cs" />
     <Compile Include="Helpers\ConnectionHelperTests.cs" />
     <Compile Include="Mocks\MockWrapperFactory.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
