@@ -8,7 +8,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
     {
         [TestMethod()]
         [ExpectedException(typeof(Exception))]
-        public void Fail()
+        public void Fail_WithMessage()
         {
             AssertHelper.Fail(Guid.NewGuid().ToString());
         }

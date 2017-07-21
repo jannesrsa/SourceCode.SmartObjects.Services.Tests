@@ -13,16 +13,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
     /// </summary>
     public static class ConnectionHelper
     {
-        private static readonly SCConnectionStringBuilder _connBuilder = new SCConnectionStringBuilder();
         private static WrapperFactory _factory;
 
         static ConnectionHelper()
         {
-            _connBuilder.Host = Environment.MachineName;
-            _connBuilder.Port = 5555;
-            _connBuilder.Integrated = true;
-            _connBuilder.IsPrimaryLogin = true;
-
             ResetWrapperFactory();
         }
 
@@ -30,7 +24,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
         {
             get
             {
-                return ConnectionHelper._connBuilder;
+                return _factory.SCConnectionStringBuilder;
             }
         }
 
@@ -38,7 +32,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
         {
             get
             {
-                var workflowConnectionStringBuilder = new SCConnectionStringBuilder(ConnectionHelper._connBuilder.ConnectionString);
+                var workflowConnectionStringBuilder = new SCConnectionStringBuilder(_factory.SCConnectionStringBuilder.ConnectionString);
                 workflowConnectionStringBuilder.Port = 5252;
                 return workflowConnectionStringBuilder;
             }
@@ -54,12 +48,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
         public static T GetServer<T>()
             where T : BaseAPI, new()
         {
-            T server = new T();
-
-            server.CreateConnection();
-            server.Connection.Open(_connBuilder.ConnectionString);
-
-            return server;
+            return _factory.GetServer<T>();
         }
 
         public static TResult Invoke<TServer, TResult>(Func<TResult> func, ref TServer server)
