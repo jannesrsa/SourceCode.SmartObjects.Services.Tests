@@ -78,6 +78,7 @@
     <Compile Include="Extensions\SmartObjectExtensionsTests.cs" />
     <Compile Include="Extensions\SmartObjectManagementServerExtensionsTests.cs" />
     <Compile Include="Extensions\ValidationExtensionsTests.cs" />
+    <Compile Include="Factories\DataTableFactory.cs" />
     <Compile Include="Factories\SmartObjectFactory.cs" />
     <Compile Include="Factories\SmartObjectOption.cs" />
     <Compile Include="Helpers\AssertHelperTests.cs" />

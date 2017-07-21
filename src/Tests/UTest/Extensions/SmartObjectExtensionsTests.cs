@@ -60,6 +60,17 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         }
 
         [TestMethod()]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void GetPropertyValue_NullPropertyName()
+        {
+            //Arrange
+            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
+
+            // Act
+            var actual = SmartObjectExtensions.GetPropertyValue<string>(smartObject, null);
+        }
+
+        [TestMethod()]
         public void GetPropertyValue_ValidCast()
         {
             //Arrange
@@ -84,6 +95,26 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             // Act
             var actual = SmartObjectExtensions.GetReturnProperties(smartObject);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void GetReturnProperties_NullSmartObject()
+        {
+            // Act
+            var actual = SmartObjectExtensions.GetReturnProperties(null);
+        }
+
+        [TestMethod()]
+        public void GetReturnProperty_WithNullProperty()
+        {
+            //Arrange
+            var expected = Guid.NewGuid().ToString();
+            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
+            smartObject.MethodToExecute = smartObject.ListMethods[0].Name;
+
+            // Act
+            SmartObjectExtensions.GetReturnProperty(smartObject, null);
         }
 
         [TestMethod()]
@@ -127,6 +158,38 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             // Act
             SmartObjectExtensions.SetInputPropertyValue(smartObject, propertyName, value);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(NullReferenceException))]
+        public void SetInputPropertyValue_NoMethodToExecute()
+        {
+            //Arrange
+            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
+            var propertyName = Guid.NewGuid().ToString();
+            var value = Guid.NewGuid().ToString();
+
+            // Act
+            SmartObjectExtensions.SetInputPropertyValue(smartObject, propertyName, value);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void SetInputPropertyValue_NullProperty()
+        {
+            //Arrange
+            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
+
+            // Act
+            SmartObjectExtensions.SetInputPropertyValue(smartObject, null, null);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void SetInputPropertyValue_NullSmartObject()
+        {
+            // Act
+            SmartObjectExtensions.SetInputPropertyValue(null, null, null);
         }
 
         [TestMethod()]

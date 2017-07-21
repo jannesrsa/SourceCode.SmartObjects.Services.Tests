@@ -22,14 +22,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void CompareDataTables()
         {
             // Arrange
-            var dataTable1 = new DataTable();
-            var dataColumn = new DataColumn("Column1");
-
-            dataTable1.Columns.Add(dataColumn);
-            var dataRow = dataTable1.NewRow();
-            dataTable1.Rows.Add(dataRow);
-
-            dataRow[dataColumn] = Guid.NewGuid().ToString();
+            DataTable dataTable1 = DataTableFactory.GetDataTableWitheOneColumnAndOneRow();
 
             // Action
             SmartObjectHelper.CompareDataTables(dataTable1, dataTable1.DefaultView.ToTable());
@@ -398,27 +391,54 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         }
 
         [TestMethod()]
-        public void VerifyAllReturnPropertiesHasValues_DefaultValues()
+        [ExpectedException(typeof(Exception))]
+        public void VerifyAllReturnPropertiesHasValues_WithMethod_NoReturn()
         {
+            // Arrange
+            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
+
             // Action
-            //SmartObjectHelper.VerifyAllReturnPropertiesHasValues(null);
+            SmartObjectHelper.VerifyAllReturnPropertiesHasValues(smartObject.Methods[0]);
         }
 
         [TestMethod()]
-        public void VerifyAllReturnPropertiesHasValuesTest1()
+        [ExpectedException(typeof(Exception))]
+        public void VerifyAllReturnPropertiesHasValues_WithSmartObject_NoReturn()
         {
+            // Arrange
+            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
+            smartObject.MethodToExecute = smartObject.Methods[0].Name;
+
             // Action
-            //SmartObjectHelper.VerifyAllReturnPropertiesHasValues(null);
+            SmartObjectHelper.VerifyAllReturnPropertiesHasValues(smartObject);
         }
 
         [TestMethod()]
+        [ExpectedException(typeof(NullReferenceException))]
         public void VerifyPaging_DefaultValues()
         {
             // Arrange
-            //SmartObjectClientServer server = null;
+            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
+            smartObject.MethodToExecute = smartObject.Methods[0].Name;
+
+            DataTable dataTable1 = DataTableFactory.GetDataTableWitheOneColumnAndOneRow();
+
+            SmartObjectClientServer server = null;
+
+            _mockWrapperFactory.SmartObjectClientServer
+               .Setup(x => x.ExecuteListDataTable(
+                   It.IsAny<SmartObject>(),
+                   It.IsAny<ExecuteListOptions>()))
+               .Returns(dataTable1);
+
+            _mockWrapperFactory.SmartObjectClientServer
+              .Setup(x => x.ExecuteListReader(
+                  It.IsAny<SmartObject>(),
+                  It.IsAny<ExecuteListReaderOptions>()))
+              .Returns(default(SmartObjectReader));
 
             // Action
-            //SmartObjectHelper.VerifyPaging(server, null, 0);
+            SmartObjectHelper.VerifyPaging(server, smartObject, 0);
         }
     }
 }
