@@ -4,15 +4,14 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SourceCode.SmartObjects.Client;
-using SourceCode.SmartObjects.Services.Tests.Extensions;
 
-namespace SourceCode.SmartObjects.Services.Tests.UTest
+namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 {
     [TestClass()]
-    public class WhenGetExceptionMessageCalledOnExceptionExtensions
+    public class ExceptionExtensionsTests
     {
         [TestMethod()]
-        public void WithException()
+        public void GetExceptionMessage_WithException()
         {
             //Arrange
             string expected = "Test";
@@ -27,7 +26,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
 
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
-        public void WithNullException()
+        public void GetExceptionMessage_WithNullException()
         {
             //Arrange
             Exception exception = null;
@@ -37,7 +36,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
         }
 
         [TestMethod()]
-        public void WithSmartObjectException()
+        public void GetExceptionMessage_WithSmartObjectException()
         {
             //Arrange
             var ctor = typeof(SmartObjectExceptionData).GetConstructors(BindingFlags.Instance | BindingFlags.NonPublic).FirstOrDefault();

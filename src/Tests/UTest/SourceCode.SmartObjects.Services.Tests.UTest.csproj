@@ -67,31 +67,24 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Extensions\ActionExtensionsTests.cs" />
+    <Compile Include="Extensions\DataRowExtensionsTests.cs" />
+    <Compile Include="Extensions\DataTableExtensionsTests.cs" />
+    <Compile Include="Extensions\ExceptionExtensionsTests.cs" />
+    <Compile Include="Extensions\ServiceManagementServerExtensionsTests.cs" />
+    <Compile Include="Extensions\SmartObjectClientServerExtensionsTests.cs" />
+    <Compile Include="Extensions\SmartObjectExtensionsTests.cs" />
+    <Compile Include="Extensions\SmartObjectManagementServerExtensionsTests.cs" />
+    <Compile Include="Extensions\ValidationExtensionsTests.cs" />
     <Compile Include="Factories\SmartObjectFactory.cs" />
     <Compile Include="Factories\SmartObjectOption.cs" />
+    <Compile Include="Helpers\ConnectionHelperTests.cs" />
+    <Compile Include="Mocks\MockWrapperFactory.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SmartObjectExtensionsTests.cs" />
-    <Compile Include="WhenSerializeItemToArrayCalledOnSmartObjectClientServerExtensions.cs" />
-    <Compile Include="WhenSerializeAddItemToArrayCalledOnSmartObjectClientServerExtensions.cs" />
-    <Compile Include="WhenSerializeCalledOnSmartObjectClientServerExtensions.cs" />
-    <Compile Include="WhenDeserializeTypedArrayCalledOnSmartObjectClientServerExtensions.cs" />
-    <Compile Include="WhenDeserializeCalledOnSmartObjectClientServerExtensions.cs" />
-    <Compile Include="WhenDeleteServiceInstanceCalledOnServiceManagementServerExtensions.cs" />
-    <Compile Include="WhenGetExceptionMessageCalledOnExceptionExtensions.cs" />
-    <Compile Include="WhenGetPagedResultCalledOnDataTableExtensions.cs" />
-    <Compile Include="WhenGetConditionCalledOnDataTableExtensions.cs" />
-    <Compile Include="WhenGenerateGetAssertHasValueCalledOnDataTableExtensions.cs" />
-    <Compile Include="WhenGetFirstValueCalledOnDataRowExtensions.cs" />
-    <Compile Include="WhenAssertHasValueCalledOnDataRowExtensions.cs" />
-    <Compile Include="WhenAssertHasValueOfTypeCalledOnDataRowExtensions.cs" />
-    <Compile Include="WhenAssertAreEqualCalledOnDataRowExtensions.cs" />
-    <Compile Include="WhenIgnoreExceptionCalledOnActionExtensions.cs" />
-    <Compile Include="WhenAssertExceptionCalledOnActionExtensions.cs" />
-    <Compile Include="WhenGetCurrentUserCalledOnConnectionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

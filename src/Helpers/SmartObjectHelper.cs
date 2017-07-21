@@ -83,7 +83,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
         public static ServiceConfigInfo GetServiceConfigInfo(Guid serviceTypeGuid)
         {
-            var connection = ConnectionHelper.GetServerWrapper<ServiceManagementServerWrapper>();
+            var connection = ConnectionHelper.GetServiceManagementServerWrapper(null);
             using (connection.BaseAPIServer?.Connection)
             {
                 string serviceInstanceConfigXml = connection.GetServiceInstanceConfig(serviceTypeGuid);
@@ -95,7 +95,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
         {
             serviceInstanceSettings.ThrowIfNull("serviceInstanceSettings");
 
-            var connection = ConnectionHelper.GetServerWrapper<SmartObjectManagementServerWrapper>();
+            var connection = ConnectionHelper.GetSmartObjectManagementServerWrapper(null);
             using (connection.BaseAPIServer?.Connection)
             {
                 var serviceInstance = ServiceInstance.Create(connection.GetServiceInstance(serviceInstanceSettings.Guid, ServiceExplorerLevel.ServiceObject));
@@ -105,7 +105,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
         public static ServiceInstanceInfo GetServiceInstance(Guid serviceInstanceGuid)
         {
-            var serviceManagementServer = ConnectionHelper.GetServerWrapper<ServiceManagementServerWrapper>();
+            var serviceManagementServer = ConnectionHelper.GetServiceManagementServerWrapper(null);
             using (serviceManagementServer.BaseAPIServer?.Connection)
             {
                 var serviceInstanceXml = serviceManagementServer.GetServiceInstanceCompact(serviceInstanceGuid);
@@ -124,7 +124,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
         {
             serviceInstanceSettings.ThrowIfNull("serviceInstanceSettings");
 
-            var connection = ConnectionHelper.GetServerWrapper<SmartObjectManagementServerWrapper>();
+            var connection = ConnectionHelper.GetSmartObjectManagementServerWrapper(null);
             using (connection.BaseAPIServer?.Connection)
             {
                 var serviceObject = ServiceObject.Create(connection.GetServiceInstanceServiceObject(serviceInstanceSettings.Guid, serviceObjectName));
@@ -134,7 +134,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
         public static ServiceTypeInfo GetServiceType(Guid guid)
         {
-            var serviceManagementServer = ConnectionHelper.GetServerWrapper<ServiceManagementServerWrapper>();
+            var serviceManagementServer = ConnectionHelper.GetServiceManagementServerWrapper(null);
             using (serviceManagementServer.BaseAPIServer?.Connection)
             {
                 var serviceTypeXml = serviceManagementServer.GetServiceType(guid);
@@ -151,7 +151,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
         public static ServiceTypeInfo GetServiceTypeInfo(Guid serviceTypeGuid)
         {
-            var connection = ConnectionHelper.GetServerWrapper<ServiceManagementServerWrapper>();
+            var connection = ConnectionHelper.GetServiceManagementServerWrapper(null);
             using (connection.BaseAPIServer?.Connection)
             {
                 string serviceTypeInfoXml = connection.GetServiceType(serviceTypeGuid);
@@ -166,7 +166,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
         public static SmartObjectDefinition GetSmartObjectDefinition(string smartObjectName)
         {
-            var managementServer = ConnectionHelper.GetServerWrapper<SmartObjectManagementServerWrapper>();
+            var managementServer = ConnectionHelper.GetSmartObjectManagementServerWrapper(null);
             using (managementServer.BaseAPIServer?.Connection)
             {
                 return SmartObjectDefinition.Create(managementServer.GetSmartObjectDefinition(smartObjectName));
@@ -177,7 +177,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
         {
             serviceInstanceSettings.ThrowIfNull("serviceInstanceSettings");
 
-            var managementServer = ConnectionHelper.GetServerWrapper<SmartObjectManagementServerWrapper>();
+            var managementServer = ConnectionHelper.GetSmartObjectManagementServerWrapper(null);
             using (managementServer.BaseAPIServer?.Connection)
             {
                 return GetSmartObjectName(managementServer, serviceObjectName, serviceInstanceSettings);
@@ -186,7 +186,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
         public static IEnumerable<SmartObjectInfo> GetSmartObjects(Guid[] guids)
         {
-            var managementServer = ConnectionHelper.GetServerWrapper<SmartObjectManagementServerWrapper>();
+            var managementServer = ConnectionHelper.GetSmartObjectManagementServerWrapper(null);
             using (managementServer.BaseAPIServer?.Connection)
             {
                 return managementServer.GetSmartObjects(guids).SmartObjectList.ToArray();
@@ -197,7 +197,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
         {
             smartObjectDefinitionsPublish.ThrowIfNull("smartObjectDefinitionsPublish");
 
-            var managementServer = ConnectionHelper.GetServerWrapper<SmartObjectManagementServerWrapper>();
+            var managementServer = ConnectionHelper.GetSmartObjectManagementServerWrapper(null);
             using (managementServer.BaseAPIServer?.Connection)
             {
                 // Delete SmartObjects

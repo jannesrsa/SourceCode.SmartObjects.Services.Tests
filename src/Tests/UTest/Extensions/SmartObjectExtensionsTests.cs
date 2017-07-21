@@ -4,16 +4,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using SourceCode.SmartObjects.Client;
 using SourceCode.SmartObjects.Client.Filters;
-using SourceCode.SmartObjects.Services.Tests.Extensions;
 using SourceCode.SmartObjects.Services.Tests.UTest.Factories;
 
-namespace SourceCode.SmartObjects.Services.Tests.UTest
+namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 {
     [TestClass()]
     public class SmartObjectExtensionsTests
     {
         [TestMethod()]
-        public void AddFirstPropertyOrderBy()
+        public void AddFirstPropertyOrderBy_WithValidSmartObject()
         {
             //Arrange
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
@@ -24,7 +23,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
         }
 
         [TestMethod()]
-        public void AddPropertyOrderBy()
+        public void AddPropertyOrderBy_WithValidSmartObject()
         {
             //Arrange
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
@@ -88,7 +87,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
         }
 
         [TestMethod()]
-        public void GetReturnPropertyValue()
+        public void GetReturnPropertyValue_WithValidSmartObject()
         {
             //Arrange
             var expected = Guid.NewGuid().ToString();
@@ -104,7 +103,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
         }
 
         [TestMethod()]
-        public void SetFilter()
+        public void SetFilter_WithValidSmartObject()
         {
             //Arrange
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
@@ -131,7 +130,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
         }
 
         [TestMethod()]
-        public void SetNewMethod()
+        public void SetNewMethod_WithValidSmartObject()
         {
             //Arrange
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.Users_and_Groups);
@@ -142,7 +141,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
         }
 
         [TestMethod()]
-        public void ToList()
+        public void ToList_WithValidSmartObjectList()
         {
             //Arrange
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);

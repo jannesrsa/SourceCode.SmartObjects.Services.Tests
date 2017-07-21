@@ -1,30 +1,16 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using SourceCode.SmartObjects.Services.Management;
-using SourceCode.SmartObjects.Services.Tests.Extensions;
 using SourceCode.SmartObjects.Services.Tests.UTest.Properties;
 using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
-namespace SourceCode.SmartObjects.Services.Tests.UTest
+namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 {
     [TestClass()]
-    public class WhenDeleteServiceInstanceCalledOnServiceManagementServerExtensions
+    public class ServiceManagementServerExtensionsTests
     {
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
-        public void WithServerNull()
-        {
-            //Arrange
-            ServiceManagementServer server = null;
-            Guid serviceInstanceGuid = Guid.NewGuid();
-
-            // Act
-            ServiceManagementServerExtensions.DeleteServiceInstance(server, serviceInstanceGuid);
-        }
-
-        [TestMethod()]
-        public void WithServiceInstanceExist()
+        public void DeleteServiceInstance_WithServiceInstanceExist()
         {
             //Arrange
             Guid serviceInstanceGuid = Guid.NewGuid();

@@ -12,6 +12,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
     {
         private readonly SmartObjectManagementServer _smartObjectManagementServer;
 
+        [ExcludeFromCodeCoverage]
         public SmartObjectManagementServerWrapper(SmartObjectManagementServer smartObjectManagementServer)
         {
             smartObjectManagementServer.ThrowIfNull(nameof(smartObjectManagementServer));

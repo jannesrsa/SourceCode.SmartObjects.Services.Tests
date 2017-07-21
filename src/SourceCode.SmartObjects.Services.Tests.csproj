@@ -129,7 +129,6 @@
     <Compile Include="Helpers\UrlHelper.cs" />
     <Compile Include="Helpers\ValueHelper.cs" />
     <Compile Include="Interfaces\IBaseAPI.cs" />
-	<Compile Include="Interfaces\IConnectionProvider.cs" />
     <Compile Include="Managers\ServiceInstanceManager.cs" />
     <Compile Include="Managers\ServiceInstanceSettings.cs" />
     <Compile Include="Managers\ServiceTypeManager.cs" />
@@ -141,7 +140,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Providers\DefaultConnectionHelperProvider.cs" />
+    <Compile Include="Wrappers\WrapperFactory.cs" />
     <Compile Include="Wrappers\SmartObjectManagementServerWrapper.cs" />
     <Compile Include="Wrappers\SmartObjectClientServerWrapper.cs" />
     <Compile Include="Wrappers\ServiceManagementServerWrapper.cs" />

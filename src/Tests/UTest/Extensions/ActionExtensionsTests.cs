@@ -1,15 +1,14 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SourceCode.SmartObjects.Services.Tests.Extensions;
 
-namespace SourceCode.SmartObjects.Services.Tests.UTest
+namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 {
     [TestClass()]
-    public class WhenAssertExceptionCalledOnActionExtensions
+    public class ActionExtensionsTests
     {
         [TestMethod()]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void WithActionNull()
+        public void AssertException_WithActionNull()
         {
             //Arrange
             Action action = null;
@@ -19,7 +18,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
         }
 
         [TestMethod()]
-        public void WithMatchingExceptionType()
+        public void AssertException_WithMatchingExceptionType()
         {
             //Arrange
             var exception = new Exception(Guid.NewGuid().ToString());
@@ -30,7 +29,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
         }
 
         [TestMethod()]
-        public void WithMatchingExceptionTypeAndMessage()
+        public void AssertException_WithMatchingExceptionTypeAndMessage()
         {
             //Arrange
             var exception = new Exception(Guid.NewGuid().ToString());
@@ -42,7 +41,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
 
         [TestMethod()]
         [ExpectedException(typeof(Exception))]
-        public void WithNotThrowingException()
+        public void AssertException_WithNotThrowingException()
         {
             //Arrange
             Action action = () => Console.WriteLine("Test");
@@ -53,7 +52,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
 
         [TestMethod()]
         [ExpectedException(typeof(NotImplementedException))]
-        public void WithnWrongExceptionType()
+        public void AssertException_WithnWrongExceptionType()
         {
             //Arrange
             Action action = () => throw new NotImplementedException();
@@ -64,13 +63,41 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest
 
         [TestMethod()]
         [ExpectedException(typeof(Exception))]
-        public void WithWrongMessage()
+        public void AssertException_WithWrongMessage()
         {
             //Arrange
             Action action = () => throw new Exception(Guid.NewGuid().ToString());
 
             // Act
             ActionExtensions.AssertException<Exception>(action, Guid.NewGuid().ToString());
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void IgnoreException_WithActionNull()
+        {
+            // Act
+            ActionExtensions.IgnoreException(null);
+        }
+
+        [TestMethod()]
+        public void IgnoreException_WithException()
+        {
+            //Arrange
+            Action action = () => throw new NotImplementedException();
+
+            // Act
+            ActionExtensions.IgnoreException(action);
+        }
+
+        [TestMethod()]
+        public void IgnoreException_WithNotThrowingException()
+        {
+            //Arrange
+            Action action = () => Console.WriteLine("Test");
+
+            // Act
+            ActionExtensions.IgnoreException(action);
         }
     }
 }

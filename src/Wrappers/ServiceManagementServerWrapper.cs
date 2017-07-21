@@ -31,36 +31,36 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
             }
         }
 
-        [ExcludeFromCodeCoverage]
-        public virtual bool DeleteServiceInstance(Guid ServiceInstanceGuid, bool IgnoreDependancy)
-        {
-            return _serviceManagementServer.DeleteServiceInstance(ServiceInstanceGuid, IgnoreDependancy);
-        }
-
-        [ExcludeFromCodeCoverage]
-        public virtual string GetServiceInstanceCompact(Guid ServiceInstanceGuid)
-        {
-            return _serviceManagementServer.GetServiceInstanceCompact(ServiceInstanceGuid);
-        }
-
-        [ExcludeFromCodeCoverage]
-        public virtual string GetServiceInstanceConfig(Guid ServiceTypeGuid)
-        {
-            return _serviceManagementServer.GetServiceInstanceConfig(ServiceTypeGuid);
-        }
-
-        [ExcludeFromCodeCoverage]
-        public virtual string GetServiceType(Guid ServiceTypeGuid)
-        {
-            return _serviceManagementServer.GetServiceType(ServiceTypeGuid);
-        }
-
-        internal void DeleteServiceInstance(Guid serviceInstanceGuid)
+        public void DeleteServiceInstance(Guid serviceInstanceGuid)
         {
             if (!string.IsNullOrEmpty(this.GetServiceInstanceCompact(serviceInstanceGuid)))
             {
                 this.DeleteServiceInstance(serviceInstanceGuid, false);
             }
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual bool DeleteServiceInstance(Guid ServiceInstanceGuid, bool IgnoreDependancy)
+        {
+            return _serviceManagementServer.DeleteServiceInstance(ServiceInstanceGuid, IgnoreDependancy);
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual string GetServiceInstanceCompact(Guid ServiceInstanceGuid)
+        {
+            return _serviceManagementServer.GetServiceInstanceCompact(ServiceInstanceGuid);
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual string GetServiceInstanceConfig(Guid ServiceTypeGuid)
+        {
+            return _serviceManagementServer.GetServiceInstanceConfig(ServiceTypeGuid);
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual string GetServiceType(Guid ServiceTypeGuid)
+        {
+            return _serviceManagementServer.GetServiceType(ServiceTypeGuid);
         }
     }
 }
