@@ -92,6 +92,7 @@
     <Compile Include="Helpers\SmartFormHelperTests.cs" />
     <Compile Include="Helpers\SmartObjectHelperTests.cs" />
     <Compile Include="Helpers\UriCreatorTests.cs" />
+    <Compile Include="Helpers\ValueHelperTests.cs" />
     <Compile Include="Mocks\MockWrapperFactory.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
