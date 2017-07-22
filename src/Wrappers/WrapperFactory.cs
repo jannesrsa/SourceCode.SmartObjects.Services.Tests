@@ -1,4 +1,5 @@
 ﻿using System;
+using SourceCode.EnvironmentSettings.Client;
 using SourceCode.Hosting.Client.BaseAPI;
 using SourceCode.SmartObjects.Client;
 using SourceCode.SmartObjects.Management;
@@ -18,6 +19,18 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
         }
 
         internal SCConnectionStringBuilder SCConnectionStringBuilder { get; } = new SCConnectionStringBuilder();
+
+        internal virtual EnvironmentSettingsManagerWrapper GetEnvironmentSettingsManagerWrapper(EnvironmentSettingsManager server)
+        {
+            if (server == null)
+            {
+                server = new EnvironmentSettingsManager(false, false);
+                server.ConnectToServer(ConnectionHelper.SmartObjectConnectionStringBuilder.ConnectionString);
+                server.InitializeSettingsManager(true);
+            }
+
+            return new EnvironmentSettingsManagerWrapper(server);
+        }
 
         internal virtual T GetServer<T>() where T : BaseAPI, new()
         {

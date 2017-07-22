@@ -16,16 +16,21 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Mocks
             SmartObjectClientServer = new Mock<SmartObjectClientServerWrapper>();
             SmartObjectManagementServer = new Mock<SmartObjectManagementServerWrapper>();
             ServiceManagementServer = new Mock<ServiceManagementServerWrapper>();
+            EnvironmentSettingsManager = new Mock<EnvironmentSettingsManagerWrapper>();
 
             Factory.Setup(x => x.GetSmartObjectClientServerWrapper(null)).Returns(SmartObjectClientServer.Object);
             Factory.Setup(x => x.GetSmartObjectManagementServerWrapper(null)).Returns(SmartObjectManagementServer.Object);
             Factory.Setup(x => x.GetServiceManagementServerWrapper(null)).Returns(ServiceManagementServer.Object);
+            Factory.Setup(x => x.GetEnvironmentSettingsManagerWrapper(null)).Returns(EnvironmentSettingsManager.Object);
+
             Factory.Setup(x => x.GetServer<SmartObjectClientServer>()).Returns(new SmartObjectClientServer());
             Factory.Setup(x => x.GetServer<SmartObjectManagementServer>()).Returns(new SmartObjectManagementServer());
             Factory.Setup(x => x.GetServer<ServiceManagementServer>()).Returns(new ServiceManagementServer());
 
             ConnectionHelper.UpdateWrapperFactory(Factory.Object);
         }
+
+        public Mock<EnvironmentSettingsManagerWrapper> EnvironmentSettingsManager { get; }
 
         public Mock<WrapperFactory> Factory { get; }
 

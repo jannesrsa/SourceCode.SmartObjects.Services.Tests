@@ -140,6 +140,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Wrappers\EnvironmentSettingsManagerWrapper.cs" />
     <Compile Include="Wrappers\WrapperFactory.cs" />
     <Compile Include="Wrappers\SmartObjectManagementServerWrapper.cs" />
     <Compile Include="Wrappers\SmartObjectClientServerWrapper.cs" />

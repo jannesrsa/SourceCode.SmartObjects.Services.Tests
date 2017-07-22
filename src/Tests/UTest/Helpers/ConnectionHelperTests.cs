@@ -8,6 +8,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
     [TestClass()]
     public class ConnectionHelperTests
     {
+        private MockWrapperFactory _mockWrapperFactory;
+
         [TestMethod()]
         public void GetCurrentUser_ReturnValid()
         {
@@ -16,6 +18,24 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
 
             // Assert
             Assert.IsFalse(string.IsNullOrWhiteSpace(currentuser));
+        }
+
+        [TestMethod()]
+        public void Invoke_ServerNull()
+        {
+            // Action
+            var function = new Func<bool>(() => { return true; });
+            SmartObjectClientServer smartObjectClientServer = null;
+            ConnectionHelper.Invoke(function, ref smartObjectClientServer);
+        }
+
+        [TestMethod()]
+        public void Invoke_WithServer()
+        {
+            // Action
+            var function = new Func<bool>(() => { return true; });
+            var smartObjectClientServer = new SmartObjectClientServer();
+            ConnectionHelper.Invoke(function, ref smartObjectClientServer);
         }
 
         [TestMethod()]
@@ -28,6 +48,12 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             Assert.IsNotNull(actual);
         }
 
+        [TestInitialize()]
+        public void TestInit()
+        {
+            _mockWrapperFactory = new MockWrapperFactory();
+        }
+
         [TestMethod()]
         public void WorkflowConnectionStringBuilder_Get()
         {
@@ -36,30 +62,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
 
             // Assert
             Assert.IsNotNull(actual);
-        }
-
-        [TestMethod()]
-        public void Invoke_WithServer()
-        {
-            // Arrange
-            var mockWrapperFactory = new MockWrapperFactory();
-
-            // Action
-            var function = new Func<bool>(() => { return true; });
-            var smartObjectClientServer = new SmartObjectClientServer();
-            ConnectionHelper.Invoke(function, ref smartObjectClientServer);
-        }
-
-        [TestMethod()]
-        public void Invoke_ServerNull()
-        {
-            // Arrange
-            var mockWrapperFactory = new MockWrapperFactory();
-
-            // Action
-            var function = new Func<bool>(() => { return true; });
-            SmartObjectClientServer smartObjectClientServer = null;
-            ConnectionHelper.Invoke(function, ref smartObjectClientServer);
         }
     }
 }

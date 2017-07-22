@@ -14,6 +14,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
     [TestClass()]
     public class SmartObjectClientServerExtensionsTests
     {
+        private MockWrapperFactory _mockWrapperFactory;
+
         [TestMethod()]
         public void Deserialize_With_ProcessInfo()
         {
@@ -27,15 +29,14 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            var mockWrapperFactory = new MockWrapperFactory();
-            mockWrapperFactory.SmartObjectManagementServer
+            _mockWrapperFactory.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<SearchProperty>(),
                     It.IsAny<SearchOperator>(),
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
 
-            mockWrapperFactory.SmartObjectClientServer
+            _mockWrapperFactory.SmartObjectClientServer
                 .Setup(x => x.GetSmartObject(
                     It.IsAny<string>()))
                 .Returns(expected);
@@ -64,21 +65,20 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            var mockWrapperFactory = new MockWrapperFactory();
-            mockWrapperFactory.SmartObjectManagementServer
+            _mockWrapperFactory.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<SearchProperty>(),
                     It.IsAny<SearchOperator>(),
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
 
-            mockWrapperFactory.SmartObjectClientServer
+            _mockWrapperFactory.SmartObjectClientServer
                 .Setup(x => x.GetSmartObject(
                     It.IsAny<string>()))
                 .Returns(smartObject);
 
             var expected = new DataTable();
-            mockWrapperFactory.SmartObjectClientServer
+            _mockWrapperFactory.SmartObjectClientServer
                 .Setup(x => x.ExecuteListDataTable(
                     It.IsAny<SmartObject>(),
                     It.IsAny<ExecuteListOptions>()))
@@ -90,49 +90,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
                 Guid.NewGuid().ToString(),
                 settings.Object,
                 Guid.NewGuid().ToString());
-
-            // Assert
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod()]
-        public void SerializeAddItemToArray_With_ProcessInfo()
-        {
-            //Arrange
-            var settings = new Mock<ServiceInstanceSettings>();
-            settings.SetupGet(i => i.Name).Returns("K2_Management");
-
-            var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
-            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
-
-            var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
-            mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
-
-            var mockWrapperFactory = new MockWrapperFactory();
-            mockWrapperFactory.SmartObjectManagementServer
-                .Setup(i => i.GetSmartObjects(
-                    It.IsAny<SearchProperty>(),
-                    It.IsAny<SearchOperator>(),
-                    It.IsAny<string>()))
-                .Returns(mockSmartObjectExplorer);
-
-            mockWrapperFactory.SmartObjectClientServer
-                .Setup(x => x.GetSmartObject(It.IsAny<string>()))
-                .Returns(smartObject);
-
-            mockWrapperFactory.SmartObjectClientServer
-                .Setup(x => x.ExecuteScalar(It.IsAny<SmartObject>()))
-                .Returns(smartObject);
-
-            var expected = "[]";
-
-            // Act
-            var actual = SmartObjectClientServerExtensions.SerializeAddItemToArray(
-                null,
-                Guid.NewGuid().ToString(),
-                expected,
-                settings.Object,
-                (SmartObject i) => { });
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -152,19 +109,18 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            var mockWrapperFactory = new MockWrapperFactory();
-            mockWrapperFactory.SmartObjectManagementServer
+            _mockWrapperFactory.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<SearchProperty>(),
                     It.IsAny<SearchOperator>(),
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
 
-            mockWrapperFactory.SmartObjectClientServer
+            _mockWrapperFactory.SmartObjectClientServer
                 .Setup(x => x.GetSmartObject(It.IsAny<string>()))
                 .Returns(smartObject);
 
-            mockWrapperFactory.SmartObjectClientServer
+            _mockWrapperFactory.SmartObjectClientServer
                 .Setup(x => x.ExecuteScalar(It.IsAny<SmartObject>()))
                 .Returns(smartObject);
 
@@ -182,6 +138,48 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         }
 
         [TestMethod()]
+        public void SerializeAddItemToArray_With_ProcessInfo()
+        {
+            //Arrange
+            var settings = new Mock<ServiceInstanceSettings>();
+            settings.SetupGet(i => i.Name).Returns("K2_Management");
+
+            var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
+            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
+
+            var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
+            mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
+
+            _mockWrapperFactory.SmartObjectManagementServer
+                .Setup(i => i.GetSmartObjects(
+                    It.IsAny<SearchProperty>(),
+                    It.IsAny<SearchOperator>(),
+                    It.IsAny<string>()))
+                .Returns(mockSmartObjectExplorer);
+
+            _mockWrapperFactory.SmartObjectClientServer
+                .Setup(x => x.GetSmartObject(It.IsAny<string>()))
+                .Returns(smartObject);
+
+            _mockWrapperFactory.SmartObjectClientServer
+                .Setup(x => x.ExecuteScalar(It.IsAny<SmartObject>()))
+                .Returns(smartObject);
+
+            var expected = "[]";
+
+            // Act
+            var actual = SmartObjectClientServerExtensions.SerializeAddItemToArray(
+                null,
+                Guid.NewGuid().ToString(),
+                expected,
+                settings.Object,
+                (SmartObject i) => { });
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
         public void SerializeItemToArray_With_ProcessInfo()
         {
             //Arrange
@@ -195,20 +193,18 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            var mockWrapperFactory = new MockWrapperFactory();
-
-            mockWrapperFactory.SmartObjectManagementServer
+            _mockWrapperFactory.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<SearchProperty>(),
                     It.IsAny<SearchOperator>(),
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
 
-            mockWrapperFactory.SmartObjectClientServer
+            _mockWrapperFactory.SmartObjectClientServer
                 .Setup(x => x.GetSmartObject(It.IsAny<string>()))
                 .Returns(smartObject);
 
-            mockWrapperFactory.SmartObjectClientServer
+            _mockWrapperFactory.SmartObjectClientServer
                 .Setup(x => x.ExecuteScalar(It.IsAny<SmartObject>()))
                 .Returns(smartObject);
 
@@ -223,6 +219,12 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             // Assert
             Assert.IsNull(actual);
+        }
+
+        [TestInitialize()]
+        public void TestInit()
+        {
+            _mockWrapperFactory = new MockWrapperFactory();
         }
     }
 }

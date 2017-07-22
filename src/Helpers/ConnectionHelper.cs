@@ -1,4 +1,5 @@
 ﻿using System;
+using SourceCode.EnvironmentSettings.Client;
 using SourceCode.Hosting.Client.BaseAPI;
 using SourceCode.SmartObjects.Client;
 using SourceCode.SmartObjects.Management;
@@ -68,6 +69,11 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             {
                 return func();
             }
+        }
+
+        internal static EnvironmentSettingsManagerWrapper GetEnvironmentSettingsManagerWrapper(EnvironmentSettingsManager server)
+        {
+            return _factory.GetEnvironmentSettingsManagerWrapper(server);
         }
 
         internal static ServiceManagementServerWrapper GetServiceManagementServerWrapper(ServiceManagementServer server)

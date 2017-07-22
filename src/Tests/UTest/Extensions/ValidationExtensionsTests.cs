@@ -7,16 +7,16 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
     public class ValidationExtensionsTests
     {
         [TestMethod()]
-        public void ThrowIfNull_ValidObject()
-        {
-            ValidationExtensions.ThrowIfNull(new object(), Guid.NewGuid().ToString());
-        }
-
-        [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
         public void ThrowIfNull_Null()
         {
             ValidationExtensions.ThrowIfNull(default(object), Guid.NewGuid().ToString());
+        }
+
+        [TestMethod()]
+        public void ThrowIfNull_ValidObject()
+        {
+            ValidationExtensions.ThrowIfNull(new object(), Guid.NewGuid().ToString());
         }
 
         [TestMethod()]

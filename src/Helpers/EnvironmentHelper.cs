@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using SourceCode.EnvironmentSettings.Client;
 
 namespace SourceCode.SmartObjects.Services.Tests.Helpers
 {
@@ -16,29 +15,14 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
                 return value;
             }
 
-            var server = GetEnvironmentSettingsManager();
+            var server = ConnectionHelper.GetEnvironmentSettingsManagerWrapper(null);
             using (server)
             {
-                var template = server.EnvironmentTemplates.DefaultTemplate;
-                var environment = template.DefaultEnvironment;
-
-                server.GetEnvironmentFields(environment);
-
-                var field = environment.EnvironmentFields.GetItemByName(name);
+                var field = server.GetItemByName(name);
                 _cachedEnvironmentFields[name] = field.Value;
 
                 return field.Value;
             }
-        }
-
-        private static EnvironmentSettingsManager GetEnvironmentSettingsManager()
-        {
-            var environmentSettingsManager = new EnvironmentSettingsManager(false, false);
-
-            environmentSettingsManager.ConnectToServer(ConnectionHelper.SmartObjectConnectionStringBuilder.ConnectionString);
-            environmentSettingsManager.InitializeSettingsManager(true);
-
-            return environmentSettingsManager;
         }
 
         public static class FieldNames
