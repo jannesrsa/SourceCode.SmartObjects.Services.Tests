@@ -8,8 +8,24 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
     {
         [TestMethod()]
         [ExpectedException(typeof(Exception))]
+        public void AreEqual_False()
+        {
+            // Action
+            AssertHelper.AreEqual(true, false);
+        }
+
+        [TestMethod()]
+        public void AreEqual_True()
+        {
+            // Action
+            AssertHelper.AreEqual(true, true);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(Exception))]
         public void Fail_WithMessage()
         {
+            // Action
             AssertHelper.Fail(Guid.NewGuid().ToString());
         }
 
@@ -17,12 +33,14 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         [ExpectedException(typeof(Exception))]
         public void IsTrue_WithFalse()
         {
+            // Action
             AssertHelper.IsTrue(false, Guid.NewGuid().ToString());
         }
 
         [TestMethod()]
         public void IsTrue_WithTrue()
         {
+            // Action
             AssertHelper.IsTrue(true, Guid.NewGuid().ToString());
         }
     }
