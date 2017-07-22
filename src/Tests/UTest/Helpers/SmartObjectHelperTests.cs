@@ -402,6 +402,16 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         }
 
         [TestMethod()]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void VerifyAllReturnPropertiesHasValues_WithNull()
+        {
+            // Arrange
+            SmartMethodBase method = null;
+            // Action
+            SmartObjectHelper.VerifyAllReturnPropertiesHasValues(method);
+        }
+
+        [TestMethod()]
         [ExpectedException(typeof(Exception))]
         public void VerifyAllReturnPropertiesHasValues_WithSmartObject_NoReturn()
         {
