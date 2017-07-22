@@ -71,6 +71,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="AssemblySetup.cs" />
     <Compile Include="Extensions\ActionExtensionsTests.cs" />
     <Compile Include="Extensions\DataRowExtensionsTests.cs" />
     <Compile Include="Extensions\DataTableExtensionsTests.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Helpers\EnvironmentHelperTests.cs" />
     <Compile Include="Helpers\PackageDeploymentHelperTests.cs" />
     <Compile Include="Helpers\SecurityHelperTests.cs" />
+    <Compile Include="Helpers\SmartFormHelperTests.cs" />
     <Compile Include="Helpers\SmartObjectHelperTests.cs" />
     <Compile Include="Mocks\MockWrapperFactory.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

@@ -97,6 +97,11 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             return _factory.GetSmartObjectManagementServerWrapper(server);
         }
 
+        internal static WebRequestWrapper GetWebRequestWrapper()
+        {
+            return _factory.GetWebRequestWrapper();
+        }
+
         internal static void ResetWrapperFactory()
         {
             _factory = new WrapperFactory();

@@ -84,5 +84,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
 
             return new SmartObjectManagementServerWrapper(server);
         }
+
+        internal virtual WebRequestWrapper GetWebRequestWrapper()
+        {
+            return new WebRequestWrapper();
+        }
     }
 }
