@@ -1,4 +1,5 @@
 ﻿using System;
+using SourceCode.Deployment.Management;
 using SourceCode.EnvironmentSettings.Client;
 using SourceCode.Hosting.Client.BaseAPI;
 using SourceCode.SmartObjects.Client;
@@ -74,6 +75,11 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
         internal static EnvironmentSettingsManagerWrapper GetEnvironmentSettingsManagerWrapper(EnvironmentSettingsManager server)
         {
             return _factory.GetEnvironmentSettingsManagerWrapper(server);
+        }
+
+        internal static PackageDeploymentManagerWrapper GetPackageDeploymentManagerWrapper(PackageDeploymentManager server)
+        {
+            return _factory.GetPackageDeploymentManagerWrapper(server);
         }
 
         internal static ServiceManagementServerWrapper GetServiceManagementServerWrapper(ServiceManagementServer server)

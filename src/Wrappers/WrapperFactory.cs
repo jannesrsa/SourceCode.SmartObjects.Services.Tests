@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
+using SourceCode.Deployment.Management;
 using SourceCode.EnvironmentSettings.Client;
 using SourceCode.Hosting.Client.BaseAPI;
 using SourceCode.SmartObjects.Client;
@@ -8,6 +10,7 @@ using SourceCode.SmartObjects.Services.Tests.Helpers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Wrappers
 {
+    [ExcludeFromCodeCoverage]
     internal class WrapperFactory
     {
         internal WrapperFactory()
@@ -30,6 +33,16 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
             }
 
             return new EnvironmentSettingsManagerWrapper(server);
+        }
+
+        internal virtual PackageDeploymentManagerWrapper GetPackageDeploymentManagerWrapper(PackageDeploymentManager server)
+        {
+            if (server == null)
+            {
+                server = ConnectionHelper.GetServer<PackageDeploymentManager>();
+            }
+
+            return new PackageDeploymentManagerWrapper(server);
         }
 
         internal virtual T GetServer<T>() where T : BaseAPI, new()

@@ -16,13 +16,11 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             }
 
             var server = ConnectionHelper.GetEnvironmentSettingsManagerWrapper(null);
-            using (server)
-            {
-                var field = server.GetItemByName(name);
-                _cachedEnvironmentFields[name] = field.Value;
+            var field = server.GetItemByName(name);
 
-                return field.Value;
-            }
+            _cachedEnvironmentFields[name] = field.Value;
+
+            return field.Value;
         }
 
         public static class FieldNames

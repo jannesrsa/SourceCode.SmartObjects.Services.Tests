@@ -51,6 +51,7 @@
     <Reference Include="Moq, Version=4.7.99.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Moq.4.7.99\lib\net45\Moq.dll</HintPath>
     </Reference>
+    <Reference Include="SourceCode.Deployment.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" />
     <Reference Include="SourceCode.EnvironmentSettings.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" />
     <Reference Include="SourceCode.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" />
     <Reference Include="SourceCode.HostClientAPI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" />
@@ -85,6 +86,7 @@
     <Compile Include="Helpers\AssertHelperTests.cs" />
     <Compile Include="Helpers\ConnectionHelperTests.cs" />
     <Compile Include="Helpers\EnvironmentHelperTests.cs" />
+    <Compile Include="Helpers\PackageDeploymentHelperTests.cs" />
     <Compile Include="Helpers\SecurityHelperTests.cs" />
     <Compile Include="Helpers\SmartObjectHelperTests.cs" />
     <Compile Include="Mocks\MockWrapperFactory.cs" />

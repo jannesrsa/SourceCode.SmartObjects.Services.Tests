@@ -23,10 +23,34 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
 
         [TestMethod()]
         [ExpectedException(typeof(Exception))]
+        public void AreEqual_WithActualNull()
+        {
+            // Action
+            AssertHelper.AreEqual(string.Empty, null);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(Exception))]
+        public void AreEqual_WithExpectedNull()
+        {
+            // Action
+            AssertHelper.AreEqual(null, string.Empty);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(Exception))]
         public void Fail_WithMessage()
         {
             // Action
             AssertHelper.Fail(Guid.NewGuid().ToString());
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(Exception))]
+        public void Fail_WithParametersNull()
+        {
+            // Action
+            AssertHelper.Fail(Guid.NewGuid().ToString(), null);
         }
 
         [TestMethod()]

@@ -1,11 +1,10 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using SourceCode.EnvironmentSettings.Client;
 using SourceCode.SmartObjects.Services.Tests.Extensions;
 
 namespace SourceCode.SmartObjects.Services.Tests.Wrappers
 {
-    internal class EnvironmentSettingsManagerWrapper : IDisposable
+    internal class EnvironmentSettingsManagerWrapper
     {
         private EnvironmentSettingsManager _environmentSettingsManager;
 
@@ -29,12 +28,15 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
         [ExcludeFromCodeCoverage]
         internal virtual EnvironmentField GetItemByName(string fieldName)
         {
-            var template = _environmentSettingsManager.EnvironmentTemplates.DefaultTemplate;
-            var environment = template.DefaultEnvironment;
+            using (_environmentSettingsManager)
+            {
+                var template = _environmentSettingsManager.EnvironmentTemplates.DefaultTemplate;
+                var environment = template.DefaultEnvironment;
 
-            _environmentSettingsManager.GetEnvironmentFields(environment);
+                _environmentSettingsManager.GetEnvironmentFields(environment);
 
-            return environment.EnvironmentFields.GetItemByName(fieldName);
+                return environment.EnvironmentFields.GetItemByName(fieldName);
+            }
         }
     }
 }
