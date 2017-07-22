@@ -33,6 +33,19 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         }
 
         [TestMethod()]
+        public void CreateSanitizedPathUri_WithEmptyStringArray()
+        {
+            // Arrange
+            var pathSegment1 = new string[] { };
+
+            // Action
+            var actual = UriCreator.CreateSanitizedPathUri(UriKind.Absolute, pathSegment1);
+
+            // Assert
+            Assert.IsNull(actual);
+        }
+
+        [TestMethod()]
         public void CreateSanitizedPathUri_WithNoParams()
         {
             // Arrange
@@ -49,7 +62,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void CreateSanitizedPathUri_WithNullPathSegments()
         {
             // Arrange
-            var pathSegment1 = (string)null;
+            string[] pathSegment1 = null;
 
             // Action
             var actual = UriCreator.CreateSanitizedPathUri(UriKind.Absolute, pathSegment1);
