@@ -26,7 +26,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var expected = Guid.NewGuid().ToString();
 
             // Action
-            SmartFormHelper.GetFormHttpResponse(expected);
+            var actual = SmartFormHelper.GetFormHttpResponse(expected);
+
+            // Assert
+            Assert.IsNull(actual);
         }
 
         [TestMethod()]
@@ -44,7 +47,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var expected = Guid.NewGuid().ToString();
 
             // Action
-            SmartFormHelper.GetViewHttpResponse(expected);
+            var actual = SmartFormHelper.GetViewHttpResponse(expected);
+
+            // Assert
+            Assert.IsNull(actual);
         }
 
         [TestInitialize()]
