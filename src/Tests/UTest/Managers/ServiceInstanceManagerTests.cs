@@ -37,7 +37,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
             var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);
             var serviceInstanceSettings = Mock.Of<ServiceInstanceSettings>();
 
-            var serviceInstanceManager = new ServiceInstanceManager(serviceTypeCreator.Object, serviceInstanceSettings.Object);
+            var serviceInstanceManager = new ServiceInstanceManager(serviceTypeCreator.Object, serviceInstanceSettings);
 
             // Act
             serviceInstanceManager.Delete();
