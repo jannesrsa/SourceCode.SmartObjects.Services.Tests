@@ -48,6 +48,18 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
         }
 
         [ExcludeFromCodeCoverage]
+        internal virtual bool DeleteServiceType(Guid ServiceTypeGuid, bool IgnoreDependancy)
+        {
+            return _serviceManagementServer.DeleteServiceType(ServiceTypeGuid, IgnoreDependancy);
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual IDictionary<string, string> GetRegisterableServices()
+        {
+            return _serviceManagementServer.GetRegisterableServices();
+        }
+
+        [ExcludeFromCodeCoverage]
         internal virtual string GetServiceInstance(Guid ServiceInstanceGuid)
         {
             return _serviceManagementServer.GetServiceInstance(ServiceInstanceGuid);
@@ -103,6 +115,12 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
         internal virtual bool RegisterServiceInstance(Guid ServiceTypeGuid, Guid ServiceInstanceGuid, string SystemName, string DisplayName, string Description, string ConfigSettings)
         {
             return _serviceManagementServer.RegisterServiceInstance(ServiceTypeGuid, ServiceInstanceGuid, SystemName, DisplayName, Description, ConfigSettings);
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual bool RegisterServiceType(Guid ServiceTypeGuid, string SystemName, string DisplayName, string Description, string Path, string Class)
+        {
+            return _serviceManagementServer.RegisterServiceType(ServiceTypeGuid, SystemName, DisplayName, Description, Path, Class);
         }
     }
 }

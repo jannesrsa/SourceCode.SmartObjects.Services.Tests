@@ -107,13 +107,15 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;serviceconfig&gt;
-        ///  &lt;serviceauthentication securityprovider=&quot;&quot; oauthresourcename=&quot;&quot; oauthresourceaudience=&quot;&quot; impersonate=&quot;true&quot; isrequired=&quot;false&quot; enforceimpersonation=&quot;false&quot; useoauth=&quot;false&quot;&gt;
+        ///  &lt;serviceauthentication securityprovider=&quot;&quot; isrequired=&quot;false&quot; impersonate=&quot;false&quot;&gt;
         ///    &lt;username /&gt;
         ///    &lt;password /&gt;
         ///    &lt;extra /&gt;
-        ///    &lt;oauthtoken /&gt;
         ///  &lt;/serviceauthentication&gt;
-        ///  &lt;settings /&gt;
+        ///  &lt;settings&gt;
+        ///    &lt;key name=&quot;HostServerConnectionString&quot; isrequired=&quot;true&quot;&gt;Integrated=True;IsPrimaryLogin=True;Authenticate=True;EncryptedPassword=False;Host=DLX;Port=5555&lt;/key&gt;
+        ///    &lt;key name=&quot;FindUsersDefaultFilter&quot; isrequired=&quot;false&quot;&gt;groupname=null;size=100&lt;/key&gt;
+        ///  &lt;/settings&gt;
         ///&lt;/serviceconfig&gt;.
         /// </summary>
         internal static string ServiceInstanceConfig {
@@ -186,6 +188,23 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Properties {
         internal static string ServiceType_ADService {
             get {
                 return ResourceManager.GetString("ServiceType_ADService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;servicetype name=&quot;SourceCode.SmartObjects.Services.UserRoleManagerService.URMService&quot; guid=&quot;11717CEC-D8EA-400D-842B-C3989F6A46D4&quot;&gt;
+        ///  &lt;metadata&gt;
+        ///    &lt;display&gt;
+        ///      &lt;displayname&gt;User Role Manager Service&lt;/displayname&gt;
+        ///      &lt;description&gt;Service to manage and resolve users and roles for Security Providers&lt;/description&gt;
+        ///    &lt;/display&gt;
+        ///  &lt;/metadata&gt;
+        ///  &lt;config&gt;
+        ///    &lt;assembly path=&quot;C:\Program Files (x86)\K2\ServiceBroker\SourceCode.SmartObjects.Services.UserRoleManagerService.dll&quot; class=&quot;SourceCode.Smart [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ServiceType_URMService {
+            get {
+                return ResourceManager.GetString("ServiceType_URMService", resourceCulture);
             }
         }
         

@@ -53,7 +53,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
             var server = ConnectionHelper.GetServer<ServiceManagementServer>();
             using (server.Connection)
             {
-                server.DeleteServiceType(_guid, false);
+                var serviceManagementServerWrapper = ConnectionHelper.GetServiceManagementServerWrapper(server);
+                serviceManagementServerWrapper.DeleteServiceType(_guid, false);
             }
         }
 
@@ -67,13 +68,15 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
             var server = ConnectionHelper.GetServer<ServiceManagementServer>();
             using (server.Connection)
             {
-                var service = (from si in server.GetRegisterableServices()
+                var serviceManagementServerWrapper = ConnectionHelper.GetServiceManagementServerWrapper(server);
+
+                var service = (from si in serviceManagementServerWrapper.GetRegisterableServices()
                                where si.Key == _className
                                select si).FirstOrDefault();
 
                 var path = service.Value;
 
-                server.RegisterServiceType(
+                serviceManagementServerWrapper.RegisterServiceType(
                     _guid,
                     _name,
                     _displayName,

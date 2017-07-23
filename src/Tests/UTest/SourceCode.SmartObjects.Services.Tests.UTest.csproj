@@ -94,6 +94,7 @@
     <Compile Include="Helpers\UriCreatorTests.cs" />
     <Compile Include="Helpers\ValueHelperTests.cs" />
     <Compile Include="Managers\ServiceInstanceManagerTests.cs" />
+    <Compile Include="Managers\ServiceTypeManagerTests.cs" />
     <Compile Include="Mocks\MockWrapperFactory.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -105,6 +106,7 @@
     <Content Include="Resources\ServiceInstancesCompact_URMService.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Resources\ServiceType_URMService.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\SourceCode.SmartObjects.Services.Tests.csproj">

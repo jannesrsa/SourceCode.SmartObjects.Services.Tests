@@ -1,0 +1,11 @@
+﻿<servicetype name="SourceCode.SmartObjects.Services.UserRoleManagerService.URMService" guid="11717CEC-D8EA-400D-842B-C3989F6A46D4">
+  <metadata>
+    <display>
+      <displayname>User Role Manager Service</displayname>
+      <description>Service to manage and resolve users and roles for Security Providers</description>
+    </display>
+  </metadata>
+  <config>
+    <assembly path="C:\Program Files (x86)\K2\ServiceBroker\SourceCode.SmartObjects.Services.UserRoleManagerService.dll" class="SourceCode.SmartObjects.Services.UserRoleManagerService.URMService" />
+  </config>
+</servicetype>
