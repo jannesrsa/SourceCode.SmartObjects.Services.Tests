@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using SourceCode.SmartObjects.Management;
@@ -88,9 +89,27 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
                 .SetupGet(i => i.ServiceAuthentication)
                 .Returns(new ServiceAuthenticationInfo());
 
+            var configurationSettings = new Dictionary<string, string>();
+            configurationSettings["HostServerConnectionString"] = Guid.NewGuid().ToString();
+
+            serviceInstanceSettings
+                .SetupGet(i => i.ConfigurationSettings)
+                .Returns(configurationSettings);
+
             var serviceInstanceManager = new ServiceInstanceManager(serviceTypeCreator.Object, serviceInstanceSettings.Object);
 
-            // Act
+            // Action 1
+            serviceInstanceManager.Register();
+
+            serviceInstanceSettings
+                .SetupGet(i => i.Name)
+                .Returns("URMService2");
+
+            serviceInstanceSettings
+              .SetupGet(i => i.Guid)
+              .Returns(new Guid("5D273AD6-E27A-46F8-BE67-198B36085F99"));
+
+            // Action 2
             serviceInstanceManager.Register();
         }
 
@@ -129,16 +148,69 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
                 .SetupGet(i => i.ServiceAuthentication)
                 .Returns(new ServiceAuthenticationInfo());
 
+            var configurationSettings = new Dictionary<string, string>();
+            configurationSettings["HostServerConnectionString"] = Guid.NewGuid().ToString();
+
+            serviceInstanceSettings
+                .SetupGet(i => i.ConfigurationSettings)
+                .Returns(configurationSettings);
+
             var serviceInstanceManager = new ServiceInstanceManager(serviceTypeCreator.Object, serviceInstanceSettings.Object);
 
-            // Act
+            // Action 1
             serviceInstanceManager.Register();
+
+            // Action 2
+            serviceInstanceManager.Register(true);
         }
 
         [TestInitialize()]
         public void TestInit()
         {
             _mockWrapperFactory = new MockWrapperFactory();
+        }
+
+        [TestMethod()]
+        public void UpdateTest_WithRefreshExistingServiceInstance()
+        {
+            // Arrange
+            _mockWrapperFactory.ServiceManagementServer
+                .Setup(i => i.GetServiceInstanceConfig(
+                    It.IsAny<Guid>()))
+                .Returns(Resources.ServiceInstanceConfig);
+
+            _mockWrapperFactory.ServiceManagementServer
+                .Setup(i => i.GetServiceInstancesCompact(
+                    It.IsAny<Guid>()))
+                .Returns(Resources.ServiceInstancesCompact_URMService);
+
+            var serviceTypeSettings = Mock.Of<ServiceTypeSettings>();
+            var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);
+
+            var serviceInstanceSettings = new Mock<ServiceInstanceSettings>();
+            serviceInstanceSettings
+                .SetupGet(i => i.Name)
+                .Returns("URMService");
+
+            serviceInstanceSettings
+                .SetupGet(i => i.Guid)
+                .Returns(new Guid("4C2F62EA-BE8D-4600-A2B5-185902BDD20A"));
+
+            serviceInstanceSettings
+                .SetupGet(i => i.ServiceAuthentication)
+                .Returns(new ServiceAuthenticationInfo());
+
+            var configurationSettings = new Dictionary<string, string>();
+            configurationSettings["HostServerConnectionString"] = Guid.NewGuid().ToString();
+
+            serviceInstanceSettings
+                .SetupGet(i => i.ConfigurationSettings)
+                .Returns(configurationSettings);
+
+            var serviceInstanceManager = new ServiceInstanceManager(serviceTypeCreator.Object, serviceInstanceSettings.Object);
+
+            // Action
+            serviceInstanceManager.Update(configurationSettings);
         }
     }
 }

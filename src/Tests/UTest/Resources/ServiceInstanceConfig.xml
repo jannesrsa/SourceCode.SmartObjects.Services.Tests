@@ -1,9 +1,11 @@
 ﻿<serviceconfig>
-  <serviceauthentication securityprovider="" oauthresourcename="" oauthresourceaudience="" impersonate="true" isrequired="false" enforceimpersonation="false" useoauth="false">
+  <serviceauthentication securityprovider="" isrequired="false" impersonate="false">
     <username />
     <password />
     <extra />
-    <oauthtoken />
   </serviceauthentication>
-  <settings />
+  <settings>
+    <key name="HostServerConnectionString" isrequired="true">Integrated=True;IsPrimaryLogin=True;Authenticate=True;EncryptedPassword=False;Host=DLX;Port=5555</key>
+    <key name="FindUsersDefaultFilter" isrequired="false">groupname=null;size=100</key>
+  </settings>
 </serviceconfig>
