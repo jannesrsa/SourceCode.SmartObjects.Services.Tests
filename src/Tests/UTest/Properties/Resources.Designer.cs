@@ -85,6 +85,27 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;serviceinstance name=&quot;URMService&quot; guid=&quot;4c2f62ea-be8d-4600-a2b5-185902bdd20a&quot; type=&quot;SourceCode.SmartObjects.Services.UserRoleManagerService.URMService&quot;&gt;
+        ///  &lt;metadata&gt;
+        ///    &lt;display&gt;
+        ///      &lt;displayname&gt;URM Service&lt;/displayname&gt;
+        ///      &lt;description&gt;URM Service from User and Group resolution against labels&lt;/description&gt;
+        ///    &lt;/display&gt;
+        ///  &lt;/metadata&gt;
+        ///  &lt;serviceobject&gt;
+        ///    &lt;objects&gt;
+        ///      &lt;object name=&quot;Group&quot; type=&quot;&quot; active=&quot;true&quot; version=&quot;&quot;&gt;
+        ///        &lt;metadata&gt;
+        ///          &lt;display&gt;
+        ///            &lt;displayna [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ServiceInstance_URMService_Full {
+            get {
+                return ResourceManager.GetString("ServiceInstance_URMService_Full", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;serviceconfig&gt;
         ///  &lt;serviceauthentication securityprovider=&quot;&quot; oauthresourcename=&quot;&quot; oauthresourceaudience=&quot;&quot; impersonate=&quot;true&quot; isrequired=&quot;false&quot; enforceimpersonation=&quot;false&quot; useoauth=&quot;false&quot;&gt;
         ///    &lt;username /&gt;
@@ -98,6 +119,29 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Properties {
         internal static string ServiceInstanceConfig {
             get {
                 return ResourceManager.GetString("ServiceInstanceConfig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;serviceinstances&gt;
+        ///  &lt;serviceinstance name=&quot;URMService&quot; type=&quot;SourceCode.SmartObjects.Services.UserRoleManagerService.URMService&quot; guid=&quot;4C2F62EA-BE8D-4600-A2B5-185902BDD20A&quot;&gt;
+        ///    &lt;metadata&gt;
+        ///      &lt;display&gt;
+        ///        &lt;displayname&gt;URM Service&lt;/displayname&gt;
+        ///        &lt;description&gt;URM Service from User and Group resolution against labels&lt;/description&gt;
+        ///      &lt;/display&gt;
+        ///      &lt;service /&gt;
+        ///    &lt;/metadata&gt;
+        ///    &lt;serviceobject /&gt;
+        ///    &lt;servicefolder&gt;
+        ///      &lt;folders /&gt;
+        ///    &lt;/servicefolder&gt;
+        ///    &lt;serviceextend&gt;
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ServiceInstancesCompact_URMService {
+            get {
+                return ResourceManager.GetString("ServiceInstancesCompact_URMService", resourceCulture);
             }
         }
         
@@ -146,7 +190,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;smartobjectroot name=&quot;K2_Management_WebDesigner_Management_ProcessInfo&quot; guid=&quot;03449af4-6e06-40ec-b9dc-c1e41ce0fafb&quot; version=&quot;0&quot; isextendible=&quot;false&quot; mode=&quot;advanced&quot; createdfromlocal=&quot;false&quot;&gt;
+        ///   Looks up a localized string similar to &lt;smartobjectroot name=&quot;K2_Management_WebDesigner_Management_ProcessInfo&quot; guid=&quot;8cfa08b3-92e6-4317-93d9-376737f0f982&quot; version=&quot;0&quot; isextendible=&quot;false&quot; mode=&quot;advanced&quot; createdfromlocal=&quot;false&quot;&gt;
         ///  &lt;metadata&gt;
         ///    &lt;display&gt;
         ///      &lt;displayname&gt;ProcessInfo&lt;/displayname&gt;

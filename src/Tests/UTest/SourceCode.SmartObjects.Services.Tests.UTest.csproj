@@ -101,6 +101,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Resources\ServiceInstance_URMService_Full.xml" />
+    <Content Include="Resources\ServiceInstancesCompact_URMService.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\SourceCode.SmartObjects.Services.Tests.csproj">

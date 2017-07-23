@@ -48,6 +48,12 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
         }
 
         [ExcludeFromCodeCoverage]
+        internal virtual string GetServiceInstance(Guid ServiceInstanceGuid)
+        {
+            return _serviceManagementServer.GetServiceInstance(ServiceInstanceGuid);
+        }
+
+        [ExcludeFromCodeCoverage]
         internal virtual string GetServiceInstanceCompact(Guid ServiceInstanceGuid)
         {
             return _serviceManagementServer.GetServiceInstanceCompact(ServiceInstanceGuid);
@@ -57,6 +63,12 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
         internal virtual string GetServiceInstanceConfig(Guid ServiceTypeGuid)
         {
             return _serviceManagementServer.GetServiceInstanceConfig(ServiceTypeGuid);
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual string GetServiceInstancesCompact(Guid ServiceTypeGuid)
+        {
+            return _serviceManagementServer.GetServiceInstancesCompact(ServiceTypeGuid);
         }
 
         [ExcludeFromCodeCoverage]
@@ -73,6 +85,24 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
                 var serviceTypesXml = _serviceManagementServer.GetServiceTypes();
                 return ServiceTypeInfoList.Create(serviceTypesXml).ToArray();
             }
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual bool RefreshServiceInstance(Guid ServiceInstanceGuid)
+        {
+            return _serviceManagementServer.RefreshServiceInstance(ServiceInstanceGuid);
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual bool RefreshServiceInstance(Guid ServiceInstanceGuid, string ServiceInstanceConfig)
+        {
+            return _serviceManagementServer.RefreshServiceInstance(ServiceInstanceGuid, ServiceInstanceConfig);
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual bool RegisterServiceInstance(Guid ServiceTypeGuid, Guid ServiceInstanceGuid, string SystemName, string DisplayName, string Description, string ConfigSettings)
+        {
+            return _serviceManagementServer.RegisterServiceInstance(ServiceTypeGuid, ServiceInstanceGuid, SystemName, DisplayName, Description, ConfigSettings);
         }
     }
 }

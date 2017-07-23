@@ -6,6 +6,7 @@ using SourceCode.SmartObjects.Management;
 using SourceCode.SmartObjects.Services.Management;
 using SourceCode.SmartObjects.Services.Tests.Extensions;
 using SourceCode.SmartObjects.Services.Tests.Helpers;
+using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Managers
 {
@@ -43,22 +44,25 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
             var server = ConnectionHelper.GetServer<ServiceManagementServer>();
             using (server.Connection)
             {
-                var serviceConfig = this.GetServiceConfigInfo(server);
+                var serviceManagementServerWrapper = ConnectionHelper.GetServiceManagementServerWrapper(server);
+                var serviceConfig = this.GetServiceConfigInfo(serviceManagementServerWrapper);
 
-                var serviceInstancesCompactXml = server.GetServiceInstancesCompact(_serviceTypeCreator.Guid);
+                var serviceInstancesCompactXml = serviceManagementServerWrapper.GetServiceInstancesCompact(_serviceTypeCreator.Guid);
                 var serviceInstances = ServiceInstanceInfoList.Create(serviceInstancesCompactXml);
 
                 var smartObjectManagementServer = ConnectionHelper.GetServer<SmartObjectManagementServer>();
                 using (smartObjectManagementServer.Connection)
                 {
+                    var smartObjectManagementServerWrapper = ConnectionHelper.GetSmartObjectManagementServerWrapper(smartObjectManagementServer);
+
                     // Remove ServiceInstance with the same name
                     foreach (var instanceInfo in serviceInstances)
                     {
                         if (instanceInfo.Name == _serviceInstanceSettings.Name &&
                             instanceInfo.Guid != _serviceInstanceSettings.Guid)
                         {
-                            smartObjectManagementServer.DeleteSmartObjects(instanceInfo.Guid);
-                            server.DeleteServiceInstance(instanceInfo.Guid);
+                            smartObjectManagementServerWrapper.DeleteSmartObjects(instanceInfo.Guid);
+                            serviceManagementServerWrapper.DeleteServiceInstance(instanceInfo.Guid);
                         }
                     }
                 }
@@ -70,18 +74,18 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
                 {
                     if (refreshOnly)
                     {
-                        server.RefreshServiceInstance(_serviceInstanceSettings.Guid);
+                        serviceManagementServerWrapper.RefreshServiceInstance(_serviceInstanceSettings.Guid);
                     }
                     else
                     {
-                        server.RefreshServiceInstance(
+                        serviceManagementServerWrapper.RefreshServiceInstance(
                           _serviceInstanceSettings.Guid,
                           serviceConfig.WriteXml());
                     }
                 }
                 else
                 {
-                    server.RegisterServiceInstance(
+                    serviceManagementServerWrapper.RegisterServiceInstance(
                           _serviceTypeCreator.Guid,
                           _serviceInstanceSettings.Guid,
                           _serviceInstanceSettings.Name,
@@ -91,7 +95,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
                 }
 
                 // Output all the ServiceObjects and methods
-                using (var serviceInstance = ServiceInstance.Create(server.GetServiceInstance(_serviceInstanceSettings.Guid)))
+                using (var serviceInstance = ServiceInstance.Create(serviceManagementServerWrapper.GetServiceInstance(_serviceInstanceSettings.Guid)))
                 {
                     serviceInstance.ServiceObjects.Sort();
 
@@ -114,21 +118,22 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
             var server = ConnectionHelper.GetServer<ServiceManagementServer>();
             using (server.Connection)
             {
-                var serviceConfig = this.GetServiceConfigInfo(server);
+                var serviceManagementServerWrapper = ConnectionHelper.GetServiceManagementServerWrapper(server);
+                var serviceConfig = this.GetServiceConfigInfo(serviceManagementServerWrapper);
 
-                var serviceInstancesCompactXml = server.GetServiceInstancesCompact(_serviceTypeCreator.Guid);
+                var serviceInstancesCompactXml = serviceManagementServerWrapper.GetServiceInstancesCompact(_serviceTypeCreator.Guid);
                 foreach (var configSetting in configurationSettings)
                 {
                     serviceConfig.ConfigSettings[configSetting.Key].Value = configSetting.Value;
                 }
 
-                server.RefreshServiceInstance(
+                serviceManagementServerWrapper.RefreshServiceInstance(
                   _serviceInstanceSettings.Guid,
                   serviceConfig.WriteXml());
             }
         }
 
-        private ServiceConfigInfo GetServiceConfigInfo(ServiceManagementServer server)
+        private ServiceConfigInfo GetServiceConfigInfo(ServiceManagementServerWrapper server)
         {
             // ServiceType's Service Config
             var serviceInstanceConfig = server.GetServiceInstanceConfig(_serviceTypeCreator.Guid);

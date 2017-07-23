@@ -1,0 +1,441 @@
+﻿<serviceinstance name="URMService" guid="4c2f62ea-be8d-4600-a2b5-185902bdd20a" type="SourceCode.SmartObjects.Services.UserRoleManagerService.URMService">
+  <metadata>
+    <display>
+      <displayname>URM Service</displayname>
+      <description>URM Service from User and Group resolution against labels</description>
+    </display>
+  </metadata>
+  <serviceobject>
+    <objects>
+      <object name="Group" type="" active="true" version="">
+        <metadata>
+          <display>
+            <displayname>Group</displayname>
+            <description>Group Object</description>
+          </display>
+          <service>
+            <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.Group</key>
+            <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.Group</key>
+          </service>
+        </metadata>
+        <properties>
+          <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+            <metadata>
+              <display>
+                <displayname>FQN</displayname>
+                <description>Fully Qualified name of the Group Object</description>
+              </display>
+              <service>
+                <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                <key name="propname">FQN</key>
+              </service>
+            </metadata>
+          </property>
+          <property name="GroupName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+            <metadata>
+              <display>
+                <displayname>GroupName</displayname>
+                <description>Formatted name of Group Name for a label</description>
+              </display>
+              <service>
+                <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                <key name="propname">GroupName</key>
+              </service>
+            </metadata>
+          </property>
+          <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+            <metadata>
+              <display>
+                <displayname>Name</displayname>
+                <description>Name of Group</description>
+              </display>
+              <service>
+                <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                <key name="propname">Name</key>
+              </service>
+            </metadata>
+          </property>
+          <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+            <metadata>
+              <display>
+                <displayname>Description</displayname>
+                <description>Description of group</description>
+              </display>
+              <service>
+                <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                <key name="propname">Description</key>
+              </service>
+            </metadata>
+          </property>
+          <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+            <metadata>
+              <display>
+                <displayname>Email</displayname>
+                <description>Email of group</description>
+              </display>
+              <service>
+                <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                <key name="propname">Email</key>
+              </service>
+            </metadata>
+          </property>
+        </properties>
+        <methods>
+          <method name="GetGroup" type="read">
+            <metadata>
+              <display>
+                <displayname>Get Group Details</displayname>
+                <description>Get Details for a specific group</description>
+              </display>
+              <service>
+                <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.Group, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+                <key name="methname">GetGroup</key>
+                <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+              </service>
+            </metadata>
+            <validation>
+              <requiredproperties>
+                <property name="FQN" />
+              </requiredproperties>
+            </validation>
+            <parameters />
+            <input>
+              <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>FQN</displayname>
+                    <description>Fully Qualified name of the Group Object</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">FQN</key>
+                  </service>
+                </metadata>
+              </property>
+            </input>
+            <return>
+              <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>FQN</displayname>
+                    <description>Fully Qualified name of the Group Object</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">FQN</key>
+                  </service>
+                </metadata>
+              </property>
+              <property name="GroupName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>GroupName</displayname>
+                    <description>Formatted name of Group Name for a label</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">GroupName</key>
+                  </service>
+                </metadata>
+              </property>
+              <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Name</displayname>
+                    <description>Name of Group</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">Name</key>
+                  </service>
+                </metadata>
+              </property>
+              <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Description</displayname>
+                    <description>Description of group</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">Description</key>
+                  </service>
+                </metadata>
+              </property>
+              <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Email</displayname>
+                    <description>Email of group</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">Email</key>
+                  </service>
+                </metadata>
+              </property>
+            </return>
+          </method>
+          <method name="GetGroups" type="list">
+            <metadata>
+              <display>
+                <displayname>Get Groups</displayname>
+                <description>Gets a List of groups</description>
+              </display>
+              <service>
+                <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.Group, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+                <key name="methname">GetGroups</key>
+                <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+              </service>
+            </metadata>
+            <validation />
+            <parameters>
+              <parameter name="labelName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Label Name</displayname>
+                    <description>Name of the Label</description>
+                  </display>
+                  <service>
+                    <key name="paramname">labelName</key>
+                  </service>
+                </metadata>
+              </parameter>
+            </parameters>
+            <input>
+              <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Name</displayname>
+                    <description>Name of Group</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">Name</key>
+                  </service>
+                </metadata>
+              </property>
+              <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Description</displayname>
+                    <description>Description of group</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">Description</key>
+                  </service>
+                </metadata>
+              </property>
+            </input>
+            <return>
+              <property name="FQN" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>FQN</displayname>
+                    <description>Fully Qualified name of the Group Object</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">FQN</key>
+                  </service>
+                </metadata>
+              </property>
+              <property name="GroupName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>GroupName</displayname>
+                    <description>Formatted name of Group Name for a label</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">GroupName</key>
+                  </service>
+                </metadata>
+              </property>
+              <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Name</displayname>
+                    <description>Name of Group</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">Name</key>
+                  </service>
+                </metadata>
+              </property>
+              <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Description</displayname>
+                    <description>Description of group</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">Description</key>
+                  </service>
+                </metadata>
+              </property>
+              <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Email</displayname>
+                    <description>Email of group</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">Email</key>
+                  </service>
+                </metadata>
+              </property>
+            </return>
+          </method>
+          <method name="FindUserGroups" type="list">
+            <metadata>
+              <display>
+                <displayname>Find User Groups</displayname>
+                <description>Find Goups for a user</description>
+              </display>
+              <service>
+                <key name="methtype">SourceCode.SmartObjects.Services.UserRoleManagerService.Group, SourceCode.SmartObjects.Services.UserRoleManagerService, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</key>
+                <key name="methname">FindUserGroups</key>
+                <key name="static">&lt;object type="System.Boolean"&gt;&lt;boolean&gt;false&lt;/boolean&gt;&lt;/object&gt;</key>
+              </service>
+            </metadata>
+            <validation />
+            <parameters>
+              <parameter name="userName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>User Name</displayname>
+                    <description>User Name</description>
+                  </display>
+                  <service>
+                    <key name="paramname">userName</key>
+                  </service>
+                </metadata>
+              </parameter>
+              <parameter name="labelName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Label Name</displayname>
+                    <description>Name of the Label</description>
+                  </display>
+                  <service>
+                    <key name="paramname">labelName</key>
+                  </service>
+                </metadata>
+              </parameter>
+            </parameters>
+            <input>
+              <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Name</displayname>
+                    <description>Name of Group</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">Name</key>
+                  </service>
+                </metadata>
+              </property>
+              <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Description</displayname>
+                    <description>Description of group</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">Description</key>
+                  </service>
+                </metadata>
+              </property>
+            </input>
+            <return>
+              <property name="Name" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Name</displayname>
+                    <description>Name of Group</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">Name</key>
+                  </service>
+                </metadata>
+              </property>
+              <property name="Description" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extendtype="default" sotype="text">
+                <metadata>
+                  <display>
+                    <displayname>Description</displayname>
+                    <description>Description of group</description>
+                  </display>
+                  <service>
+                    <key name="proptype">System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</key>
+                    <key name="propname">Description</key>
+                  </service>
+                </metadata>
+              </property>
+            </return>
+          </method>
+        </methods>
+      </object>
+      <object name="Label" type="" active="true" version="">
+        <metadata>
+          <display>
+            <displayname>Label</displayname>
+            <description>Label defined for providers</description>
+          </display>
+          <service>
+            <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.Label</key>
+          </service>
+        </metadata>
+        <properties />
+      </object>
+      <object name="Role" type="" active="true" version="">
+        <metadata>
+          <display>
+            <displayname>Role</displayname>
+            <description>Role Object</description>
+          </display>
+          <service>
+            <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.Role</key>
+          </service>
+        </metadata>
+        <properties />
+      </object>
+      <object name="User" type="" active="true" version="">
+        <metadata>
+          <display>
+            <displayname>User</displayname>
+            <description>User Object</description>
+          </display>
+          <service>
+            <key name="objtype">SourceCode.SmartObjects.Services.UserRoleManagerService.User</key>
+          </service>
+        </metadata>
+        <properties />
+      </object>
+    </objects>
+  </serviceobject>
+  <servicefolder>
+    <folders />
+  </servicefolder>
+  <serviceextend servicename="" serviceguid="00000000-0000-0000-0000-000000000000">
+    <objects />
+  </serviceextend>
+  <serviceconfig>
+    <serviceauthentication securityprovider="" isrequired="false" impersonate="false">
+      <username />
+      <password />
+      <extra />
+    </serviceauthentication>
+    <settings>
+      <key name="HostServerConnectionString" isrequired="true">Integrated=True;IsPrimaryLogin=True;Authenticate=True;EncryptedPassword=False;Host=DLX;Port=5555</key>
+      <key name="FindUsersDefaultFilter" isrequired="false">groupname=null;size=100</key>
+    </settings>
+  </serviceconfig>
+</serviceinstance>

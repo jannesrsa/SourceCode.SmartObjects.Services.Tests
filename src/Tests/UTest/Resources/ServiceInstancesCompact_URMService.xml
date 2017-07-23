@@ -1,0 +1,29 @@
+﻿<serviceinstances>
+  <serviceinstance name="URMService" type="SourceCode.SmartObjects.Services.UserRoleManagerService.URMService" guid="4C2F62EA-BE8D-4600-A2B5-185902BDD20A">
+    <metadata>
+      <display>
+        <displayname>URM Service</displayname>
+        <description>URM Service from User and Group resolution against labels</description>
+      </display>
+      <service />
+    </metadata>
+    <serviceobject />
+    <servicefolder>
+      <folders />
+    </servicefolder>
+    <serviceextend>
+      <objects />
+    </serviceextend>
+    <serviceconfig>
+      <serviceauthentication securityprovider="" isrequired="false" impersonate="false">
+        <username />
+        <password />
+        <extra />
+      </serviceauthentication>
+      <settings>
+        <key name="HostServerConnectionString" isrequired="true">Integrated=True;IsPrimaryLogin=True;Authenticate=True;EncryptedPassword=False;Host=DLX;Port=5555</key>
+        <key name="FindUsersDefaultFilter" isrequired="false">groupname=null;size=100</key>
+      </settings>
+    </serviceconfig>
+  </serviceinstance>
+</serviceinstances>
