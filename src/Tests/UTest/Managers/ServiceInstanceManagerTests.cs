@@ -37,7 +37,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
             var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);
             var serviceInstanceSettings = Mock.Of<ServiceInstanceSettings>();
 
-            var serviceInstanceManager = new ServiceInstanceManager(serviceTypeCreator.Object, serviceInstanceSettings);
+            var serviceInstanceManager = new ServiceInstanceManager(serviceTypeCreator.Object, serviceInstanceSettings.Object);
 
             // Act
             serviceInstanceManager.Delete();
@@ -83,6 +83,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
             var serviceInstanceSettings = new Mock<ServiceInstanceSettings>();
             serviceInstanceSettings
                 .SetupGet(i => i.Name)
+                .Returns("URMService");
+
+            serviceInstanceSettings
+                .SetupGet(i => i.Description)
                 .Returns("URMService");
 
             serviceInstanceSettings
