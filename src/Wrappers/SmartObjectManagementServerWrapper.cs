@@ -60,6 +60,12 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
         }
 
         [ExcludeFromCodeCoverage]
+        internal virtual void GenerateSmartObjects(Guid serviceInstanceGuid, bool createNew, bool updateExisting, bool deleteRemoved)
+        {
+            _smartObjectManagementServer.GenerateSmartObjects(serviceInstanceGuid, createNew, updateExisting, deleteRemoved);
+        }
+
+        [ExcludeFromCodeCoverage]
         internal virtual string GetServiceInstance(Guid serviceInstanceGuid, ServiceExplorerLevel serviceLevel)
         {
             return _smartObjectManagementServer.GetServiceInstance(serviceInstanceGuid, serviceLevel);

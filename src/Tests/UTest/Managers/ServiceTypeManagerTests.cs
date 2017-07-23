@@ -16,8 +16,11 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
         public void DeleteTest()
         {
             // Arrange
-            var serviceTypeSettings = Mock.Of<ServiceTypeSettings>();
-            var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);
+            var serviceTypeSettings = new Mock<ServiceTypeSettings>();
+            var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings.Object);
+            serviceTypeSettings
+                .SetupGet(i => i.AlwaysUseDefaults)
+                .Returns(true);
 
             // Action
             serviceTypeCreator.Object.Delete();

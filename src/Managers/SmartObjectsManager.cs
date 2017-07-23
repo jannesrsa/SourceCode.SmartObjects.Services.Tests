@@ -1,5 +1,4 @@
 ﻿using SourceCode.SmartObjects.Management;
-using SourceCode.SmartObjects.Services.Tests.Extensions;
 using SourceCode.SmartObjects.Services.Tests.Helpers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Managers
@@ -23,9 +22,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
             var smartObjectManagementServer = ConnectionHelper.GetServer<SmartObjectManagementServer>();
             using (smartObjectManagementServer.Connection)
             {
-                foreach (SmartObjectInfo smartObject in smartObjectManagementServer.GetSmartObjects(_serviceInstanceSettings.Guid).SmartObjects)
+                var smartObjectManagementServerWrapper = ConnectionHelper.GetSmartObjectManagementServerWrapper(smartObjectManagementServer);
+                foreach (SmartObjectInfo smartObject in smartObjectManagementServerWrapper.GetSmartObjects(_serviceInstanceSettings.Guid).SmartObjects)
                 {
-                    smartObjectManagementServer.DeleteSmartObject(smartObject.Name);
+                    smartObjectManagementServerWrapper.DeleteSmartObject(smartObject.Name);
                 }
             }
         }
@@ -35,7 +35,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
             var managementServer = ConnectionHelper.GetServer<SmartObjectManagementServer>();
             using (managementServer.Connection)
             {
-                managementServer.GenerateSmartObjects(_serviceInstanceSettings.Guid, true, true, true);
+                var smartObjectManagementServerWrapper = ConnectionHelper.GetSmartObjectManagementServerWrapper(managementServer);
+                smartObjectManagementServerWrapper.GenerateSmartObjects(_serviceInstanceSettings.Guid, true, true, true);
             }
         }
     }

@@ -14,6 +14,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
     {
         private readonly SmartObjectClientServer _serviceClientServer;
 
+        [ExcludeFromCodeCoverage]
         public SmartObjectClientServerWrapper(SmartObjectClientServer serviceClientServer)
         {
             serviceClientServer.ThrowIfNull(nameof(serviceClientServer));
@@ -25,6 +26,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
         {
         }
 
+        [ExcludeFromCodeCoverage]
         public BaseAPI BaseAPIServer
         {
             get

@@ -8,6 +8,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
     {
         private EnvironmentSettingsManager _environmentSettingsManager;
 
+        [ExcludeFromCodeCoverage]
         public EnvironmentSettingsManagerWrapper(EnvironmentSettingsManager environmentSettingsManager)
         {
             environmentSettingsManager.ThrowIfNull(nameof(environmentSettingsManager));

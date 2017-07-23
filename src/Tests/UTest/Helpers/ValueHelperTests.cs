@@ -48,5 +48,82 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
                 Assert.IsNotNull(type);
             }
         }
+
+        [TestMethod()]
+        public void TryConvert_Convert_True()
+        {
+            // Action
+            object outValue;
+            var actual = ValueHelper.TryConvert(typeof(int), "1", out outValue);
+
+            // Assert
+            Assert.IsTrue(actual);
+        }
+
+        [TestMethod()]
+        public void TryConvert_Decimal_False()
+        {
+            // Action
+            object outValue;
+            var actual = ValueHelper.TryConvert(typeof(decimal), "test", out outValue);
+
+            // Assert
+            Assert.IsFalse(actual);
+        }
+
+        [TestMethod()]
+        public void TryConvert_Decimal_True()
+        {
+            // Action
+            object outValue;
+            var actual = ValueHelper.TryConvert(typeof(decimal), "1,0", out outValue);
+
+            // Assert
+            Assert.IsTrue(actual);
+        }
+
+        [TestMethod()]
+        public void TryConvert_False()
+        {
+            // Action
+            object outValue;
+            var actual = ValueHelper.TryConvert(typeof(int), "test", out outValue);
+
+            // Assert
+            Assert.IsFalse(actual);
+        }
+
+        [TestMethod()]
+        public void TryConvert_True()
+        {
+            // Action
+            object outValue;
+            var actual = ValueHelper.TryConvert(typeof(int), 1, out outValue);
+
+            // Assert
+            Assert.IsTrue(actual);
+        }
+
+        [TestMethod()]
+        public void TryConvert_WithDbNull()
+        {
+            // Action
+            object outValue;
+            var actual = ValueHelper.TryConvert(typeof(int), DBNull.Value, out outValue);
+
+            // Assert
+            Assert.IsFalse(actual);
+        }
+
+        [TestMethod()]
+        public void TryConvert_WithNull()
+        {
+            // Action
+            object outValue;
+            var actual = ValueHelper.TryConvert(typeof(int), null, out outValue);
+
+            // Assert
+            Assert.IsFalse(actual);
+        }
     }
 }

@@ -95,6 +95,7 @@
     <Compile Include="Helpers\ValueHelperTests.cs" />
     <Compile Include="Managers\ServiceInstanceManagerTests.cs" />
     <Compile Include="Managers\ServiceTypeManagerTests.cs" />
+    <Compile Include="Managers\SmartObjectsManagerTests.cs" />
     <Compile Include="Mocks\MockWrapperFactory.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
