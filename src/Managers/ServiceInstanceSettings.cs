@@ -11,7 +11,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
             get;
         }
 
-        public abstract string Description
+        public virtual string Description
         {
             get;
         }

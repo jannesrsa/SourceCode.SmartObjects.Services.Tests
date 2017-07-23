@@ -26,19 +26,15 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
             var smartObjectManagementServer = ConnectionHelper.GetServer<SmartObjectManagementServer>();
             using (smartObjectManagementServer.Connection)
             {
-                foreach (SmartObjectInfo smartObject in smartObjectManagementServer.GetSmartObjects(_serviceInstanceSettings.Guid).SmartObjects)
-                {
-                    smartObjectManagementServer.DeleteSmartObject(smartObject.Name);
-                }
+                var smartObjectManagementServerWrapper = ConnectionHelper.GetSmartObjectManagementServerWrapper(smartObjectManagementServer);
+                smartObjectManagementServerWrapper.DeleteSmartObjects(_serviceInstanceSettings.Guid);
             }
 
             var serviceManagementServer = ConnectionHelper.GetServer<ServiceManagementServer>();
             using (smartObjectManagementServer.Connection)
             {
-                if (!string.IsNullOrEmpty(serviceManagementServer.GetServiceInstanceCompact(_serviceInstanceSettings.Guid)))
-                {
-                    serviceManagementServer.DeleteServiceInstance(_serviceInstanceSettings.Guid, false);
-                }
+                var serviceManagementServerWrapper = ConnectionHelper.GetServiceManagementServerWrapper(serviceManagementServer);
+                serviceManagementServerWrapper.DeleteServiceInstance(_serviceInstanceSettings.Guid);
             }
         }
 

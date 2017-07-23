@@ -1,5 +1,9 @@
 ﻿using Moq;
+using SourceCode.Deployment.Management;
+using SourceCode.EnvironmentSettings.Client;
 using SourceCode.SmartObjects.Client;
+using SourceCode.SmartObjects.Management;
+using SourceCode.SmartObjects.Services.Management;
 using SourceCode.SmartObjects.Services.Tests.Helpers;
 using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
@@ -18,14 +22,17 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Mocks
             PackageDeploymentManager = new Mock<PackageDeploymentManagerWrapper>();
             WebRequestManager = new Mock<WebRequestWrapper>();
 
-            Factory.Setup(x => x.GetSmartObjectClientServerWrapper(null)).Returns(SmartObjectClientServer.Object);
-            Factory.Setup(x => x.GetSmartObjectManagementServerWrapper(null)).Returns(SmartObjectManagementServer.Object);
-            Factory.Setup(x => x.GetServiceManagementServerWrapper(null)).Returns(ServiceManagementServer.Object);
-            Factory.Setup(x => x.GetEnvironmentSettingsManagerWrapper(null)).Returns(EnvironmentSettingsManager.Object);
-            Factory.Setup(x => x.GetPackageDeploymentManagerWrapper(null)).Returns(PackageDeploymentManager.Object);
+            Factory.Setup(x => x.GetSmartObjectClientServerWrapper(It.IsAny<SmartObjectClientServer>())).Returns(SmartObjectClientServer.Object);
+            Factory.Setup(x => x.GetSmartObjectManagementServerWrapper(It.IsAny<SmartObjectManagementServer>())).Returns(SmartObjectManagementServer.Object);
+            Factory.Setup(x => x.GetServiceManagementServerWrapper(It.IsAny<ServiceManagementServer>())).Returns(ServiceManagementServer.Object);
+            Factory.Setup(x => x.GetEnvironmentSettingsManagerWrapper(It.IsAny<EnvironmentSettingsManager>())).Returns(EnvironmentSettingsManager.Object);
+            Factory.Setup(x => x.GetPackageDeploymentManagerWrapper(It.IsAny<PackageDeploymentManager>())).Returns(PackageDeploymentManager.Object);
             Factory.Setup(x => x.GetWebRequestWrapper()).Returns(WebRequestManager.Object);
 
             Factory.Setup(x => x.GetServer<SmartObjectClientServer>()).Returns(new SmartObjectClientServer());
+            Factory.Setup(x => x.GetServer<SmartObjectManagementServer>()).Returns(new SmartObjectManagementServer());
+            Factory.Setup(x => x.GetServer<ServiceManagementServer>()).Returns(new ServiceManagementServer());
+            Factory.Setup(x => x.GetServer<PackageDeploymentManager>()).Returns(new PackageDeploymentManager());
 
             ConnectionHelper.UpdateWrapperFactory(Factory.Object);
         }

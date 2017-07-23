@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using SourceCode.Hosting.Client.BaseAPI;
 using SourceCode.SmartObjects.Services.Management;
 using SourceCode.SmartObjects.Services.Tests.Extensions;
@@ -61,6 +63,16 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
         internal virtual string GetServiceType(Guid ServiceTypeGuid)
         {
             return _serviceManagementServer.GetServiceType(ServiceTypeGuid);
+        }
+
+        [ExcludeFromCodeCoverage]
+        internal virtual IEnumerable<ServiceTypeInfo> GetServiceTypes()
+        {
+            using (_serviceManagementServer.Connection)
+            {
+                var serviceTypesXml = _serviceManagementServer.GetServiceTypes();
+                return ServiceTypeInfoList.Create(serviceTypesXml).ToArray();
+            }
         }
     }
 }

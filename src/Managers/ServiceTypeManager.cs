@@ -28,21 +28,17 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
             // Use the existing ServiceType's values
             if (!serviceTypeSettings.AlwaysUseDefaults)
             {
-                var server = ConnectionHelper.GetServer<ServiceManagementServer>();
-                using (server.Connection)
+                var server = ConnectionHelper.GetServiceManagementServerWrapper(null);
+                var serviceTypeCollection = server.GetServiceTypes();
+                var serviceType = serviceTypeCollection.FirstOrDefault(i => i.Class.Equals(_className));
+
+                if (serviceType != null)
                 {
-                    var serviceTypesXml = server.GetServiceTypes();
-                    var serviceTypeCollection = ServiceTypeInfoList.Create(serviceTypesXml);
-                    var serviceType = serviceTypeCollection.FirstOrDefault(i => i.Class.Equals(_className));
+                    _registered = true;
 
-                    if (serviceType != null)
-                    {
-                        _registered = true;
-
-                        _guid = serviceType.Guid;
-                        _name = serviceType.Name;
-                        _displayName = serviceType.DisplayName;
-                    }
+                    _guid = serviceType.Guid;
+                    _name = serviceType.Name;
+                    _displayName = serviceType.DisplayName;
                 }
             }
         }
