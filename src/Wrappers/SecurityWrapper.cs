@@ -41,6 +41,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
             }
         }
 
+        [ExcludeFromCodeCoverage]
         internal static class NativeMethods
         {
             [DllImport("advapi32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
@@ -48,6 +49,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
             internal static extern bool LogonUser(String lpszUsername, String lpszDomain, String lpszPassword, int dwLogonType, int dwLogonProvider, out SafeTokenHandle phToken);
         }
 
+        [ExcludeFromCodeCoverage]
         internal sealed class SafeTokenHandle : SafeHandleZeroOrMinusOneIsInvalid
         {
             private SafeTokenHandle()
@@ -60,6 +62,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
                 return NativeMethods.CloseHandle(handle);
             }
 
+            [ExcludeFromCodeCoverage]
             internal static class NativeMethods
             {
                 [DllImport("kernel32.dll")]
