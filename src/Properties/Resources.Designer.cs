@@ -22,6 +22,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage()]
     internal class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
