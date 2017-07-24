@@ -32,8 +32,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             }
             else
             {
-                SafeTokenHandle safeTokenHandle;
-
                 const int LOGON32_PROVIDER_DEFAULT = 0;
 
                 //This parameter causes LogonUser to create a primary token.
@@ -42,7 +40,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
                 // Call LogonUser to obtain a handle to an access token.
                 bool returnValue = NativeMethods.LogonUser(userName, Environment.UserDomainName, password,
                     LOGON32_LOGON_INTERACTIVE, LOGON32_PROVIDER_DEFAULT,
-                    out safeTokenHandle);
+                    out SafeTokenHandle safeTokenHandle);
 
                 if (false == returnValue)
                 {

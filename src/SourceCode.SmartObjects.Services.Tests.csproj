@@ -163,8 +163,8 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy /R /Y "$(TargetPath)" "c:\Program Files (x86)\K2\ServiceBroker\"
+xcopy /R /Y "$(TargetPath)" "c:\Program Files (x86)\K2\"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

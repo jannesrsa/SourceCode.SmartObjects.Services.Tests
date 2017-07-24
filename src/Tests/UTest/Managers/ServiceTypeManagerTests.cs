@@ -60,8 +60,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
                 .Setup(i => i.GetRegisterableServices())
                 .Returns(registerableServices);
 
-            var serviceTypeInfoCollection = new List<ServiceTypeInfo>();
-            serviceTypeInfoCollection.Add(urmServiceType);
+            var serviceTypeInfoCollection = new List<ServiceTypeInfo>
+            {
+                urmServiceType
+            };
 
             _mockWrapperFactory.ServiceManagementServer
                 .Setup(i => i.GetServiceTypes())

@@ -92,6 +92,7 @@
     <Compile Include="Helpers\SmartFormHelperTests.cs" />
     <Compile Include="Helpers\SmartObjectHelperTests.cs" />
     <Compile Include="Helpers\UriCreatorTests.cs" />
+    <Compile Include="Helpers\UrlHelperTests.cs" />
     <Compile Include="Helpers\ValueHelperTests.cs" />
     <Compile Include="Managers\ServiceInstanceManagerTests.cs" />
     <Compile Include="Managers\ServiceTypeManagerTests.cs" />

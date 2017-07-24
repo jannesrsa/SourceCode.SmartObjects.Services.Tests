@@ -2,7 +2,7 @@
 
 namespace SourceCode.SmartObjects.Services.Tests.Helpers
 {
-    internal static class UrlHelper
+    public static class UrlHelper
     {
         public static string InvalidPathChars { get; } = GetInvalidPathChars();
 

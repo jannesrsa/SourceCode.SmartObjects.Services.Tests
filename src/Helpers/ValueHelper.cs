@@ -96,8 +96,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
         {
             if (smartProperty == null) throw new ArgumentNullException("smartProperty");
 
-            object result;
-            TryConvert(typeof(T), smartProperty.Value, out result);
+            TryConvert(typeof(T), smartProperty.Value, out object result);
             return (T)result;
         }
 
@@ -138,8 +137,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
                 {
                     if (type == typeof(decimal))
                     {
-                        decimal returnValue;
-                        if (decimal.TryParse(Convert.ToString(value, CultureInfo.InvariantCulture), NumberStyles.Any, CultureInfo.InvariantCulture, out returnValue))
+                        if (decimal.TryParse(Convert.ToString(value, CultureInfo.InvariantCulture), NumberStyles.Any, CultureInfo.InvariantCulture, out decimal returnValue))
                         {
                             result = returnValue;
                             return true;

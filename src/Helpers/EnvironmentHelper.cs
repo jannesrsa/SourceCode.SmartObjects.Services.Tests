@@ -9,8 +9,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
         public static string GetEnvironmentFieldByName(string name)
         {
-            string value;
-            if (_cachedEnvironmentFields.TryGetValue(name, out value))
+            if (_cachedEnvironmentFields.TryGetValue(name, out string value))
             {
                 return value;
             }
