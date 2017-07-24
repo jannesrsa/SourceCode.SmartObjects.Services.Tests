@@ -2,12 +2,15 @@
 using System.ComponentModel;
 using System.Security.Principal;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SourceCode.SmartObjects.Services.Tests.UTest.Mocks;
 
 namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
 {
     [TestClass()]
     public class SecurityHelperTests
     {
+        private MockWrapperFactory _mockWrapperFactory;
+
         [TestMethod()]
         public void InvokeAsUser_CurrentUser()
         {
@@ -36,10 +39,17 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void InvokeAsUser_InvalidUser()
         {
             // Arrange
+            Wrappers.WrapperFactory.Instance = new Wrappers.WrapperFactory();
             Action action = () => { Assert.AreEqual(string.Empty, string.Empty); };
 
             // Action
             SecurityHelper.InvokeAsUser(action, Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
+        }
+
+        [TestInitialize()]
+        public void TestInit()
+        {
+            _mockWrapperFactory = new MockWrapperFactory();
         }
     }
 }

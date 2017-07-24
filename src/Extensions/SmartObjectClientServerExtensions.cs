@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Data;
 using SourceCode.SmartObjects.Client;
-using SourceCode.SmartObjects.Services.Tests.Helpers;
 using SourceCode.SmartObjects.Services.Tests.Managers;
+using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Extensions
 {
@@ -18,7 +18,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
         public static SmartObject Deserialize(this SmartObjectClientServer clientServer, string serviceObjectName,
             ServiceInstanceSettings serviceInstanceSettings, String value)
         {
-            return ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer).Deserialize(serviceObjectName, serviceInstanceSettings, value);
+            return WrapperFactory.Instance.GetSmartObjectClientServerWrapper(clientServer).Deserialize(serviceObjectName, serviceInstanceSettings, value);
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
         public static DataTable DeserializeTypedArray(this SmartObjectClientServer clientServer, string serviceObjectName,
             ServiceInstanceSettings serviceInstanceSettings, string value)
         {
-            return ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer).DeserializeTypedArray(serviceObjectName, serviceInstanceSettings, value);
+            return WrapperFactory.Instance.GetSmartObjectClientServerWrapper(clientServer).DeserializeTypedArray(serviceObjectName, serviceInstanceSettings, value);
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
         public static string Serialize(this SmartObjectClientServer clientServer, string serviceObjectName,
             ServiceInstanceSettings serviceInstanceSettings, params Action<SmartObject>[] actions)
         {
-            return ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer).Serialize(serviceObjectName, serviceInstanceSettings, actions);
+            return WrapperFactory.Instance.GetSmartObjectClientServerWrapper(clientServer).Serialize(serviceObjectName, serviceInstanceSettings, actions);
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
         public static string SerializeAddItemToArray(this SmartObjectClientServer clientServer, string serviceObjectName, string existingSerializedArray,
             ServiceInstanceSettings serviceInstanceSettings, params Action<SmartObject>[] actions)
         {
-            return ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer).SerializeAddItemToArray(serviceObjectName, existingSerializedArray, serviceInstanceSettings, actions);
+            return WrapperFactory.Instance.GetSmartObjectClientServerWrapper(clientServer).SerializeAddItemToArray(serviceObjectName, existingSerializedArray, serviceInstanceSettings, actions);
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
         public static string SerializeItemToArray(this SmartObjectClientServer clientServer, string serviceObjectName,
             ServiceInstanceSettings serviceInstanceSettings, params Action<SmartObject>[] actions)
         {
-            return ConnectionHelper.GetSmartObjectClientServerWrapper(clientServer).SerializeItemToArray(serviceObjectName, serviceInstanceSettings, actions);
+            return WrapperFactory.Instance.GetSmartObjectClientServerWrapper(clientServer).SerializeItemToArray(serviceObjectName, serviceInstanceSettings, actions);
         }
     }
 }

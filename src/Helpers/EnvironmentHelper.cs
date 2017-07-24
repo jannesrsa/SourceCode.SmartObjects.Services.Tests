@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Helpers
 {
@@ -14,7 +15,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
                 return value;
             }
 
-            var server = ConnectionHelper.GetEnvironmentSettingsManagerWrapper(null);
+            var server = WrapperFactory.Instance.GetEnvironmentSettingsManagerWrapper(null);
             var field = server.GetItemByName(name);
 
             _cachedEnvironmentFields[name] = field.Value;

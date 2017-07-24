@@ -5,7 +5,6 @@ using SourceCode.SmartObjects.Authoring;
 using SourceCode.SmartObjects.Management;
 using SourceCode.SmartObjects.Services.Management;
 using SourceCode.SmartObjects.Services.Tests.Extensions;
-using SourceCode.SmartObjects.Services.Tests.Helpers;
 using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Managers
@@ -24,36 +23,36 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
 
         public void Delete()
         {
-            var smartObjectManagementServer = ConnectionHelper.GetServer<SmartObjectManagementServer>();
+            var smartObjectManagementServer = WrapperFactory.Instance.GetServer<SmartObjectManagementServer>();
             using (smartObjectManagementServer.Connection)
             {
-                var smartObjectManagementServerWrapper = ConnectionHelper.GetSmartObjectManagementServerWrapper(smartObjectManagementServer);
+                var smartObjectManagementServerWrapper = WrapperFactory.Instance.GetSmartObjectManagementServerWrapper(smartObjectManagementServer);
                 smartObjectManagementServerWrapper.DeleteSmartObjects(_serviceInstanceSettings.Guid);
             }
 
-            var serviceManagementServer = ConnectionHelper.GetServer<ServiceManagementServer>();
+            var serviceManagementServer = WrapperFactory.Instance.GetServer<ServiceManagementServer>();
             using (smartObjectManagementServer.Connection)
             {
-                var serviceManagementServerWrapper = ConnectionHelper.GetServiceManagementServerWrapper(serviceManagementServer);
+                var serviceManagementServerWrapper = WrapperFactory.Instance.GetServiceManagementServerWrapper(serviceManagementServer);
                 serviceManagementServerWrapper.DeleteServiceInstance(_serviceInstanceSettings.Guid);
             }
         }
 
         public void Register(bool refreshOnly = false)
         {
-            var server = ConnectionHelper.GetServer<ServiceManagementServer>();
+            var server = WrapperFactory.Instance.GetServer<ServiceManagementServer>();
             using (server.Connection)
             {
-                var serviceManagementServerWrapper = ConnectionHelper.GetServiceManagementServerWrapper(server);
+                var serviceManagementServerWrapper = WrapperFactory.Instance.GetServiceManagementServerWrapper(server);
                 var serviceConfig = this.GetServiceConfigInfo(serviceManagementServerWrapper);
 
                 var serviceInstancesCompactXml = serviceManagementServerWrapper.GetServiceInstancesCompact(_serviceTypeCreator.Guid);
                 var serviceInstances = ServiceInstanceInfoList.Create(serviceInstancesCompactXml);
 
-                var smartObjectManagementServer = ConnectionHelper.GetServer<SmartObjectManagementServer>();
+                var smartObjectManagementServer = WrapperFactory.Instance.GetServer<SmartObjectManagementServer>();
                 using (smartObjectManagementServer.Connection)
                 {
-                    var smartObjectManagementServerWrapper = ConnectionHelper.GetSmartObjectManagementServerWrapper(smartObjectManagementServer);
+                    var smartObjectManagementServerWrapper = WrapperFactory.Instance.GetSmartObjectManagementServerWrapper(smartObjectManagementServer);
 
                     // Remove ServiceInstance with the same name
                     foreach (var instanceInfo in serviceInstances)
@@ -115,10 +114,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
         {
             configurationSettings.ThrowIfNull("configurationSettings");
 
-            var server = ConnectionHelper.GetServer<ServiceManagementServer>();
+            var server = WrapperFactory.Instance.GetServer<ServiceManagementServer>();
             using (server.Connection)
             {
-                var serviceManagementServerWrapper = ConnectionHelper.GetServiceManagementServerWrapper(server);
+                var serviceManagementServerWrapper = WrapperFactory.Instance.GetServiceManagementServerWrapper(server);
                 var serviceConfig = this.GetServiceConfigInfo(serviceManagementServerWrapper);
 
                 var serviceInstancesCompactXml = serviceManagementServerWrapper.GetServiceInstancesCompact(_serviceTypeCreator.Guid);

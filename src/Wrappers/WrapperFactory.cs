@@ -13,12 +13,26 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
     [ExcludeFromCodeCoverage]
     internal class WrapperFactory
     {
+        private static WrapperFactory _instance = new WrapperFactory();
+
         internal WrapperFactory()
         {
             SCConnectionStringBuilder.Host = Environment.MachineName;
             SCConnectionStringBuilder.Port = 5555;
             SCConnectionStringBuilder.Integrated = true;
             SCConnectionStringBuilder.IsPrimaryLogin = true;
+        }
+
+        public static WrapperFactory Instance
+        {
+            get
+            {
+                return _instance;
+            }
+            set
+            {
+                _instance = value;
+            }
         }
 
         internal SCConnectionStringBuilder SCConnectionStringBuilder { get; } = new SCConnectionStringBuilder();
@@ -43,6 +57,11 @@ namespace SourceCode.SmartObjects.Services.Tests.Wrappers
             }
 
             return new PackageDeploymentManagerWrapper(server);
+        }
+
+        internal virtual SecurityWrapper GetSecurityWrapper()
+        {
+            return new SecurityWrapper();
         }
 
         internal virtual T GetServer<T>() where T : BaseAPI, new()

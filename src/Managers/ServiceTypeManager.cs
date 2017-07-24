@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using SourceCode.SmartObjects.Services.Management;
-using SourceCode.SmartObjects.Services.Tests.Helpers;
+using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Managers
 {
@@ -28,7 +28,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
             // Use the existing ServiceType's values
             if (!serviceTypeSettings.AlwaysUseDefaults)
             {
-                var server = ConnectionHelper.GetServiceManagementServerWrapper(null);
+                var server = WrapperFactory.Instance.GetServiceManagementServerWrapper(null);
                 var serviceTypeCollection = server.GetServiceTypes();
                 var serviceType = serviceTypeCollection.FirstOrDefault(i => i.Class.Equals(_className));
 
@@ -50,10 +50,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
 
         public void Delete()
         {
-            var server = ConnectionHelper.GetServer<ServiceManagementServer>();
+            var server = WrapperFactory.Instance.GetServer<ServiceManagementServer>();
             using (server.Connection)
             {
-                var serviceManagementServerWrapper = ConnectionHelper.GetServiceManagementServerWrapper(server);
+                var serviceManagementServerWrapper = WrapperFactory.Instance.GetServiceManagementServerWrapper(server);
                 serviceManagementServerWrapper.DeleteServiceType(_guid, false);
             }
         }
@@ -65,10 +65,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
                 return;
             }
 
-            var server = ConnectionHelper.GetServer<ServiceManagementServer>();
+            var server = WrapperFactory.Instance.GetServer<ServiceManagementServer>();
             using (server.Connection)
             {
-                var serviceManagementServerWrapper = ConnectionHelper.GetServiceManagementServerWrapper(server);
+                var serviceManagementServerWrapper = WrapperFactory.Instance.GetServiceManagementServerWrapper(server);
 
                 var service = (from si in serviceManagementServerWrapper.GetRegisterableServices()
                                where si.Key == _className

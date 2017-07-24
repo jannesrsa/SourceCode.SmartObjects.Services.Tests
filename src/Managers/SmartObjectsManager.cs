@@ -1,5 +1,5 @@
 ﻿using SourceCode.SmartObjects.Management;
-using SourceCode.SmartObjects.Services.Tests.Helpers;
+using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Managers
 {
@@ -19,10 +19,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
 
         public void Delete()
         {
-            var smartObjectManagementServer = ConnectionHelper.GetServer<SmartObjectManagementServer>();
+            var smartObjectManagementServer = WrapperFactory.Instance.GetServer<SmartObjectManagementServer>();
             using (smartObjectManagementServer.Connection)
             {
-                var smartObjectManagementServerWrapper = ConnectionHelper.GetSmartObjectManagementServerWrapper(smartObjectManagementServer);
+                var smartObjectManagementServerWrapper = WrapperFactory.Instance.GetSmartObjectManagementServerWrapper(smartObjectManagementServer);
                 foreach (SmartObjectInfo smartObject in smartObjectManagementServerWrapper.GetSmartObjects(_serviceInstanceSettings.Guid).SmartObjects)
                 {
                     smartObjectManagementServerWrapper.DeleteSmartObject(smartObject.Name);
@@ -32,10 +32,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers
 
         public void Register()
         {
-            var managementServer = ConnectionHelper.GetServer<SmartObjectManagementServer>();
+            var managementServer = WrapperFactory.Instance.GetServer<SmartObjectManagementServer>();
             using (managementServer.Connection)
             {
-                var smartObjectManagementServerWrapper = ConnectionHelper.GetSmartObjectManagementServerWrapper(managementServer);
+                var smartObjectManagementServerWrapper = WrapperFactory.Instance.GetSmartObjectManagementServerWrapper(managementServer);
                 smartObjectManagementServerWrapper.GenerateSmartObjects(_serviceInstanceSettings.Guid, true, true, true);
             }
         }

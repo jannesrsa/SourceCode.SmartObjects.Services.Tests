@@ -142,6 +142,7 @@
     </Compile>
     <Compile Include="Wrappers\EnvironmentSettingsManagerWrapper.cs" />
     <Compile Include="Wrappers\PackageDeploymentManagerWrapper.cs" />
+    <Compile Include="Wrappers\SecurityWrapper.cs" />
     <Compile Include="Wrappers\WebRequestWrapper.cs" />
     <Compile Include="Wrappers\WrapperFactory.cs" />
     <Compile Include="Wrappers\SmartObjectManagementServerWrapper.cs" />

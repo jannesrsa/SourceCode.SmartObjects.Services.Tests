@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Reflection;
 using SourceCode.SmartObjects.Services.Tests.Extensions;
+using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Helpers
 {
@@ -11,7 +12,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
         public static void DeployPackage(byte[] package)
         {
-            var packageDeploymentManager = ConnectionHelper.GetPackageDeploymentManagerWrapper(null);
+            var packageDeploymentManager = WrapperFactory.Instance.GetPackageDeploymentManagerWrapper(null);
             packageDeploymentManager.DeployPackage(package);
         }
 
@@ -21,7 +22,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
             var resources = assembly.GetManifestResourceNames().Where(i => i.IndexOf(".kspx", StringComparison.OrdinalIgnoreCase) >= 0);
 
-            var packageDeploymentManager = ConnectionHelper.GetPackageDeploymentManagerWrapper(null);
+            var packageDeploymentManager = WrapperFactory.Instance.GetPackageDeploymentManagerWrapper(null);
             packageDeploymentManager.DeployPackages(assembly, resources);
         }
     }
