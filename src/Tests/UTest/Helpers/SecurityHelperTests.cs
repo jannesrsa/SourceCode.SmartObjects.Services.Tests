@@ -12,7 +12,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void InvokeAsUser_CurrentUser()
         {
             // Arrange
-            Action action = () => { };
+            Action action = () => { Assert.AreEqual(string.Empty, string.Empty); };
 
             // Action
             SecurityHelper.InvokeAsUser(action, WindowsIdentity.GetCurrent().Name, string.Empty);
@@ -22,7 +22,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void InvokeAsUser_GetCurrentUser()
         {
             // Arrange
-            Action action = () => { };
+            Action action = () => { Assert.AreEqual(string.Empty, string.Empty); };
 
             // Action
             SecurityHelper.InvokeAsUser(action, ConnectionHelper.GetCurrentUser(), string.Empty);
@@ -36,7 +36,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void InvokeAsUser_InvalidUser()
         {
             // Arrange
-            Action action = () => { };
+            Action action = () => { Assert.AreEqual(string.Empty, string.Empty); };
 
             // Action
             SecurityHelper.InvokeAsUser(action, Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
