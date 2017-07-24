@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Security.Principal;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -29,7 +28,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             SecurityHelper.InvokeAsUser(action, ConnectionHelper.GetCurrentUser(), string.Empty);
 
             // Assert
-            Debug.WriteLine($"User: {ConnectionHelper.GetCurrentUser()}");
+            Console.WriteLine($"User: {ConnectionHelper.GetCurrentUser()}");
         }
 
         [TestMethod()]

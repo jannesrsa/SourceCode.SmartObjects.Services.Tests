@@ -44,7 +44,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void AssertException_WithNotThrowingException()
         {
             //Arrange
-            Action action = () => Console.WriteLine("Test");
+            Action action = () => { };
 
             // Act
             ActionExtensions.AssertException<Exception>(action);
@@ -94,7 +94,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void IgnoreException_WithNotThrowingException()
         {
             //Arrange
-            Action action = () => Console.WriteLine("Test");
+            Action action = () => { };
 
             // Act
             ActionExtensions.IgnoreException(action);
