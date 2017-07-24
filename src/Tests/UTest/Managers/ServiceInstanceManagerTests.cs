@@ -93,9 +93,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
                 .SetupGet(i => i.ServiceAuthentication)
                 .Returns(new ServiceAuthenticationInfo());
 
-            var configurationSettings = new Dictionary<string, string>();
-            configurationSettings["HostServerConnectionString"] = Guid.NewGuid().ToString();
-
+            var configurationSettings = new Dictionary<string, string>
+            {
+                ["HostServerConnectionString"] = Guid.NewGuid().ToString()
+            };
             serviceInstanceSettings
                 .SetupGet(i => i.ConfigurationSettings)
                 .Returns(configurationSettings);
@@ -145,6 +146,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
                 .Returns("URMService");
 
             serviceInstanceSettings
+                .SetupGet(i => i.Description)
+                .Returns("URMService Description");
+
+            serviceInstanceSettings
                 .SetupGet(i => i.Guid)
                 .Returns(new Guid("4C2F62EA-BE8D-4600-A2B5-185902BDD20A"));
 
@@ -152,9 +157,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
                 .SetupGet(i => i.ServiceAuthentication)
                 .Returns(new ServiceAuthenticationInfo());
 
-            var configurationSettings = new Dictionary<string, string>();
-            configurationSettings["HostServerConnectionString"] = Guid.NewGuid().ToString();
-
+            var configurationSettings = new Dictionary<string, string>
+            {
+                ["HostServerConnectionString"] = Guid.NewGuid().ToString()
+            };
             serviceInstanceSettings
                 .SetupGet(i => i.ConfigurationSettings)
                 .Returns(configurationSettings);
@@ -204,9 +210,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
                 .SetupGet(i => i.ServiceAuthentication)
                 .Returns(new ServiceAuthenticationInfo());
 
-            var configurationSettings = new Dictionary<string, string>();
-            configurationSettings["HostServerConnectionString"] = Guid.NewGuid().ToString();
-
+            var configurationSettings = new Dictionary<string, string>
+            {
+                ["HostServerConnectionString"] = Guid.NewGuid().ToString()
+            };
             serviceInstanceSettings
                 .SetupGet(i => i.ConfigurationSettings)
                 .Returns(configurationSettings);

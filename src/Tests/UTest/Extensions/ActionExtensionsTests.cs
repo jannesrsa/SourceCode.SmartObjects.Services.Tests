@@ -44,7 +44,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void AssertException_WithNotThrowingException()
         {
             //Arrange
-            Action action = () => { };
+            Action action = () => { Assert.AreEqual(string.Empty, string.Empty); };
 
             // Act
             ActionExtensions.AssertException<Exception>(action);
@@ -84,7 +84,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void IgnoreException_WithException()
         {
             //Arrange
-            Action action = () => throw new NotImplementedException();
+            Action action = () => { Assert.AreEqual(Guid.NewGuid(), Guid.NewGuid()); };
 
             // Act
             ActionExtensions.IgnoreException(action);
@@ -94,7 +94,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void IgnoreException_WithNotThrowingException()
         {
             //Arrange
-            Action action = () => { };
+            Action action = () => { Assert.AreEqual(string.Empty, string.Empty); };
 
             // Act
             ActionExtensions.IgnoreException(action);

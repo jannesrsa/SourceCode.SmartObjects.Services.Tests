@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SourceCode.SmartObjects.Services.Tests.Managers
 {
+    [ExcludeFromCodeCoverage]
     public abstract class ServiceTypeSettings
     {
         public virtual bool AlwaysUseDefaults

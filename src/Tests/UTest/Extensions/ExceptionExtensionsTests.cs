@@ -49,9 +49,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             var smartObjectExceptionData = (SmartObjectExceptionData)ctor.Invoke(new object[] { serviceName, serviceGuid, message, innerExceptionMessage, severity });
 
-            var collection = new SmartObjectExceptionDataCollection();
-            collection.Add(smartObjectExceptionData);
-
+            var collection = new SmartObjectExceptionDataCollection
+            {
+                smartObjectExceptionData
+            };
             var exception = new SmartObjectException(collection);
             string expected = $@"Service: {serviceName}
 Service Guid: {serviceGuid}
