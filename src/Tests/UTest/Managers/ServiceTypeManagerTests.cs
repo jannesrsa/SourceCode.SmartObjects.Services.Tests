@@ -10,8 +10,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
     [TestClass()]
     public class ServiceTypeManagerTests
     {
-        private MockWrapperFactory _mockWrapperFactory;
-
         [TestMethod()]
         public void DeleteTest()
         {
@@ -34,7 +32,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
             var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);
 
             var registerableServices = new Dictionary<string, string>();
-            _mockWrapperFactory.ServiceManagementServer
+            MockWrapperFactory.Instance.ServiceManagementServer
                 .Setup(i => i.GetRegisterableServices())
                 .Returns(registerableServices);
 
@@ -43,7 +41,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
         }
 
         [TestMethod()]
-        public void Register_WithExisingServiceType()
+        public void Register_WithExistingServiceType()
         {
             // Arrange
             var urmServiceType = ServiceTypeInfo.Create(Resources.ServiceType_URMService);
@@ -56,7 +54,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
             var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings.Object);
 
             var registerableServices = new Dictionary<string, string>();
-            _mockWrapperFactory.ServiceManagementServer
+            MockWrapperFactory.Instance.ServiceManagementServer
                 .Setup(i => i.GetRegisterableServices())
                 .Returns(registerableServices);
 
@@ -65,7 +63,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
                 urmServiceType
             };
 
-            _mockWrapperFactory.ServiceManagementServer
+            MockWrapperFactory.Instance.ServiceManagementServer
                 .Setup(i => i.GetServiceTypes())
                 .Returns(serviceTypeInfoCollection);
 
@@ -76,7 +74,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
         [TestInitialize()]
         public void TestInit()
         {
-            _mockWrapperFactory = new MockWrapperFactory();
+            // Arrange
+            MockWrapperFactory.MockInstance();
         }
     }
 }

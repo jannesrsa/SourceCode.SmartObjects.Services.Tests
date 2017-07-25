@@ -13,7 +13,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             //Arrange
             Action action = null;
 
-            // Act
+            // Action
             ActionExtensions.AssertException<Exception>(action);
         }
 
@@ -21,62 +21,62 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void AssertException_WithMatchingExceptionType()
         {
             //Arrange
-            var exception = new Exception(Guid.NewGuid().ToString());
+            var exception = new InvalidOperationException(Guid.NewGuid().ToString());
             Action action = () => throw exception;
 
-            // Act
-            ActionExtensions.AssertException<Exception>(action);
+            // Action
+            ActionExtensions.AssertException<InvalidOperationException>(action);
         }
 
         [TestMethod()]
         public void AssertException_WithMatchingExceptionTypeAndMessage()
         {
             //Arrange
-            var exception = new Exception(Guid.NewGuid().ToString());
+            var exception = new InvalidOperationException(Guid.NewGuid().ToString());
             Action action = () => throw exception;
 
-            // Act
-            ActionExtensions.AssertException<Exception>(action, exception.Message);
+            // Action
+            ActionExtensions.AssertException<InvalidOperationException>(action, exception.Message);
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void AssertException_WithNotThrowingException()
         {
             //Arrange
             Action action = () => { Assert.AreEqual(string.Empty, string.Empty); };
 
-            // Act
+            // Action
             ActionExtensions.AssertException<Exception>(action);
         }
 
         [TestMethod()]
         [ExpectedException(typeof(NotImplementedException))]
-        public void AssertException_WithnWrongExceptionType()
+        public void AssertException_WithWrongExceptionType()
         {
             //Arrange
             Action action = () => throw new NotImplementedException();
 
-            // Act
+            // Action
             ActionExtensions.AssertException<Exception>(action);
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void AssertException_WithWrongMessage()
         {
             //Arrange
-            Action action = () => throw new Exception(Guid.NewGuid().ToString());
+            Action action = () => throw new ArgumentNullException(Guid.NewGuid().ToString());
 
-            // Act
-            ActionExtensions.AssertException<Exception>(action, Guid.NewGuid().ToString());
+            // Action
+            ActionExtensions.AssertException<ArgumentNullException>(action, Guid.NewGuid().ToString());
         }
 
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
         public void IgnoreException_WithActionNull()
         {
-            // Act
+            // Action
             ActionExtensions.IgnoreException(null);
         }
 
@@ -86,7 +86,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             //Arrange
             Action action = () => { Assert.AreEqual(Guid.NewGuid(), Guid.NewGuid()); };
 
-            // Act
+            // Action
             ActionExtensions.IgnoreException(action);
         }
 
@@ -96,7 +96,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             //Arrange
             Action action = () => { Assert.AreEqual(string.Empty, string.Empty); };
 
-            // Act
+            // Action
             ActionExtensions.IgnoreException(action);
         }
     }

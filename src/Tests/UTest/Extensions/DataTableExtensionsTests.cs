@@ -14,7 +14,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             //Arrange
             var dataTable = DataTableFactory.GetDataTableWithOneColumnAndOneRow();
 
-            // Act
+            // Action
             var actual = DataTableExtensions.GenerateGetAssertHasValue(dataTable);
 
             // Assert
@@ -28,7 +28,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             //Arrange
             DataTable dataTable = null;
 
-            // Act
+            // Action
             DataTableExtensions.GenerateGetAssertHasValue(dataTable);
         }
 
@@ -38,7 +38,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             //Arrange
             var dataTable = DataTableFactory.GetDataTableWithOneColumnAndOneRow(string.Empty);
 
-            // Act
+            // Action
             var actual = DataTableExtensions.GenerateGetAssertHasValue(dataTable);
 
             // Assert
@@ -52,7 +52,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             //Arrange
             var dataTable = new DataTable();
 
-            // Act
+            // Action
             DataTableExtensions.GenerateGetAssertHasValue(dataTable);
         }
 
@@ -65,7 +65,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             int pageNumber = 0;
             int pageSize = 0;
 
-            // Act
+            // Action
             DataTableExtensions.GetCondition(dataTable, pageNumber, pageSize);
         }
 
@@ -78,7 +78,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             int pageNumber = int.MinValue;
             int pageSize = 0;
 
-            // Act
+            // Action
             DataTableExtensions.GetCondition(dataTable, pageNumber, pageSize);
         }
 
@@ -92,7 +92,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             int pageNumber = 2;
             int pageSize = 2;
 
-            // Act
+            // Action
             var actual = DataTableExtensions.GetCondition(dataTable, pageNumber, pageSize);
 
             // Assert
@@ -109,7 +109,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             int pageNumber = 0;
             int pageSize = 0;
 
-            // Act
+            // Action
             var actual = DataTableExtensions.GetCondition(dataTable, pageNumber, pageSize);
 
             // Assert
@@ -125,7 +125,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             int pageNumber = 0;
             int pageSize = 0;
 
-            // Act
+            // Action
             DataTableExtensions.GetPagedResult(dataTable, pageNumber, pageSize);
         }
 
@@ -138,7 +138,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             int pageNumber = int.MinValue;
             int pageSize = 0;
 
-            // Act
+            // Action
             DataTableExtensions.GetPagedResult(dataTable, pageNumber, pageSize);
         }
 
@@ -152,7 +152,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             int pageNumber = 1;
             int pageSize = 1;
 
-            // Act
+            // Action
             var actual = DataTableExtensions.GetPagedResult(dataTable, pageNumber, pageSize);
 
             // Assert
@@ -169,7 +169,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             int pageNumber = 2;
             int pageSize = 2;
 
-            // Act
+            // Action
             var actual = DataTableExtensions.GetPagedResult(dataTable, pageNumber, pageSize);
 
             // Assert

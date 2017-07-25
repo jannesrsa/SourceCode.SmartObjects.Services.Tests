@@ -22,7 +22,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             string expectedValue = Guid.NewGuid().ToString();
 
-            // Act
+            // Action
             DataRowExtensions.AssertAreEqual(dataRow, columnName, expectedValue);
         }
 
@@ -41,7 +41,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             string expectedValue = Guid.NewGuid().ToString();
 
-            // Act
+            // Action
             DataRowExtensions.AssertAreEqual(dataRow, columnName, expectedValue);
         }
 
@@ -54,7 +54,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             string columnName = "Column1";
             string expectedValue = Guid.NewGuid().ToString();
 
-            // Act
+            // Action
             DataRowExtensions.AssertAreEqual(dataRow, columnName, expectedValue);
         }
 
@@ -74,12 +74,12 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             dataRow[columnName] = expectedValue;
 
-            // Act
+            // Action
             DataRowExtensions.AssertAreEqual(dataRow, columnName, expectedValue);
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void AssertAreEqual_WithNonEqualValues()
         {
             //Arrange
@@ -95,7 +95,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             dataRow[columnName] = Guid.NewGuid().ToString();
 
-            // Act
+            // Action
             DataRowExtensions.AssertAreEqual(dataRow, columnName, expectedValue);
         }
 
@@ -112,7 +112,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             var dataRow = dataTable.NewRow();
 
-            // Act
+            // Action
             DataRowExtensions.AssertHasValue<string>(dataRow, columnName);
         }
 
@@ -128,7 +128,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             dataTable.Columns.Add(dataColumn);
 
             var dataRow = dataTable.NewRow();
-            // Act
+            // Action
             DataRowExtensions.AssertHasValue<string>(dataRow, columnName);
         }
 
@@ -141,12 +141,31 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             string columnName = "Column1";
             string rowIdentifier = Guid.NewGuid().ToString();
 
-            // Act
+            // Action
             DataRowExtensions.AssertHasValue<string>(dataRow, columnName, rowIdentifier);
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void AssertHasValue_WithNonMatchingTypeValue()
+        {
+            //Arrange
+            var dataTable = new DataTable();
+
+            string columnName = "Column1";
+            var dataColumn = new DataColumn(columnName, typeof(Guid));
+            dataTable.Columns.Add(dataColumn);
+
+            var dataRow = dataTable.NewRow();
+
+            dataRow[dataColumn] = Guid.NewGuid();
+
+            // Action
+            DataRowExtensions.AssertHasValue<string>(dataRow, columnName);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void AssertHasValue_WithNullValue()
         {
             //Arrange
@@ -160,7 +179,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             dataRow[dataColumn] = null;
 
-            // Act
+            // Action
             DataRowExtensions.AssertHasValue<string>(dataRow, columnName);
         }
 
@@ -178,27 +197,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             dataRow[dataColumn] = Guid.NewGuid().ToString();
 
-            // Act
+            // Action
             DataRowExtensions.AssertHasValue(dataRow, columnName);
-        }
-
-        [TestMethod()]
-        [ExpectedException(typeof(Exception))]
-        public void AssertHasValue_WitNonMatchingTypeValue()
-        {
-            //Arrange
-            var dataTable = new DataTable();
-
-            string columnName = "Column1";
-            var dataColumn = new DataColumn(columnName, typeof(Guid));
-            dataTable.Columns.Add(dataColumn);
-
-            var dataRow = dataTable.NewRow();
-
-            dataRow[dataColumn] = Guid.NewGuid();
-
-            // Act
-            DataRowExtensions.AssertHasValue<string>(dataRow, columnName);
         }
 
         [TestMethod()]
@@ -215,7 +215,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var expected = Guid.NewGuid().ToString();
             dataRow[dataColumn] = expected;
 
-            // Act
+            // Action
             var actual = DataRowExtensions.GetFirstValue(dataRow, Guid.NewGuid().ToString(), columnName);
 
             // Assert
@@ -236,7 +236,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var expected = Guid.NewGuid().ToString();
             dataRow[dataColumn] = expected;
 
-            // Act
+            // Action
             var actual = DataRowExtensions.GetFirstValue(dataRow, Guid.NewGuid().ToString());
 
             // Assert
@@ -256,8 +256,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             var dataRow = dataTable.NewRow();
 
-            // Act
-            var actual = DataRowExtensions.GetFirstValue(dataRow, columnNames);
+            // Action
+            DataRowExtensions.GetFirstValue(dataRow, columnNames);
         }
 
         [TestMethod()]
@@ -267,7 +267,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             DataRow dataRow = null;
             string columnName = "Column1";
 
-            // Act
+            // Action
             var actual = DataRowExtensions.GetFirstValue(dataRow, columnName);
 
             // Assert
@@ -288,7 +288,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var expected = Guid.NewGuid().ToString();
             dataRow[dataColumn] = expected;
 
-            // Act
+            // Action
             var actual = DataRowExtensions.GetFirstValue(dataRow, columnName);
 
             // Assert

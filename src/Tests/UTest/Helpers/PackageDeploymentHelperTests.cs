@@ -7,8 +7,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
     [TestClass()]
     public class PackageDeploymentHelperTests
     {
-        private MockWrapperFactory _mockWrapperFactory;
-
         [TestMethod()]
         public void DeployPackage_WithDefaultValues()
         {
@@ -34,7 +32,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         [TestInitialize()]
         public void TestInit()
         {
-            _mockWrapperFactory = new MockWrapperFactory();
+            // Arrange
+            MockWrapperFactory.MockInstance();
         }
     }
 }

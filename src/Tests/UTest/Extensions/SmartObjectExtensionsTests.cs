@@ -18,7 +18,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
             smartObject.MethodToExecute = smartObject.ListMethods[0].Name;
 
-            // Act
+            // Action
             SmartObjectExtensions.AddFirstPropertyOrderBy(smartObject);
         }
 
@@ -29,7 +29,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
             smartObject.MethodToExecute = smartObject.ListMethods[0].Name;
 
-            // Act
+            // Action
             SmartObjectExtensions.AddPropertyOrderBy(smartObject, smartObject.ListMethods[0].ReturnProperties[0].Name);
         }
 
@@ -40,7 +40,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
             smartObject.MethodToExecute = smartObject.ListMethods[0].Name;
 
-            // Act
+            // Action
             var actual = SmartObjectExtensions.GetPropertyValue<int>(smartObject, smartObject.ListMethods[0].ReturnProperties[0].Name);
 
             // Assert
@@ -55,7 +55,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
             smartObject.MethodToExecute = smartObject.ListMethods[0].Name;
 
-            // Act
+            // Action
             SmartObjectExtensions.GetPropertyValue<int>(smartObject, Guid.NewGuid().ToString());
         }
 
@@ -66,8 +66,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             //Arrange
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
 
-            // Act
-            var actual = SmartObjectExtensions.GetPropertyValue<string>(smartObject, null);
+            // Action
+            SmartObjectExtensions.GetPropertyValue<string>(smartObject, null);
         }
 
         [TestMethod()]
@@ -79,7 +79,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             smartObject.MethodToExecute = smartObject.ListMethods[0].Name;
             smartObject.Properties[smartObject.ListMethods[0].ReturnProperties[0].Name].Value = expected;
 
-            // Act
+            // Action
             var actual = SmartObjectExtensions.GetPropertyValue<string>(smartObject, smartObject.ListMethods[0].ReturnProperties[0].Name);
 
             // Assert
@@ -93,16 +93,16 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             //Arrange
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
 
-            // Act
-            var actual = SmartObjectExtensions.GetReturnProperties(smartObject);
+            // Action
+            SmartObjectExtensions.GetReturnProperties(smartObject);
         }
 
         [TestMethod()]
         [ExpectedException(typeof(ArgumentNullException))]
         public void GetReturnProperties_NullSmartObject()
         {
-            // Act
-            var actual = SmartObjectExtensions.GetReturnProperties(null);
+            // Action
+            SmartObjectExtensions.GetReturnProperties(null);
         }
 
         [TestMethod()]
@@ -113,7 +113,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
             smartObject.MethodToExecute = smartObject.ListMethods[0].Name;
 
-            // Act
+            // Action
             SmartObjectExtensions.GetReturnProperty(smartObject, Guid.NewGuid().ToString());
         }
 
@@ -125,7 +125,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.NoReturnProperties);
             smartObject.MethodToExecute = smartObject.AllMethods.First().Name;
 
-            // Act
+            // Action
             SmartObjectExtensions.GetReturnProperty(smartObject, Guid.NewGuid().ToString());
         }
 
@@ -133,11 +133,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void GetReturnProperty_WithNullProperty()
         {
             //Arrange
-            var expected = Guid.NewGuid().ToString();
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
             smartObject.MethodToExecute = smartObject.ListMethods[0].Name;
 
-            // Act
+            // Action
             SmartObjectExtensions.GetReturnProperty(smartObject, null);
         }
 
@@ -150,7 +149,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             smartObject.MethodToExecute = smartObject.ListMethods[0].Name;
             smartObject.Properties[smartObject.ListMethods[0].ReturnProperties[0].Name].Value = expected;
 
-            // Act
+            // Action
             var actual = SmartObjectExtensions.GetReturnPropertyValue<string>(smartObject, smartObject.ListMethods[0].ReturnProperties[0].Name);
 
             // Assert
@@ -166,7 +165,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 
             var filter = Mock.Of<Equals>();
 
-            // Act
+            // Action
             SmartObjectExtensions.SetFilter(smartObject, filter);
         }
 
@@ -180,7 +179,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var value = Guid.NewGuid().ToString();
             smartObject.MethodToExecute = smartObject.ListMethods[0].Name;
 
-            // Act
+            // Action
             SmartObjectExtensions.SetInputPropertyValue(smartObject, propertyName, value);
         }
 
@@ -193,7 +192,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var propertyName = Guid.NewGuid().ToString();
             var value = Guid.NewGuid().ToString();
 
-            // Act
+            // Action
             SmartObjectExtensions.SetInputPropertyValue(smartObject, propertyName, value);
         }
 
@@ -204,7 +203,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             //Arrange
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
 
-            // Act
+            // Action
             SmartObjectExtensions.SetInputPropertyValue(smartObject, null, null);
         }
 
@@ -212,7 +211,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         [ExpectedException(typeof(ArgumentNullException))]
         public void SetInputPropertyValue_NullSmartObject()
         {
-            // Act
+            // Action
             SmartObjectExtensions.SetInputPropertyValue(null, null, null);
         }
 
@@ -223,7 +222,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.Users_and_Groups);
             smartObject.MethodToExecute = smartObject.ListMethods[0].Name;
 
-            // Act
+            // Action
             SmartObjectExtensions.SetNewMethod(smartObject, smartObject.ListMethods[0].Name, false, true);
         }
 
@@ -237,7 +236,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var smartObjectList = new SmartObjectList();
             smartObjectList.SmartObjectsList.Add(smartObject);
 
-            // Act
+            // Action
             var actual = SmartObjectExtensions.ToList(smartObjectList, smartObject.MethodToExecute);
 
             // Assert

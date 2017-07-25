@@ -1,15 +1,12 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SourceCode.SmartObjects.Client;
-using SourceCode.SmartObjects.Services.Tests.UTest.Mocks;
 
 namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
 {
     [TestClass()]
     public class ConnectionHelperTests
     {
-        private MockWrapperFactory _mockWrapperFactory;
-
         [TestMethod()]
         public void GetCurrentUser_ReturnValid()
         {
@@ -46,12 +43,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
 
             // Assert
             Assert.IsNotNull(actual);
-        }
-
-        [TestInitialize()]
-        public void TestInit()
-        {
-            _mockWrapperFactory = new MockWrapperFactory();
         }
 
         [TestMethod()]

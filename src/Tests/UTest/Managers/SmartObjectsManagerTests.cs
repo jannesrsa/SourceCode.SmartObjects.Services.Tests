@@ -10,8 +10,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
     [TestClass()]
     public class SmartObjectsManagerTests
     {
-        private MockWrapperFactory _mockWrapperFactory;
-
         [TestMethod()]
         public void Delete_WithDefaultValues()
         {
@@ -29,12 +27,12 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
 
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                .Setup(i => i.GetSmartObjects(
                    It.IsAny<Guid>()))
                .Returns(mockSmartObjectExplorer);
@@ -77,7 +75,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
         [TestInitialize()]
         public void TestInit()
         {
-            _mockWrapperFactory = new MockWrapperFactory();
+            MockWrapperFactory.MockInstance();
         }
     }
 }

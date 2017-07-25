@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using SourceCode.SmartObjects.Services.Tests.Extensions;
 
 namespace SourceCode.SmartObjects.Services.Tests.Helpers
 {
@@ -27,6 +28,9 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
             // Variables
             byte[] bytes = new byte[10]; // Buffer used to encode characters
             int byteCount = 0; // The number of bytes to encode the character
+
+            text.ThrowIfNull(nameof(text));
+
             int textCharLength = text.Length;
             StringBuilder builder = new StringBuilder();
 

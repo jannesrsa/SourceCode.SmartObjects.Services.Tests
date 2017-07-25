@@ -9,13 +9,11 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
     [TestClass()]
     public class ServiceInstanceManagerTests
     {
-        private MockWrapperFactory _mockWrapperFactory;
-
         [TestMethod()]
         public void Delete_DefaultValues()
         {
             // Arrange
-            _mockWrapperFactory.WithProcessInstanceSmartObject();
+            MockWrapperFactory.Instance.WithProcessInstanceSmartObject();
 
             var serviceTypeSettings = Mock.Of<ServiceTypeSettings>();
             var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);
@@ -23,7 +21,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
 
             var serviceInstanceManager = new ServiceInstanceManager(serviceTypeCreator.Object, serviceInstanceSettings);
 
-            // Act
+            // Action
             serviceInstanceManager.Delete();
         }
 
@@ -31,10 +29,10 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
         public void RegisterTest_WithDeleteExistingServiceInstance()
         {
             // Arrange
-            _mockWrapperFactory.WithProcessInstanceSmartObject();
+            MockWrapperFactory.Instance.WithProcessInstanceSmartObject();
 
             var serviceInstanceSettings = new Mock<ServiceInstanceSettings>();
-            var serviceInstanceManager = _mockWrapperFactory.WithExistingServiceInstance(serviceInstanceSettings);
+            var serviceInstanceManager = MockWrapperFactory.WithExistingServiceInstance(serviceInstanceSettings);
 
             serviceInstanceSettings
               .SetupGet(i => i.Guid)
@@ -55,8 +53,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
         public void RegisterTest_WithRefreshExistingServiceInstance()
         {
             // Arrange
-            _mockWrapperFactory.WithProcessInstanceSmartObject();
-            var serviceInstanceManager = _mockWrapperFactory.WithExistingServiceInstance();
+            MockWrapperFactory.Instance.WithProcessInstanceSmartObject();
+            var serviceInstanceManager = MockWrapperFactory.WithExistingServiceInstance();
 
             // Action 1
             serviceInstanceManager.Register();
@@ -68,17 +66,17 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
         [TestInitialize()]
         public void TestInit()
         {
-            _mockWrapperFactory = new MockWrapperFactory();
+            MockWrapperFactory.MockInstance();
         }
 
         [TestMethod()]
         public void UpdateTest_WithRefreshExistingServiceInstance()
         {
             // Arrange
-            _mockWrapperFactory.WithProcessInstanceSmartObject();
+            MockWrapperFactory.Instance.WithProcessInstanceSmartObject();
 
             var configurationSettings = new Dictionary<string, string>();
-            var serviceInstanceManager = _mockWrapperFactory.WithExistingServiceInstance(configurationSettings: configurationSettings);
+            var serviceInstanceManager = MockWrapperFactory.WithExistingServiceInstance(configurationSettings: configurationSettings);
 
             // Action
             serviceInstanceManager.Update(configurationSettings);

@@ -15,9 +15,9 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         {
             //Arrange
             string expected = "Test";
-            Exception exception = new Exception(expected);
+            var exception = new InvalidOperationException(expected);
 
-            // Act
+            // Action
             var actual = ExceptionExtensions.GetExceptionMessage(exception);
 
             // Assert
@@ -31,7 +31,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             //Arrange
             Exception exception = null;
 
-            // Act
+            // Action
             ExceptionExtensions.GetExceptionMessage(exception);
         }
 
@@ -60,7 +60,7 @@ Severity: {severity.ToString()}
 Error Message: {message}
 InnerException Message: {innerExceptionMessage}";
 
-            // Act
+            // Action
             var actual = ExceptionExtensions.GetExceptionMessage(exception);
 
             // Assert

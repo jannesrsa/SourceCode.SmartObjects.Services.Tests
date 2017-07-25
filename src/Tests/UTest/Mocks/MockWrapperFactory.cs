@@ -43,6 +43,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Mocks
             WrapperFactory.Instance = Factory.Object;
         }
 
+        public static MockWrapperFactory Instance { get; private set; }
         public Mock<EnvironmentSettingsManagerWrapper> EnvironmentSettingsManager { get; }
 
         public Mock<WrapperFactory> Factory { get; }
@@ -58,6 +59,57 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Mocks
         public Mock<SmartObjectManagementServerWrapper> SmartObjectManagementServer { get; }
 
         public Mock<WebRequestWrapper> WebRequestManager { get; }
+
+        public static void MockInstance()
+        {
+            Instance = new MockWrapperFactory();
+        }
+
+        public static void ResetInstance()
+        {
+            WrapperFactory.Instance = new WrapperFactory();
+        }
+
+        public static ServiceInstanceManager WithExistingServiceInstance(Mock<ServiceInstanceSettings> serviceInstanceSettings = null, Dictionary<string, string> configurationSettings = null)
+        {
+            var serviceTypeSettings = Mock.Of<ServiceTypeSettings>();
+            var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);
+
+            if (serviceInstanceSettings == null)
+            {
+                serviceInstanceSettings = new Mock<ServiceInstanceSettings>();
+            }
+
+            serviceInstanceSettings
+                .SetupGet(i => i.Name)
+                .Returns("URMService");
+
+            serviceInstanceSettings
+                .SetupGet(i => i.Description)
+                .Returns("URMService Description");
+
+            serviceInstanceSettings
+                .SetupGet(i => i.Guid)
+                .Returns(new Guid("4C2F62EA-BE8D-4600-A2B5-185902BDD20A"));
+
+            serviceInstanceSettings
+                .SetupGet(i => i.ServiceAuthentication)
+                .Returns(new ServiceAuthenticationInfo());
+
+            if (configurationSettings == null)
+            {
+                configurationSettings = new Dictionary<string, string>();
+            }
+
+            configurationSettings["HostServerConnectionString"] = Guid.NewGuid().ToString();
+
+            serviceInstanceSettings
+                .SetupGet(i => i.ConfigurationSettings)
+                .Returns(configurationSettings);
+
+            var serviceInstanceManager = new ServiceInstanceManager(serviceTypeCreator.Object, serviceInstanceSettings.Object);
+            return serviceInstanceManager;
+        }
 
         public void WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings serviceInstanceSettings)
         {
@@ -117,47 +169,6 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Mocks
         public void WithProcessInstanceSmartObject()
         {
             WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings serviceInstanceSettings);
-        }
-
-        public ServiceInstanceManager WithExistingServiceInstance(Mock<ServiceInstanceSettings> serviceInstanceSettings = null, Dictionary<string, string> configurationSettings = null)
-        {
-            var serviceTypeSettings = Mock.Of<ServiceTypeSettings>();
-            var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);
-
-            if (serviceInstanceSettings == null)
-            {
-                serviceInstanceSettings = new Mock<ServiceInstanceSettings>();
-            }
-
-            serviceInstanceSettings
-                .SetupGet(i => i.Name)
-                .Returns("URMService");
-
-            serviceInstanceSettings
-                .SetupGet(i => i.Description)
-                .Returns("URMService Description");
-
-            serviceInstanceSettings
-                .SetupGet(i => i.Guid)
-                .Returns(new Guid("4C2F62EA-BE8D-4600-A2B5-185902BDD20A"));
-
-            serviceInstanceSettings
-                .SetupGet(i => i.ServiceAuthentication)
-                .Returns(new ServiceAuthenticationInfo());
-
-            if (configurationSettings == null)
-            {
-                configurationSettings = new Dictionary<string, string>();
-            }
-
-            configurationSettings["HostServerConnectionString"] = Guid.NewGuid().ToString();
-
-            serviceInstanceSettings
-                .SetupGet(i => i.ConfigurationSettings)
-                .Returns(configurationSettings);
-
-            var serviceInstanceManager = new ServiceInstanceManager(serviceTypeCreator.Object, serviceInstanceSettings.Object);
-            return serviceInstanceManager;
         }
     }
 }

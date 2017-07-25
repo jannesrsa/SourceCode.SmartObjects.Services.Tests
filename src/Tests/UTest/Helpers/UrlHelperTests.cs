@@ -29,6 +29,31 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         }
 
         [TestMethod()]
+        public void VanityEncode_EncodeUrl()
+        {
+            // Arrange
+            var text = "http://www.ietf.org/rfc/rfc2396.txt";
+
+            StringBuilder builder = new StringBuilder();
+
+            // Add control chars (0x00 - 0x1F)
+            int code = 0;
+            while (code < 0x20)
+            {
+                builder.Append((char)code++);
+            }
+            builder.Append('\x7F'); // DEL Control Char
+
+            builder.Append("\"<>|:*?\\/#%&+");
+
+            // Action
+            var actual = UrlHelper.VanityEncode(text);
+
+            // Assert
+            Assert.AreEqual("http_3A_2F_2Fwww.ietf.org_2Frfc_2Frfc2396.txt", actual);
+        }
+
+        [TestMethod()]
         public void VanityEncode_UnderscoreSpaceEndInPeriod()
         {
             // Arrange
@@ -51,31 +76,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
 
             // Assert
             Assert.AreEqual("__+_2E", actual);
-        }
-
-        [TestMethod()]
-        public void VanityEncode_UnencodeUrl()
-        {
-            // Arrange
-            var text = "http://www.ietf.org/rfc/rfc2396.txt";
-
-            StringBuilder builder = new StringBuilder();
-
-            // Add control chars (0x00 - 0x1F)
-            int code = 0;
-            while (code < 0x20)
-            {
-                builder.Append((char)code++);
-            }
-            builder.Append('\x7F'); // DEL Control Char
-
-            builder.Append("\"<>|:*?\\/#%&+");
-
-            // Action
-            var actual = UrlHelper.VanityEncode(text);
-
-            // Assert
-            Assert.AreEqual("http_3A_2F_2Fwww.ietf.org_2Frfc_2Frfc2396.txt", actual);
         }
     }
 }

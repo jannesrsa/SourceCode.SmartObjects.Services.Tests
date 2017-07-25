@@ -48,9 +48,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         [TestMethod()]
         public void CreateSanitizedPathUri_WithNoParams()
         {
-            // Arrange
-            var pathSegment1 = string.Empty;
-
             // Action
             var actual = UriCreator.CreateSanitizedPathUri(UriKind.Absolute);
 

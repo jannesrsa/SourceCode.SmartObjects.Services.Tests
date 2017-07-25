@@ -9,8 +9,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
     [TestClass()]
     public class EnvironmentHelperTests
     {
-        private MockWrapperFactory _mockWrapperFactory;
-
         [TestMethod()]
         public void GetEnvironmentFieldByName_DefaultValue()
         {
@@ -19,7 +17,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var mockEnvironmentField = Mock.Of<EnvironmentField>();
             mockEnvironmentField.Value = expected;
 
-            _mockWrapperFactory.EnvironmentSettingsManager
+            MockWrapperFactory.Instance.EnvironmentSettingsManager
                 .Setup(x => x.GetItemByName(It.IsAny<string>()))
                 .Returns(mockEnvironmentField);
 
@@ -38,7 +36,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var mockEnvironmentField = Mock.Of<EnvironmentField>();
             mockEnvironmentField.Value = expected;
 
-            _mockWrapperFactory.EnvironmentSettingsManager
+            MockWrapperFactory.Instance.EnvironmentSettingsManager
                 .Setup(x => x.GetItemByName(It.IsAny<string>()))
                 .Returns(mockEnvironmentField);
 
@@ -55,7 +53,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         [TestInitialize()]
         public void TestInit()
         {
-            _mockWrapperFactory = new MockWrapperFactory();
+            MockWrapperFactory.MockInstance();
         }
     }
 }

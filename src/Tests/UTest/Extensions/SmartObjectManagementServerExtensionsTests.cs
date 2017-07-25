@@ -10,8 +10,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
     [TestClass()]
     public class SmartObjectManagementServerExtensionsTests
     {
-        private MockWrapperFactory _mockWrapperFactory;
-
         [TestMethod()]
         public void ContainsSmartObject_ReturnTrue()
         {
@@ -21,12 +19,12 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
 
-            // Act
+            // Action
             var actual = SmartObjectManagementServerExtensions.ContainsSmartObject(null, smartObjectInfo.Name);
 
             // Assert
@@ -42,12 +40,12 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
 
-            // Act
+            // Action
             SmartObjectManagementServerExtensions.DeleteSmartObject(null, smartObjectInfo.Name);
         }
 
@@ -60,24 +58,24 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<Guid>()))
                 .Returns(mockSmartObjectExplorer);
 
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
 
-            // Act
+            // Action
             SmartObjectManagementServerExtensions.DeleteSmartObjects(null, smartObjectInfo.ServiceInstanceGuid);
         }
 
         [TestInitialize()]
         public void TestInit()
         {
-            _mockWrapperFactory = new MockWrapperFactory();
+            MockWrapperFactory.MockInstance();
         }
     }
 }

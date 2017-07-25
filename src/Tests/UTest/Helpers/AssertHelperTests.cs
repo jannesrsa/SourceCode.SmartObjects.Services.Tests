@@ -7,7 +7,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
     public class AssertHelperTests
     {
         [TestMethod()]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void AreEqual_False()
         {
             // Action
@@ -22,7 +22,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void AreEqual_WithActualNull()
         {
             // Action
@@ -30,7 +30,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void AreEqual_WithExpectedNull()
         {
             // Action
@@ -38,7 +38,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void Fail_WithMessage()
         {
             // Action
@@ -46,7 +46,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void Fail_WithParametersNull()
         {
             // Action
@@ -54,7 +54,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void IsTrue_WithFalse()
         {
             // Action

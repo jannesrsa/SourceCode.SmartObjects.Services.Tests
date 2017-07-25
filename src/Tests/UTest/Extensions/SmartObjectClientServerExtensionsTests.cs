@@ -11,15 +11,13 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
     [TestClass()]
     public class SmartObjectClientServerExtensionsTests
     {
-        private MockWrapperFactory _mockWrapperFactory;
-
         [TestMethod()]
         public void Deserialize_With_ProcessInfo()
         {
             //Arrange
-            _mockWrapperFactory.WithProcessInstanceSmartObject(out SmartObject expected, out ServiceInstanceSettings settings);
+            MockWrapperFactory.Instance.WithProcessInstanceSmartObject(out SmartObject expected, out ServiceInstanceSettings settings);
 
-            // Act
+            // Action
             var actual = SmartObjectClientServerExtensions.Deserialize(
                 null,
                 Guid.NewGuid().ToString(),
@@ -34,16 +32,16 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void DeserializeTypedArray_With_ProcessInfo()
         {
             //Arrange
-            _mockWrapperFactory.WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
+            MockWrapperFactory.Instance.WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
 
             var expected = new DataTable();
-            _mockWrapperFactory.SmartObjectClientServer
+            MockWrapperFactory.Instance.SmartObjectClientServer
                 .Setup(x => x.ExecuteListDataTable(
                     It.IsAny<SmartObject>(),
                     It.IsAny<ExecuteListOptions>()))
                 .Returns(expected);
 
-            // Act
+            // Action
             var actual = SmartObjectClientServerExtensions.DeserializeTypedArray(
                 null,
                 Guid.NewGuid().ToString(),
@@ -58,11 +56,11 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void Serialize_With_ProcessInfo()
         {
             //Arrange
-            _mockWrapperFactory.WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
+            MockWrapperFactory.Instance.WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
             var serviceObjectName = Guid.NewGuid().ToString();
             Action<SmartObject> action = (SmartObject i) => { };
 
-            // Act
+            // Action
             var actual = SmartObjectClientServerExtensions.Serialize(
                 null,
                 serviceObjectName,
@@ -77,11 +75,11 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void SerializeAddItemToArray_With_ProcessInfo()
         {
             //Arrange
-            _mockWrapperFactory.WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
+            MockWrapperFactory.Instance.WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
 
             var expected = "[]";
 
-            // Act
+            // Action
             var actual = SmartObjectClientServerExtensions.SerializeAddItemToArray(
                 null,
                 Guid.NewGuid().ToString(),
@@ -97,12 +95,12 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void SerializeItemToArray_With_ProcessInfo()
         {
             //Arrange
-            _mockWrapperFactory.WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
+            MockWrapperFactory.Instance.WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
 
             var serviceObjectName = Guid.NewGuid().ToString();
             Action<SmartObject> action = (SmartObject i) => { };
 
-            // Act
+            // Action
             var actual = SmartObjectClientServerExtensions.SerializeItemToArray(
                 null,
                 serviceObjectName,
@@ -116,7 +114,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         [TestInitialize()]
         public void TestInit()
         {
-            _mockWrapperFactory = new MockWrapperFactory();
+            MockWrapperFactory.MockInstance();
         }
     }
 }

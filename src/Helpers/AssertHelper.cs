@@ -14,14 +14,14 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
             var formattedMessage = FormatMessage(message, parameters);
 
-            throw new Exception($"{MethodInfo.GetCurrentMethod().Name}{formattedMessage}\r\nExpected:{expected?.ToString() ?? string.Empty}\r\nActual{actual?.ToString() ?? string.Empty}");
+            throw new InvalidOperationException($"{MethodInfo.GetCurrentMethod().Name}{formattedMessage}\r\nExpected:{expected?.ToString() ?? string.Empty}\r\nActual{actual?.ToString() ?? string.Empty}");
         }
 
         public static void Fail(string message = null, params object[] parameters)
         {
             var formattedMessage = FormatMessage(message, parameters);
 
-            throw new Exception($"{MethodInfo.GetCurrentMethod().Name}{formattedMessage}");
+            throw new InvalidOperationException($"{MethodInfo.GetCurrentMethod().Name}{formattedMessage}");
         }
 
         public static void IsFalse(bool condition, string message = null, params object[] parameters)
@@ -33,7 +33,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
             var formattedMessage = FormatMessage(message, parameters);
 
-            throw new Exception($"{MethodInfo.GetCurrentMethod().Name}{formattedMessage}");
+            throw new InvalidOperationException($"{MethodInfo.GetCurrentMethod().Name}{formattedMessage}");
         }
 
         public static void IsNotNull(object value, string message = null, params object[] parameters)
@@ -45,7 +45,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
             var formattedMessage = FormatMessage(message, parameters);
 
-            throw new Exception($"{MethodInfo.GetCurrentMethod().Name} Value: {value}{formattedMessage}");
+            throw new InvalidOperationException($"{MethodInfo.GetCurrentMethod().Name} Value: {value}{formattedMessage}");
         }
 
         public static void IsTrue(bool condition, string message = null, params object[] parameters)
@@ -57,7 +57,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers
 
             var formattedMessage = FormatMessage(message, parameters);
 
-            throw new Exception($"{MethodInfo.GetCurrentMethod().Name}{formattedMessage}");
+            throw new InvalidOperationException($"{MethodInfo.GetCurrentMethod().Name}{formattedMessage}");
         }
 
         private static string FormatMessage(string message, params object[] parameters)

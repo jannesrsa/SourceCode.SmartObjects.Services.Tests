@@ -16,8 +16,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
     [TestClass()]
     public class SmartObjectHelperTests
     {
-        private MockWrapperFactory _mockWrapperFactory;
-
         [TestMethod()]
         public void CompareDataTables()
         {
@@ -37,7 +35,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
@@ -58,7 +56,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
@@ -76,7 +74,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
@@ -136,7 +134,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             SmartObjectClientServer server = null;
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
 
-            // Act
+            // Action
             SmartObjectHelper.ExecuteScalar(server, smartObject);
         }
 
@@ -154,7 +152,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void GetServiceConfigInfo_DefaultValues()
         {
             // Arrange
-            _mockWrapperFactory.ServiceManagementServer
+            MockWrapperFactory.Instance.ServiceManagementServer
                 .Setup(i => i.GetServiceInstanceConfig(
                     It.IsAny<Guid>()))
                 .Returns(Resources.ServiceInstanceConfig);
@@ -180,7 +178,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void GetServiceInstance_WithGuid()
         {
             // Arrange
-            _mockWrapperFactory.ServiceManagementServer
+            MockWrapperFactory.Instance.ServiceManagementServer
                .Setup(i => i.GetServiceInstanceCompact(
                    It.IsAny<Guid>()))
                .Returns(Resources.ServiceInstance_URMService);
@@ -196,7 +194,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void GetServiceInstance_WithServiceInstanceSettings()
         {
             // Arrange
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                .Setup(i => i.GetServiceInstance(
                    It.IsAny<Guid>(),
                    It.IsAny<ServiceExplorerLevel>()))
@@ -213,7 +211,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void GetServiceObject_DefaultValues()
         {
             // Arrange
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                .Setup(i => i.GetServiceInstanceServiceObject(
                    It.IsAny<Guid>(),
                    It.IsAny<string>()))
@@ -230,7 +228,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void GetServiceType_DefaultValues()
         {
             // Arrange
-            _mockWrapperFactory.ServiceManagementServer
+            MockWrapperFactory.Instance.ServiceManagementServer
                .Setup(i => i.GetServiceType(
                    It.IsAny<Guid>()))
                .Returns(Resources.ServiceType_ADService);
@@ -245,8 +243,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         [TestMethod()]
         public void GetServiceType_Null()
         {
-            // Act
-            _mockWrapperFactory.ServiceManagementServer
+            // Action
+            MockWrapperFactory.Instance.ServiceManagementServer
                .Setup(i => i.GetServiceType(
                    It.IsAny<Guid>()))
                .Returns(string.Empty);
@@ -261,8 +259,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         [TestMethod()]
         public void GetServiceTypeInfo_DefaultValues()
         {
-            // Act
-            _mockWrapperFactory.ServiceManagementServer
+            // Action
+            MockWrapperFactory.Instance.ServiceManagementServer
                .Setup(i => i.GetServiceType(
                    It.IsAny<Guid>()))
                .Returns(Resources.ServiceType_ADService);
@@ -279,7 +277,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         {
             // Arrange
             SmartObjectClientServer server = null;
-            _mockWrapperFactory.WithProcessInstanceSmartObject(out SmartObject expected, out ServiceInstanceSettings settings);
+            MockWrapperFactory.Instance.WithProcessInstanceSmartObject(out SmartObject expected, out ServiceInstanceSettings settings);
 
             // Action
             var actual = SmartObjectHelper.GetSmartObject(server, Guid.NewGuid().ToString(), Mock.Of<ServiceInstanceSettings>());
@@ -292,7 +290,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void GetSmartObjectDefinition_DefaultValues()
         {
             // Arrange
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjectDefinition(
                     It.IsAny<string>()))
                 .Returns(Resources.SmartObjectDefinition_ProcessInfo);
@@ -313,7 +311,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(expected);
 
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<Guid[]>()))
                 .Returns(mockSmartObjectExplorer);
@@ -333,7 +331,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
@@ -353,7 +351,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
 
-            _mockWrapperFactory.SmartObjectManagementServer
+            MockWrapperFactory.Instance.SmartObjectManagementServer
                 .Setup(i => i.GetSmartObjects(
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
@@ -368,11 +366,11 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         [TestInitialize()]
         public void TestInit()
         {
-            _mockWrapperFactory = new MockWrapperFactory();
+            MockWrapperFactory.MockInstance();
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void VerifyAllReturnPropertiesHasValues_WithMethod_NoReturn()
         {
             // Arrange
@@ -393,7 +391,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void VerifyAllReturnPropertiesHasValues_WithSmartObject_NoReturn()
         {
             // Arrange
@@ -416,13 +414,13 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
 
             SmartObjectClientServer server = null;
 
-            _mockWrapperFactory.SmartObjectClientServer
+            MockWrapperFactory.Instance.SmartObjectClientServer
                .Setup(x => x.ExecuteListDataTable(
                    It.IsAny<SmartObject>(),
                    It.IsAny<ExecuteListOptions>()))
                .Returns(dataTable1);
 
-            _mockWrapperFactory.SmartObjectClientServer
+            MockWrapperFactory.Instance.SmartObjectClientServer
               .Setup(x => x.ExecuteListReader(
                   It.IsAny<SmartObject>(),
                   It.IsAny<ExecuteListReaderOptions>()))

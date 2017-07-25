@@ -9,8 +9,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
     [TestClass()]
     public class SmartFormHelperTests
     {
-        private MockWrapperFactory _mockWrapperFactory;
-
         [TestMethod()]
         public void GetFormHttpResponse_DefaultValues()
         {
@@ -19,7 +17,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var mockEnvironmentField = Mock.Of<EnvironmentField>();
             mockEnvironmentField.Value = uri;
 
-            _mockWrapperFactory.EnvironmentSettingsManager
+            MockWrapperFactory.Instance.EnvironmentSettingsManager
                 .Setup(x => x.GetItemByName(It.IsAny<string>()))
                 .Returns(mockEnvironmentField);
 
@@ -40,7 +38,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var mockEnvironmentField = Mock.Of<EnvironmentField>();
             mockEnvironmentField.Value = uri;
 
-            _mockWrapperFactory.EnvironmentSettingsManager
+            MockWrapperFactory.Instance.EnvironmentSettingsManager
                 .Setup(x => x.GetItemByName(It.IsAny<string>()))
                 .Returns(mockEnvironmentField);
 
@@ -56,7 +54,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         [TestInitialize()]
         public void TestInit()
         {
-            _mockWrapperFactory = new MockWrapperFactory();
+            MockWrapperFactory.MockInstance();
         }
     }
 }

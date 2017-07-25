@@ -29,6 +29,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -83,6 +84,7 @@
     <Compile Include="Factories\DataTableFactory.cs" />
     <Compile Include="Factories\SmartObjectFactory.cs" />
     <Compile Include="Factories\SmartObjectOption.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Helpers\AssertHelperTests.cs" />
     <Compile Include="Helpers\ConnectionHelperTests.cs" />
     <Compile Include="Helpers\EnvironmentHelperTests.cs" />
