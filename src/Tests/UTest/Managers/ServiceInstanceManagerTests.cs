@@ -36,16 +36,16 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
             var serviceInstanceSettings = new Mock<ServiceInstanceSettings>();
             var serviceInstanceManager = _mockWrapperFactory.WithExistingServiceInstance(serviceInstanceSettings);
 
+            serviceInstanceSettings
+              .SetupGet(i => i.Guid)
+              .Returns(new Guid("5D273AD6-E27A-46F8-BE67-198B36085F99"));
+
             // Action 1
             serviceInstanceManager.Register();
 
             serviceInstanceSettings
                 .SetupGet(i => i.Name)
                 .Returns("URMService2");
-
-            serviceInstanceSettings
-              .SetupGet(i => i.Guid)
-              .Returns(new Guid("5D273AD6-E27A-46F8-BE67-198B36085F99"));
 
             // Action 2
             serviceInstanceManager.Register();
