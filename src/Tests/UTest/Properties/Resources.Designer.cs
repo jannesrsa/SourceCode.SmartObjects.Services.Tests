@@ -209,6 +209,30 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;smartobjectroot name=&quot;DeleteAvailabilityZoneForUser_String_UserName_&quot; guid=&quot;a11e6083-a9f1-46f0-966d-0c7f6bbbf760&quot; version=&quot;0&quot; isextendible=&quot;False&quot;&gt;
+        ///  &lt;metadata&gt;
+        ///    &lt;display&gt;
+        ///      &lt;displayname&gt;DeleteAvailabilityZoneForUser(String UserName)&lt;/displayname&gt;
+        ///      &lt;description&gt;&lt;/description&gt;
+        ///    &lt;/display&gt;
+        ///    &lt;service /&gt;
+        ///  &lt;/metadata&gt;
+        ///  &lt;types&gt;
+        ///    &lt;type name=&quot;user&quot; /&gt;
+        ///  &lt;/types&gt;
+        ///  &lt;properties /&gt;
+        ///  &lt;methods&gt;
+        ///    &lt;method name=&quot;Execute&quot; type=&quot;execute&quot; transaction=&quot;continue&quot;&gt;
+        ///      &lt;metadata&gt;
+        ///     [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SmartObject_NoReturnProperties {
+            get {
+                return ResourceManager.GetString("SmartObject_NoReturnProperties", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;smartobjectroot name=&quot;K2_Management_WebDesigner_Management_ProcessInfo&quot; guid=&quot;8cfa08b3-92e6-4317-93d9-376737f0f982&quot; version=&quot;0&quot; isextendible=&quot;false&quot; mode=&quot;advanced&quot; createdfromlocal=&quot;false&quot;&gt;
         ///  &lt;metadata&gt;
         ///    &lt;display&gt;

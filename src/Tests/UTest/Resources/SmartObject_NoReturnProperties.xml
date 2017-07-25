@@ -1,0 +1,45 @@
+﻿<smartobjectroot name="DeleteAvailabilityZoneForUser_String_UserName_" guid="a11e6083-a9f1-46f0-966d-0c7f6bbbf760" version="0" isextendible="False">
+  <metadata>
+    <display>
+      <displayname>DeleteAvailabilityZoneForUser(String UserName)</displayname>
+      <description></description>
+    </display>
+    <service />
+  </metadata>
+  <types>
+    <type name="user" />
+  </types>
+  <properties>
+    <property name="UserName" type="text" unique="false" system="false" required="false">
+      <metadata>
+        <display>
+          <displayname>UserName</displayname>
+          <description>User Name as provided by label provider</description>
+        </display>
+      </metadata>
+    </property>
+  </properties>
+  <methods>
+    <method name="Execute" type="execute" transaction="continue">
+      <metadata>
+        <display>
+          <displayname>Execute</displayname>
+          <description></description>
+        </display>
+        <service />
+      </metadata>
+      <requiredproperties>
+        <property name="UserName" />
+      </requiredproperties>
+      <input>
+        <property name="UserName" />
+      </input>
+      <returnproperties />
+    </method>
+  </methods>
+  <defaults>
+    <methods />
+  </defaults>
+  <associations />
+  <lookup />
+</smartobjectroot>

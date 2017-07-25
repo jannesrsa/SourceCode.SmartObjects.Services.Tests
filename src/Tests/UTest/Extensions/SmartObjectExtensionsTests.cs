@@ -106,6 +106,30 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         }
 
         [TestMethod()]
+        [ExpectedException(typeof(Exception))]
+        public void GetReturnProperty_WithInvalidReturnProperty()
+        {
+            //Arrange
+            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
+            smartObject.MethodToExecute = smartObject.ListMethods[0].Name;
+
+            // Act
+            SmartObjectExtensions.GetReturnProperty(smartObject, Guid.NewGuid().ToString());
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(Exception))]
+        public void GetReturnProperty_WithNoReturnProperties()
+        {
+            //Arrange
+            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.NoReturnProperties);
+            smartObject.MethodToExecute = smartObject.AllMethods.First().Name;
+
+            // Act
+            SmartObjectExtensions.GetReturnProperty(smartObject, Guid.NewGuid().ToString());
+        }
+
+        [TestMethod()]
         public void GetReturnProperty_WithNullProperty()
         {
             //Arrange

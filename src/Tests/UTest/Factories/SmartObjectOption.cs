@@ -4,6 +4,7 @@
     {
         Empty,
         ProcessInfo,
-        Users_and_Groups
+        Users_and_Groups,
+        NoReturnProperties
     }
 }

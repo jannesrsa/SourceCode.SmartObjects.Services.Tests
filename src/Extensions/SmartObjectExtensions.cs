@@ -46,10 +46,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
             if (string.IsNullOrWhiteSpace(propValueString))
                 return default(T);
             object changedType = Convert.ChangeType(propValueString, typeof(T));
-            if (changedType == null || !(changedType is T))
-            {
-                throw new Exception(string.Concat("Failed to convert property ", propertyName, " to ", typeof(T).Name));
-            }
             return (T)changedType;
         }
 
@@ -132,10 +128,6 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions
             if (string.IsNullOrEmpty(smartObject.MethodToExecute)) throw new NullReferenceException("smartObject.MethodToExecute");
 
             var method = smartObject.AllMethods.Where(i => i.Name == smartObject.MethodToExecute).FirstOrDefault();
-            if (method == null)
-            {
-                if (method == null) throw new NullReferenceException("method");
-            }
 
             var inputProperty = method.InputProperties.OfType<SmartProperty>()
                 .Where(i => i.Name.StartsWith(propertyName, StringComparison.InvariantCultureIgnoreCase))

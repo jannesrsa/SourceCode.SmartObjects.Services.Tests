@@ -142,4 +142,7 @@
   <data name="ServiceType_URMService" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\servicetype_urmservice.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="SmartObject_NoReturnProperties" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\smartobject_noreturnproperties.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

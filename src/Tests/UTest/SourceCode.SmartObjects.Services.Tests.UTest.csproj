@@ -108,6 +108,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Resources\ServiceType_URMService.xml" />
+    <EmbeddedResource Include="Resources\SmartObject_NoReturnProperties.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\SourceCode.SmartObjects.Services.Tests.csproj">
