@@ -22,7 +22,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         public void CompareDataTables()
         {
             // Arrange
-            DataTable dataTable1 = DataTableFactory.GetDataTableWitheOneColumnAndOneRow();
+            DataTable dataTable1 = DataTableFactory.GetDataTableWithOneColumnAndOneRow();
 
             // Action
             SmartObjectHelper.CompareDataTables(dataTable1, dataTable1.DefaultView.ToTable());
@@ -412,7 +412,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
             var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
             smartObject.MethodToExecute = smartObject.Methods[0].Name;
 
-            DataTable dataTable1 = DataTableFactory.GetDataTableWitheOneColumnAndOneRow();
+            DataTable dataTable1 = DataTableFactory.GetDataTableWithOneColumnAndOneRow();
 
             SmartObjectClientServer server = null;
 

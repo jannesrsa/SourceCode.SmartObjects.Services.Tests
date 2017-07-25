@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SourceCode.SmartObjects.Services.Tests.UTest.Factories;
 
 namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
 {
@@ -11,23 +12,13 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void GenerateGetAssertHasValue_WithAssertHasValue()
         {
             //Arrange
-            var dataTable = new DataTable();
-
-            string columnName = "Column1";
-            var dataColumn = new DataColumn(columnName);
-            dataTable.Columns.Add(dataColumn);
-
-            var dataRow = dataTable.NewRow();
-            dataTable.Rows.Add(dataRow);
-
-            var expectedValue = Guid.NewGuid().ToString();
-            dataRow[columnName] = expectedValue;
+            var dataTable = DataTableFactory.GetDataTableWithOneColumnAndOneRow();
 
             // Act
             var actual = DataTableExtensions.GenerateGetAssertHasValue(dataTable);
 
             // Assert
-            Assert.AreEqual($"row.AssertHasValue<String>(\"{columnName}\");\r\n", actual);
+            Assert.AreEqual($"row.AssertHasValue<String>(\"{dataTable.Columns[0].ColumnName}\");\r\n", actual);
         }
 
         [TestMethod()]
@@ -45,20 +36,13 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void GenerateGetAssertHasValue_WithEmptyValue()
         {
             //Arrange
-            var dataTable = new DataTable();
-
-            string columnName = "Column1";
-            var dataColumn = new DataColumn(columnName);
-            dataTable.Columns.Add(dataColumn);
-
-            var dataRow = dataTable.NewRow();
-            dataTable.Rows.Add(dataRow);
+            var dataTable = DataTableFactory.GetDataTableWithOneColumnAndOneRow(string.Empty);
 
             // Act
             var actual = DataTableExtensions.GenerateGetAssertHasValue(dataTable);
 
             // Assert
-            Assert.AreEqual($"// Empty values\r\n//row.AssertHasValue<String>(\"{columnName}\");\r\n", actual);
+            Assert.AreEqual($"// Empty values\r\n//row.AssertHasValue<String>(\"{dataTable.Columns[0].ColumnName}\");\r\n", actual);
         }
 
         [TestMethod()]
@@ -102,17 +86,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void GetCondition_WithReturnFalseValue()
         {
             //Arrange
-            var dataTable = new DataTable();
-
-            string columnName = "Column1";
-            var dataColumn = new DataColumn(columnName);
-            dataTable.Columns.Add(dataColumn);
-
-            var dataRow = dataTable.NewRow();
-            dataTable.Rows.Add(dataRow);
-
             var expectedValue = Guid.NewGuid().ToString();
-            dataRow[columnName] = expectedValue;
+            var dataTable = DataTableFactory.GetDataTableWithOneColumnAndOneRow(expectedValue);
 
             int pageNumber = 2;
             int pageSize = 2;
@@ -128,17 +103,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void GetCondition_WithReturnTrueValue()
         {
             //Arrange
-            var dataTable = new DataTable();
-
-            string columnName = "Column1";
-            var dataColumn = new DataColumn(columnName);
-            dataTable.Columns.Add(dataColumn);
-
-            var dataRow = dataTable.NewRow();
-            dataTable.Rows.Add(dataRow);
-
             var expectedValue = Guid.NewGuid().ToString();
-            dataRow[columnName] = expectedValue;
+            var dataTable = DataTableFactory.GetDataTableWithOneColumnAndOneRow(expectedValue);
 
             int pageNumber = 0;
             int pageSize = 0;
@@ -180,17 +146,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void GetPagedResult_WithReturnOneRow()
         {
             //Arrange
-            var dataTable = new DataTable();
-
-            string columnName = "Column1";
-            var dataColumn = new DataColumn(columnName);
-            dataTable.Columns.Add(dataColumn);
-
-            var dataRow = dataTable.NewRow();
-            dataTable.Rows.Add(dataRow);
-
             var expectedValue = Guid.NewGuid().ToString();
-            dataRow[columnName] = expectedValue;
+            var dataTable = DataTableFactory.GetDataTableWithOneColumnAndOneRow(expectedValue);
 
             int pageNumber = 1;
             int pageSize = 1;
@@ -206,17 +163,8 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void GetPagedResult_WithReturnZeroRows()
         {
             //Arrange
-            var dataTable = new DataTable();
-
-            string columnName = "Column1";
-            var dataColumn = new DataColumn(columnName);
-            dataTable.Columns.Add(dataColumn);
-
-            var dataRow = dataTable.NewRow();
-            dataTable.Rows.Add(dataRow);
-
             var expectedValue = Guid.NewGuid().ToString();
-            dataRow[columnName] = expectedValue;
+            var dataTable = DataTableFactory.GetDataTableWithOneColumnAndOneRow(expectedValue);
 
             int pageNumber = 2;
             int pageSize = 2;
