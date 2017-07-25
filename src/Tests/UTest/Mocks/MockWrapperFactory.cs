@@ -4,6 +4,9 @@ using SourceCode.EnvironmentSettings.Client;
 using SourceCode.SmartObjects.Client;
 using SourceCode.SmartObjects.Management;
 using SourceCode.SmartObjects.Services.Management;
+using SourceCode.SmartObjects.Services.Tests.Managers;
+using SourceCode.SmartObjects.Services.Tests.UTest.Factories;
+using SourceCode.SmartObjects.Services.Tests.UTest.Properties;
 using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.UTest.Mocks
@@ -53,5 +56,35 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Mocks
         public Mock<SmartObjectManagementServerWrapper> SmartObjectManagementServer { get; }
 
         public Mock<WebRequestWrapper> WebRequestManager { get; }
+
+        public void MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings serviceInstanceSettings)
+        {
+            smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
+            var settings = new Mock<ServiceInstanceSettings>();
+            settings.SetupGet(i => i.Name).Returns("K2_Management");
+
+            var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
+
+            var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
+            mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
+
+            this.SmartObjectManagementServer
+                .Setup(i => i.GetSmartObjects(
+                    It.IsAny<SearchProperty>(),
+                    It.IsAny<SearchOperator>(),
+                    It.IsAny<string>()))
+                .Returns(mockSmartObjectExplorer);
+
+            this.SmartObjectClientServer
+                .Setup(x => x.GetSmartObject(
+                    It.IsAny<string>()))
+                .Returns(smartObject);
+
+            this.SmartObjectClientServer
+                .Setup(x => x.ExecuteScalar(It.IsAny<SmartObject>()))
+                .Returns(smartObject);
+
+            serviceInstanceSettings = settings.Object;
+        }
     }
 }

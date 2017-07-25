@@ -279,26 +279,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         {
             // Arrange
             SmartObjectClientServer server = null;
-            var settings = new Mock<ServiceInstanceSettings>();
-            settings.SetupGet(i => i.Name).Returns("K2_Management");
-
-            var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
-            var expected = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
-
-            var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
-            mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
-
-            _mockWrapperFactory.SmartObjectManagementServer
-                .Setup(i => i.GetSmartObjects(
-                    It.IsAny<SearchProperty>(),
-                    It.IsAny<SearchOperator>(),
-                    It.IsAny<string>()))
-                .Returns(mockSmartObjectExplorer);
-
-            _mockWrapperFactory.SmartObjectClientServer
-                .Setup(x => x.GetSmartObject(
-                    It.IsAny<string>()))
-                .Returns(expected);
+            _mockWrapperFactory.MockWithProcessInstanceSmartObject(out SmartObject expected, out ServiceInstanceSettings settings);
 
             // Action
             var actual = SmartObjectHelper.GetSmartObject(server, Guid.NewGuid().ToString(), Mock.Of<ServiceInstanceSettings>());
