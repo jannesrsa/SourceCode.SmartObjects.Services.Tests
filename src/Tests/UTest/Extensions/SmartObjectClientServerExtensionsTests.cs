@@ -20,32 +20,13 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void Deserialize_With_ProcessInfo()
         {
             //Arrange
-            var settings = new Mock<ServiceInstanceSettings>();
-            settings.SetupGet(i => i.Name).Returns("K2_Management");
-
-            var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
-            var expected = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
-
-            var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
-            mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
-
-            _mockWrapperFactory.SmartObjectManagementServer
-                .Setup(i => i.GetSmartObjects(
-                    It.IsAny<SearchProperty>(),
-                    It.IsAny<SearchOperator>(),
-                    It.IsAny<string>()))
-                .Returns(mockSmartObjectExplorer);
-
-            _mockWrapperFactory.SmartObjectClientServer
-                .Setup(x => x.GetSmartObject(
-                    It.IsAny<string>()))
-                .Returns(expected);
+            MockWithProcessInstanceSmartObject(out SmartObject expected, out ServiceInstanceSettings settings);
 
             // Act
             var actual = SmartObjectClientServerExtensions.Deserialize(
                 null,
                 Guid.NewGuid().ToString(),
-                settings.Object,
+                settings,
                 Guid.NewGuid().ToString());
 
             // Assert
@@ -56,26 +37,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void DeserializeTypedArray_With_ProcessInfo()
         {
             //Arrange
-            var settings = new Mock<ServiceInstanceSettings>();
-            settings.SetupGet(i => i.Name).Returns("K2_Management");
-
-            var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
-            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
-
-            var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
-            mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
-
-            _mockWrapperFactory.SmartObjectManagementServer
-                .Setup(i => i.GetSmartObjects(
-                    It.IsAny<SearchProperty>(),
-                    It.IsAny<SearchOperator>(),
-                    It.IsAny<string>()))
-                .Returns(mockSmartObjectExplorer);
-
-            _mockWrapperFactory.SmartObjectClientServer
-                .Setup(x => x.GetSmartObject(
-                    It.IsAny<string>()))
-                .Returns(smartObject);
+            MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
 
             var expected = new DataTable();
             _mockWrapperFactory.SmartObjectClientServer
@@ -88,7 +50,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
             var actual = SmartObjectClientServerExtensions.DeserializeTypedArray(
                 null,
                 Guid.NewGuid().ToString(),
-                settings.Object,
+                settings,
                 Guid.NewGuid().ToString());
 
             // Assert
@@ -99,38 +61,15 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void Serialize_With_ProcessInfo()
         {
             //Arrange
+            MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
             var serviceObjectName = Guid.NewGuid().ToString();
-            var settings = new Mock<ServiceInstanceSettings>();
-            settings.SetupGet(i => i.Name).Returns("K2_Management");
-
-            var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
-            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
-
-            var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
-            mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
-
-            _mockWrapperFactory.SmartObjectManagementServer
-                .Setup(i => i.GetSmartObjects(
-                    It.IsAny<SearchProperty>(),
-                    It.IsAny<SearchOperator>(),
-                    It.IsAny<string>()))
-                .Returns(mockSmartObjectExplorer);
-
-            _mockWrapperFactory.SmartObjectClientServer
-                .Setup(x => x.GetSmartObject(It.IsAny<string>()))
-                .Returns(smartObject);
-
-            _mockWrapperFactory.SmartObjectClientServer
-                .Setup(x => x.ExecuteScalar(It.IsAny<SmartObject>()))
-                .Returns(smartObject);
-
             Action<SmartObject> action = (SmartObject i) => { };
 
             // Act
             var actual = SmartObjectClientServerExtensions.Serialize(
                 null,
                 serviceObjectName,
-                settings.Object,
+                settings,
                 action);
 
             // Assert
@@ -141,29 +80,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void SerializeAddItemToArray_With_ProcessInfo()
         {
             //Arrange
-            var settings = new Mock<ServiceInstanceSettings>();
-            settings.SetupGet(i => i.Name).Returns("K2_Management");
-
-            var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
-            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
-
-            var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
-            mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
-
-            _mockWrapperFactory.SmartObjectManagementServer
-                .Setup(i => i.GetSmartObjects(
-                    It.IsAny<SearchProperty>(),
-                    It.IsAny<SearchOperator>(),
-                    It.IsAny<string>()))
-                .Returns(mockSmartObjectExplorer);
-
-            _mockWrapperFactory.SmartObjectClientServer
-                .Setup(x => x.GetSmartObject(It.IsAny<string>()))
-                .Returns(smartObject);
-
-            _mockWrapperFactory.SmartObjectClientServer
-                .Setup(x => x.ExecuteScalar(It.IsAny<SmartObject>()))
-                .Returns(smartObject);
+            MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
 
             var expected = "[]";
 
@@ -172,7 +89,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
                 null,
                 Guid.NewGuid().ToString(),
                 expected,
-                settings.Object,
+                settings,
                 (SmartObject i) => { });
 
             // Assert
@@ -183,12 +100,35 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void SerializeItemToArray_With_ProcessInfo()
         {
             //Arrange
+            MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
+
             var serviceObjectName = Guid.NewGuid().ToString();
+            Action<SmartObject> action = (SmartObject i) => { };
+
+            // Act
+            var actual = SmartObjectClientServerExtensions.SerializeItemToArray(
+                null,
+                serviceObjectName,
+                settings,
+                action);
+
+            // Assert
+            Assert.IsNull(actual);
+        }
+
+        [TestInitialize()]
+        public void TestInit()
+        {
+            _mockWrapperFactory = new MockWrapperFactory();
+        }
+
+        private void MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings serviceInstanceSettings)
+        {
+            smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
             var settings = new Mock<ServiceInstanceSettings>();
             settings.SetupGet(i => i.Name).Returns("K2_Management");
 
             var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
-            var smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
 
             var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
             mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
@@ -201,30 +141,15 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
                 .Returns(mockSmartObjectExplorer);
 
             _mockWrapperFactory.SmartObjectClientServer
-                .Setup(x => x.GetSmartObject(It.IsAny<string>()))
+                .Setup(x => x.GetSmartObject(
+                    It.IsAny<string>()))
                 .Returns(smartObject);
 
             _mockWrapperFactory.SmartObjectClientServer
                 .Setup(x => x.ExecuteScalar(It.IsAny<SmartObject>()))
                 .Returns(smartObject);
 
-            Action<SmartObject> action = (SmartObject i) => { };
-
-            // Act
-            var actual = SmartObjectClientServerExtensions.SerializeItemToArray(
-                null,
-                serviceObjectName,
-                settings.Object,
-                action);
-
-            // Assert
-            Assert.IsNull(actual);
-        }
-
-        [TestInitialize()]
-        public void TestInit()
-        {
-            _mockWrapperFactory = new MockWrapperFactory();
+            serviceInstanceSettings = settings.Object;
         }
     }
 }
