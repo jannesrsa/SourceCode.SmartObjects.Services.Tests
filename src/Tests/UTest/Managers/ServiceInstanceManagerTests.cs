@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using SourceCode.SmartObjects.Management;
 using SourceCode.SmartObjects.Services.Management;
 using SourceCode.SmartObjects.Services.Tests.UTest.Mocks;
-using SourceCode.SmartObjects.Services.Tests.UTest.Properties;
 
 namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
 {
@@ -18,20 +16,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
         public void Delete_DefaultValues()
         {
             // Arrange
-            var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
-
-            var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
-            mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
-
-            _mockWrapperFactory.SmartObjectManagementServer
-                .Setup(i => i.GetSmartObjects(
-                    It.IsAny<Guid>()))
-                .Returns(mockSmartObjectExplorer);
-
-            _mockWrapperFactory.SmartObjectManagementServer
-                .Setup(i => i.GetSmartObjects(
-                    It.IsAny<string>()))
-                .Returns(mockSmartObjectExplorer);
+            _mockWrapperFactory.MockWithProcessInstanceSmartObject();
 
             var serviceTypeSettings = Mock.Of<ServiceTypeSettings>();
             var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);
@@ -47,35 +32,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
         public void RegisterTest_WithDeleteExistingServiceInstance()
         {
             // Arrange
-            var smartObjectInfo = SmartObjectInfo.Create(Resources.SmartObjectDefinition_ProcessInfo);
-
-            var mockSmartObjectExplorer = Mock.Of<SmartObjectExplorer>();
-            mockSmartObjectExplorer.SmartObjects.Add(smartObjectInfo);
-
-            _mockWrapperFactory.SmartObjectManagementServer
-                .Setup(i => i.GetSmartObjects(
-                    It.IsAny<Guid>()))
-                .Returns(mockSmartObjectExplorer);
-
-            _mockWrapperFactory.SmartObjectManagementServer
-                .Setup(i => i.GetSmartObjects(
-                    It.IsAny<string>()))
-                .Returns(mockSmartObjectExplorer);
-
-            _mockWrapperFactory.ServiceManagementServer
-                .Setup(i => i.GetServiceInstanceConfig(
-                    It.IsAny<Guid>()))
-                .Returns(Resources.ServiceInstanceConfig);
-
-            _mockWrapperFactory.ServiceManagementServer
-                .Setup(i => i.GetServiceInstancesCompact(
-                    It.IsAny<Guid>()))
-                .Returns(Resources.ServiceInstancesCompact_URMService);
-
-            _mockWrapperFactory.ServiceManagementServer
-                .Setup(i => i.GetServiceInstance(
-                    It.IsAny<Guid>()))
-                .Returns(Resources.ServiceInstance_URMService_Full);
+            _mockWrapperFactory.MockWithProcessInstanceSmartObject();
 
             var serviceTypeSettings = Mock.Of<ServiceTypeSettings>();
             var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);
@@ -122,20 +79,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
         public void RegisterTest_WithRefreshExistingServiceInstance()
         {
             // Arrange
-            _mockWrapperFactory.ServiceManagementServer
-                .Setup(i => i.GetServiceInstanceConfig(
-                    It.IsAny<Guid>()))
-                .Returns(Resources.ServiceInstanceConfig);
-
-            _mockWrapperFactory.ServiceManagementServer
-                .Setup(i => i.GetServiceInstancesCompact(
-                    It.IsAny<Guid>()))
-                .Returns(Resources.ServiceInstancesCompact_URMService);
-
-            _mockWrapperFactory.ServiceManagementServer
-                .Setup(i => i.GetServiceInstance(
-                    It.IsAny<Guid>()))
-                .Returns(Resources.ServiceInstance_URMService_Full);
+            _mockWrapperFactory.MockWithProcessInstanceSmartObject();
 
             var serviceTypeSettings = Mock.Of<ServiceTypeSettings>();
             var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);
@@ -184,15 +128,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Managers.Tests
         public void UpdateTest_WithRefreshExistingServiceInstance()
         {
             // Arrange
-            _mockWrapperFactory.ServiceManagementServer
-                .Setup(i => i.GetServiceInstanceConfig(
-                    It.IsAny<Guid>()))
-                .Returns(Resources.ServiceInstanceConfig);
-
-            _mockWrapperFactory.ServiceManagementServer
-                .Setup(i => i.GetServiceInstancesCompact(
-                    It.IsAny<Guid>()))
-                .Returns(Resources.ServiceInstancesCompact_URMService);
+            _mockWrapperFactory.MockWithProcessInstanceSmartObject();
 
             var serviceTypeSettings = Mock.Of<ServiceTypeSettings>();
             var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);

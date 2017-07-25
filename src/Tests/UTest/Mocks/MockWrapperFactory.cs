@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using System;
+using Moq;
 using SourceCode.Deployment.Management;
 using SourceCode.EnvironmentSettings.Client;
 using SourceCode.SmartObjects.Client;
@@ -75,6 +76,16 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Mocks
                     It.IsAny<string>()))
                 .Returns(mockSmartObjectExplorer);
 
+            this.SmartObjectManagementServer
+                .Setup(i => i.GetSmartObjects(
+                    It.IsAny<Guid>()))
+                .Returns(mockSmartObjectExplorer);
+
+            this.SmartObjectManagementServer
+                .Setup(i => i.GetSmartObjects(
+                    It.IsAny<string>()))
+                .Returns(mockSmartObjectExplorer);
+
             this.SmartObjectClientServer
                 .Setup(x => x.GetSmartObject(
                     It.IsAny<string>()))
@@ -84,7 +95,27 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Mocks
                 .Setup(x => x.ExecuteScalar(It.IsAny<SmartObject>()))
                 .Returns(smartObject);
 
+            this.ServiceManagementServer
+                .Setup(i => i.GetServiceInstanceConfig(
+                    It.IsAny<Guid>()))
+                .Returns(Resources.ServiceInstanceConfig);
+
+            this.ServiceManagementServer
+                .Setup(i => i.GetServiceInstancesCompact(
+                    It.IsAny<Guid>()))
+                .Returns(Resources.ServiceInstancesCompact_URMService);
+
+            this.ServiceManagementServer
+                .Setup(i => i.GetServiceInstance(
+                    It.IsAny<Guid>()))
+                .Returns(Resources.ServiceInstance_URMService_Full);
+
             serviceInstanceSettings = settings.Object;
+        }
+
+        public void MockWithProcessInstanceSmartObject()
+        {
+            MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings serviceInstanceSettings);
         }
     }
 }
