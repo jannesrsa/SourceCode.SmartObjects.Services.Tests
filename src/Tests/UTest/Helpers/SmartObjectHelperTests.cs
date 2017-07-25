@@ -279,7 +279,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Helpers.Tests
         {
             // Arrange
             SmartObjectClientServer server = null;
-            _mockWrapperFactory.MockWithProcessInstanceSmartObject(out SmartObject expected, out ServiceInstanceSettings settings);
+            _mockWrapperFactory.WithProcessInstanceSmartObject(out SmartObject expected, out ServiceInstanceSettings settings);
 
             // Action
             var actual = SmartObjectHelper.GetSmartObject(server, Guid.NewGuid().ToString(), Mock.Of<ServiceInstanceSettings>());

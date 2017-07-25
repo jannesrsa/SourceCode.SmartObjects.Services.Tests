@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Moq;
 using SourceCode.Deployment.Management;
 using SourceCode.EnvironmentSettings.Client;
@@ -58,7 +59,7 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Mocks
 
         public Mock<WebRequestWrapper> WebRequestManager { get; }
 
-        public void MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings serviceInstanceSettings)
+        public void WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings serviceInstanceSettings)
         {
             smartObject = SmartObjectFactory.GetSmartObject(SmartObjectOption.ProcessInfo);
             var settings = new Mock<ServiceInstanceSettings>();
@@ -113,9 +114,50 @@ namespace SourceCode.SmartObjects.Services.Tests.UTest.Mocks
             serviceInstanceSettings = settings.Object;
         }
 
-        public void MockWithProcessInstanceSmartObject()
+        public void WithProcessInstanceSmartObject()
         {
-            MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings serviceInstanceSettings);
+            WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings serviceInstanceSettings);
+        }
+
+        public ServiceInstanceManager WithExistingServiceInstance(Mock<ServiceInstanceSettings> serviceInstanceSettings = null, Dictionary<string, string> configurationSettings = null)
+        {
+            var serviceTypeSettings = Mock.Of<ServiceTypeSettings>();
+            var serviceTypeCreator = new Mock<ServiceTypeManager>(serviceTypeSettings);
+
+            if (serviceInstanceSettings == null)
+            {
+                serviceInstanceSettings = new Mock<ServiceInstanceSettings>();
+            }
+
+            serviceInstanceSettings
+                .SetupGet(i => i.Name)
+                .Returns("URMService");
+
+            serviceInstanceSettings
+                .SetupGet(i => i.Description)
+                .Returns("URMService Description");
+
+            serviceInstanceSettings
+                .SetupGet(i => i.Guid)
+                .Returns(new Guid("4C2F62EA-BE8D-4600-A2B5-185902BDD20A"));
+
+            serviceInstanceSettings
+                .SetupGet(i => i.ServiceAuthentication)
+                .Returns(new ServiceAuthenticationInfo());
+
+            if (configurationSettings == null)
+            {
+                configurationSettings = new Dictionary<string, string>();
+            }
+
+            configurationSettings["HostServerConnectionString"] = Guid.NewGuid().ToString();
+
+            serviceInstanceSettings
+                .SetupGet(i => i.ConfigurationSettings)
+                .Returns(configurationSettings);
+
+            var serviceInstanceManager = new ServiceInstanceManager(serviceTypeCreator.Object, serviceInstanceSettings.Object);
+            return serviceInstanceManager;
         }
     }
 }

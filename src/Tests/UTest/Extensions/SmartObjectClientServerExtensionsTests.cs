@@ -17,7 +17,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void Deserialize_With_ProcessInfo()
         {
             //Arrange
-            _mockWrapperFactory.MockWithProcessInstanceSmartObject(out SmartObject expected, out ServiceInstanceSettings settings);
+            _mockWrapperFactory.WithProcessInstanceSmartObject(out SmartObject expected, out ServiceInstanceSettings settings);
 
             // Act
             var actual = SmartObjectClientServerExtensions.Deserialize(
@@ -34,7 +34,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void DeserializeTypedArray_With_ProcessInfo()
         {
             //Arrange
-            _mockWrapperFactory.MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
+            _mockWrapperFactory.WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
 
             var expected = new DataTable();
             _mockWrapperFactory.SmartObjectClientServer
@@ -58,7 +58,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void Serialize_With_ProcessInfo()
         {
             //Arrange
-            _mockWrapperFactory.MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
+            _mockWrapperFactory.WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
             var serviceObjectName = Guid.NewGuid().ToString();
             Action<SmartObject> action = (SmartObject i) => { };
 
@@ -77,7 +77,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void SerializeAddItemToArray_With_ProcessInfo()
         {
             //Arrange
-            _mockWrapperFactory.MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
+            _mockWrapperFactory.WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
 
             var expected = "[]";
 
@@ -97,7 +97,7 @@ namespace SourceCode.SmartObjects.Services.Tests.Extensions.Tests
         public void SerializeItemToArray_With_ProcessInfo()
         {
             //Arrange
-            _mockWrapperFactory.MockWithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
+            _mockWrapperFactory.WithProcessInstanceSmartObject(out SmartObject smartObject, out ServiceInstanceSettings settings);
 
             var serviceObjectName = Guid.NewGuid().ToString();
             Action<SmartObject> action = (SmartObject i) => { };
