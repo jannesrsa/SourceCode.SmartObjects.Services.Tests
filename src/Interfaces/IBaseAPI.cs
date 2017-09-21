@@ -1,4 +1,5 @@
-﻿using SourceCode.Hosting.Client.BaseAPI;
+﻿using System;
+using SourceCode.Hosting.Client.BaseAPI;
 
 namespace SourceCode.SmartObjects.Services.Tests.Interfaces
 {

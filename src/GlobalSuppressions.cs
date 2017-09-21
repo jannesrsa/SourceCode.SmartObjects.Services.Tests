@@ -1,4 +1,6 @@
-﻿[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Scope = "member", Target = "SourceCode.SmartObjects.Services.Tests.Managers.ServiceInstanceManager.#Register(System.Boolean)")]
+﻿using System;
+
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Scope = "member", Target = "SourceCode.SmartObjects.Services.Tests.Managers.ServiceInstanceManager.#Register(System.Boolean)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Scope = "member", Target = "SourceCode.SmartObjects.Services.Tests.Extensions.ActionExtensions.#AssertException`1(System.Action,System.String)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Scope = "member", Target = "SourceCode.SmartObjects.Services.Tests.Extensions.DataRowExtensions.#AssertAreEqual`1(System.Data.DataRow,System.String,!!0,System.String)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Scope = "member", Target = "SourceCode.SmartObjects.Services.Tests.Extensions.DataRowExtensions.#AssertHasValue`1(System.Data.DataRow,System.String,System.String)")]

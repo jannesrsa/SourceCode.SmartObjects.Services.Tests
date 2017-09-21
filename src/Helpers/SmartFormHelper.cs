@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Helpers

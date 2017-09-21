@@ -1,4 +1,6 @@
-﻿[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1306:SetLocaleForDataTypes", Scope = "member", Target = "SourceCode.SmartObjects.Services.Tests.Extensions.Tests.DataRowExtensionsTests.#AssertAreEqual_WithColumnNameNull()")]
+﻿using System;
+
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1306:SetLocaleForDataTypes", Scope = "member", Target = "SourceCode.SmartObjects.Services.Tests.Extensions.Tests.DataRowExtensionsTests.#AssertAreEqual_WithColumnNameNull()")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1306:SetLocaleForDataTypes", Scope = "member", Target = "SourceCode.SmartObjects.Services.Tests.Extensions.Tests.DataRowExtensionsTests.#AssertAreEqual_WithColumnNameStringEmpty()")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1306:SetLocaleForDataTypes", Scope = "member", Target = "SourceCode.SmartObjects.Services.Tests.Extensions.Tests.DataRowExtensionsTests.#AssertAreEqual_WithEqualValues()")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1306:SetLocaleForDataTypes", Scope = "member", Target = "SourceCode.SmartObjects.Services.Tests.Extensions.Tests.DataRowExtensionsTests.#AssertAreEqual_WithNonEqualValues()")]
