@@ -1,1 +1,1 @@
-GlobalSuppressions.cs linguist-vendored
+*.cs linguist-language=C#
