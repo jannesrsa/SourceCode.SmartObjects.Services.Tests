@@ -1,4 +1,5 @@
-﻿using SourceCode.SmartObjects.Client;
+﻿using System;
+using SourceCode.SmartObjects.Client;
 
 namespace SourceCode.SmartObjects.Services.Tests.UTest.Factories
 {

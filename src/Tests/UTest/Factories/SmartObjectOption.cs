@@ -1,4 +1,6 @@
-﻿namespace SourceCode.SmartObjects.Services.Tests.UTest.Factories
+﻿using System;
+
+namespace SourceCode.SmartObjects.Services.Tests.UTest.Factories
 {
     internal enum SmartObjectOption
     {

@@ -1,4 +1,5 @@
-﻿using SourceCode.SmartObjects.Management;
+﻿using System;
+using SourceCode.SmartObjects.Management;
 using SourceCode.SmartObjects.Services.Tests.Wrappers;
 
 namespace SourceCode.SmartObjects.Services.Tests.Managers
